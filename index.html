@@ -25,6 +25,203 @@
 	  <div class="h-entry">
 		
 
+		<a href="https://blog.yostos.org/2024/08/23/i-had-set.html" class="u-url"><time class="dt-published" datetime="2024-08-23 12:52:08 &#43;0900">Aug 23, 2024</time></a>
+
+		<div class="e-content">
+			 <p>I had set the date incorrectly on my digital camera and wanted to correct the date in the Exif data. However, I didn’t want to install unnecessary apps from the App Store, so I used Homebrew to install exiftool and made the correction.</p>
+<p>デジカメの日付の設定を間違えExifの日付を修正したかったが、AppStoreから余計なアプリをインストールしたくなかったので、Homebrewでexiftoolをインストールして修正。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Install exiftool using Homebrew</span>
+brew install exiftool
+
+
+<span style="color:#75715e"># Confirm dates of exif</span>
+exiftool R0000001.jpg  
+    ExifTool Version Number         : 12.76
+    File Name                       : R0000001.JPG
+    Directory                       : .
+    File Size                       : <span style="color:#ae81ff">12</span> MB
+    File Modification Date/Time     : 2024:08:26 12:42:29+09:00
+    File Access Date/Time           : 2024:08:26 12:43:26+09:00
+    File Inode Change Date/Time     : 2024:08:26 12:43:24+09:00
+    File Permissions                : -rwx------
+    File Type                       : JPEG
+    File Type Extension             : jpg
+    MIME Type                       : image/jpeg
+    Exif Byte Order                 : Little-endian <span style="color:#f92672">(</span>Intel, II<span style="color:#f92672">)</span>
+    <span style="color:#f92672">(</span>Output truncated <span style="color:#66d9ef">for</span> brevity<span style="color:#f92672">)</span>
+
+
+<span style="color:#75715e"># Modify dates of exif</span>
+exiftool -Alldates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2024:08:23 12:11:00&#39;</span> -overwrite_original ./* 
+</code></pre></div>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/22/this-is-a.html" class="u-url"><time class="dt-published" datetime="2024-08-22 20:36:06 &#43;0900">Aug 22, 2024</time></a>
+
+		<div class="e-content">
+			 <p>This is a ridiculous device installed in the restroom at Chiba City Hall. It seems to be meant for explaining how to use the toilet in different languages. But first of all, it’s hard to even understand what this device is for, and using flags to identify languages is just not practical. For example, just because it’s the Chinese flag doesn’t mean the person understands Mandarin.</p>
+<p>When it comes to something like toilet instructions, simple pictograms would be much easier to understand. These days, it’s so easy to just take a picture of the Japanese text with your smartphone and translate it into your own language, so wouldn’t just having Japanese be enough?</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/22/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-08-22 16:56:03 &#43;0900">Aug 22, 2024</time></a>
+
+		<div class="e-content">
+			 <p>Finished reading: <a href="https://amzn.to/3SYDlFv">ヴィンテージ・エフェクターの真実</a> by アキマツネオ📚</p>
+<p>ケンケンさんとの対談が載っていたので買ったが、この価格でモノクロ、紙質の低さにがっかり。「結局ヴィンテージ・サウンドを超えるものなんてないんだ」と言いながら、掲載されているのがリイシュ品だったりする。文章が主観的なのはよいが、その割に知識と愛が足りない。『CULT of Pedals』に遠く及ばない。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/21/rere.html" class="u-url"><time class="dt-published" datetime="2024-08-21 18:25:24 &#43;0900">Aug 21, 2024</time></a>
+
+		<div class="e-content">
+			 <p>🎥 『<a href="https://bocchi.rocks/">劇場版総集編 ぼっち・ざ・ろっくRe:Re:</a>』を見てきました。まだ夏休みですが、平日昼間のためかアニメのリュックを背負ったガチ勢の兄ちゃんしかいなくて怖かった。</p>
+<p>冒頭の初ライブシーンが良かったので、ギターで<a href="https://hearthis.at/yostos/thatband/">コピー</a>してみました。</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2024/08/21/finished-reading-by.html">Finished reading: The United States’ war responsibility in World War II(アメリカの戦争責任) by 竹田恒泰 📚</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2024/08/21/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-08-21 09:27:08 &#43;0900">Aug 21, 2024</time></a>
+
+		<div class="e-content">
+			 <p>Finished reading: <a href="https://micro.blog/books/9784569826646">アメリカの戦争責任</a> by 竹田恒泰 📚</p>
+<p>The book that examines the United States’ war responsibility, particularly regarding the atomic bombings during World War II. I decided to read this book because August 15th is recognized as “End of War Day” in Japan.</p>
+<p>The book begins with a striking anecdote about Kanji Ishihara, known as a &ldquo;genius of war,&rdquo; who stated during the Tokyo Trials that &ldquo;the primary war criminal is President Truman.&rdquo;
+It was particularly impactful to learn that the U.S. had scattered leaflets in Japan threatening to bomb civilians if surrender was not signed by the President. This action clearly violated the Saint Petersburg Declaration and the Hague Regulations, which were the international laws of war at the time, making it a blatant war crime.</p>
+<p>Even William D. Leahy, Chief of Staff to the President, expressed the following:</p>
+<!-- raw HTML omitted -->
+<p>In the United States, it is generally believed that the atomic bombs were used as a last resort because Japan would not stop the war. However, there is evidence suggesting otherwise, and I found myself deeply resonating with these points:</p>
+<ul>
+<li>One year before the war ended, the Hyde Park Agreement was secretly signed between President Roosevelt and British Prime Minister Churchill, deciding to use the atomic bomb on Japan.</li>
+<li>The U.S. had deciphered Japan&rsquo;s communication codes and understood that the Emperor was instructing steps toward ending the war.</li>
+<li>The U.S. was aware of the surrender terms Japan would accept and attempted to include them in the Potsdam Declaration, but Secretary of State Byrnes and President Truman removed these terms, insisting on unconditional surrender, which deliberately delayed Japan&rsquo;s capitulation.</li>
+<li>To measure the power of the atomic bomb, an untouched city was selected, and the bomb was intentionally dropped over a civilian area rather than a military factory.</li>
+<li>The reason Japan ultimately surrendered was due to the Soviet Union&rsquo;s entry into the war, not the atomic bombings, which contributed nothing to ending the war.</li>
+</ul>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/21/tbs-news-dig.html" class="u-url"><time class="dt-published" datetime="2024-08-21 08:34:01 &#43;0900">Aug 21, 2024</time></a>
+
+		<div class="e-content">
+			 <!-- raw HTML omitted -->
+<p>さすがによく揶揄されるセクシー発言や寧ろ環境に有害なレジ袋有料化などはこの人の問題ではないと思いますが、この人は危ういし国をリードできるとも思えない。​📰 </p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/20/the-hiyodorizaka-is.html" class="u-url"><time class="dt-published" datetime="2024-08-20 21:11:35 &#43;0900">Aug 20, 2024</time></a>
+
+		<div class="e-content">
+			 <p>The Hiyodori-zaka is an old path adjacent to an ancient samurai residence street, surrounded by a beautiful bamboo grove that has remained almost unchanged since the Edo period​. 📷​</p>
+<p><code>#Path</code>​</p>
+<p>​</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/20/170209.html" class="u-url"><time class="dt-published" datetime="2024-08-20 17:02:09 &#43;0900">Aug 20, 2024</time></a>
+
+		<div class="e-content">
+			 <p>当日ですが、『あちこちオードリーオンラインライブ2024～それ言ってどうすんだ祭～』のチケットを購入。今夜は一杯やりながらゆっくり視聴。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/20/the-new-webbased.html" class="u-url"><time class="dt-published" datetime="2024-08-20 09:41:22 &#43;0900">Aug 20, 2024</time></a>
+
+		<div class="e-content">
+			 <p>The new web-based Micro.blog editor seems to have issues with Japanese input.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/19/ive-started-using.html" class="u-url"><time class="dt-published" datetime="2024-08-19 21:26:36 &#43;0900">Aug 19, 2024</time></a>
+
+		<div class="e-content">
+			 <p>I&rsquo;ve started using  <a href="https://surfshark.club/friend/vLx3TyyC">SurfShark VPN</a> to avoid facing the same issues as Chika Shigetani, a member of Japan&rsquo;s Paralympic team for Paris. <!-- raw HTML omitted -->
+カフェでMacを使ってFree WiFiでネットに接続しながら、ちょっとした作業をすることが多くなった。パリ・パラリンピック日本代表の重定知佳さんのような事態を避けるため、個人で <a href="https://surfshark.club/friend/vLx3TyyC">SurfShark VPN</a> を使用し始めた。</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/19/i-visited-bangla.html" class="u-url"><time class="dt-published" datetime="2024-08-19 13:49:41 &#43;0900">Aug 19, 2024</time></a>
+
+		<div class="e-content">
+			 <p>I visited <a href="https://x.com/banglakitchiba">Bangla Kitchen</a> for lunch🍽️, a place I’ve been wanting to try for a while. As the name suggests, this restaurant offers Bangladeshi cuisine. Today, I had the mutton biryani, which was what I was looking forward to. Delicious!</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/18/yahoo-vpn.html" class="u-url"><time class="dt-published" datetime="2024-08-18 13:46:32 &#43;0900">Aug 18, 2024</time></a>
+
+		<div class="e-content">
+			 <!-- raw HTML omitted -->
+<p>匿名だからって高をくくってたんかな。今どき発信者情報開示請求も簡単にできるのだから、誹謗中傷する人はノーロギングのVPNを使いましょう。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/08/18/when-i-looked.html" class="u-url"><time class="dt-published" datetime="2024-08-18 13:21:55 &#43;0900">Aug 18, 2024</time></a>
+
+		<div class="e-content">
+			 <p>When I looked at the street trees near my home, I noticed that these insects were quite prevalent, which was creepy.</p>
+<p>自宅近くの街路樹を見たら、この虫がかなり発生していて、不気味。</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
 		<a href="https://blog.yostos.org/2024/08/16/i-found-some.html" class="u-url"><time class="dt-published" datetime="2024-08-16 19:25:09 &#43;0900">Aug 16, 2024</time></a>
 
 		<div class="e-content">
@@ -108,7 +305,6 @@ Laughably bad. The highlight of the story is supposed to be the battle of wits b
 <!-- raw HTML omitted -->
 <p>その一方で、クリプトアナーキスト宣言のティモシー・メイが以下のように言及している。体感的にはこっちのほうがすっきりする。</p>
 <!-- raw HTML omitted -->
-
 		</div>
 	  </div>
 	
@@ -242,6 +438,7 @@ Following yesterday&rsquo;s earthquake in Miyazaki, there was another one in Kan
 ChatGPT, and a few things caught my attention. I decided to summarize my
 thoughts here. 🪄</p>
 <p>最近ChatGPTを使ったソフトウェア開発について人と話したときに気になったことがあるので、思った事まとめておこうと思います。</p>
+<!-- raw HTML omitted -->
 <h2 id="dramatic-cost-reduction">Dramatic Cost Reduction</h2>
 <p>The use of generative AI has dramatically reduced the costs of producing images
 and music. For example, tasks like illustration creation (using services like
@@ -1061,6 +1258,91 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
   defer
 ></script>
 
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            const targetElements = document.querySelectorAll("article h2, article h3, article h4, article h5, .pages h2, .pages h3, .pages h4, .pages h5");
+            
+            if (targetElements.length === 0) return;
+
+            
+            const tocPlaceholder = document.querySelector("article").innerHTML.indexOf("<!--toc-->");
+            
+            if (tocPlaceholder === -1) return;
+
+            
+            let tocHTML = '<div id="table-of-contents"><h2>Table of Contents</h2><ul>';
+            targetElements.forEach((element, index) => {
+                const id = `toc-${index}`;
+                element.id = id;
+                const tagName = element.tagName.toLowerCase();
+                const indentClass = tagName === 'h2' ? 'toc-level-1' :
+                                   tagName === 'h3' ? 'toc-level-2' :
+                                   tagName === 'h4' ? 'toc-level-3' : 'toc-level-4';
+                tocHTML += `<li class="${indentClass}"><a href="#${id}">${element.textContent}</a></li>`;
+            });
+            tocHTML += '</ul></div>';
+
+            
+            document.querySelector("article").innerHTML = document.querySelector("article").innerHTML.replace("<!--toc-->", tocHTML);
+
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                #table-of-contents {
+                    margin: 30px 0;
+                    padding: 15px;
+                    border: 1px solid #e0e0e0;
+                    background-color: #f7f7f7;
+                    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+                }
+
+                #table-of-contents h2 {
+                    font-size: 1.15em;
+                    margin-bottom: 15px;
+                    font-weight: bold;
+                    color: #333;
+                }
+
+                #table-of-contents ul {
+                    list-style-type: none;
+                    padding-left: 0;
+                }
+
+                #table-of-contents li {
+                    margin: 5px 0;
+                }
+
+                #table-of-contents li.toc-level-1 {
+                    padding-left: 0;
+                }
+
+                #table-of-contents li.toc-level-2 {
+                    padding-left: 20px;
+                }
+
+                #table-of-contents li.toc-level-3 {
+                    padding-left: 40px;
+                }
+
+                #table-of-contents li.toc-level-4 {
+                    padding-left: 60px;
+                }
+
+                #table-of-contents a {
+                    text-decoration: none;
+                    color: #1a73e8;
+                    font-weight: 500;
+                    font-size: 0.9em;
+                }
+
+                #table-of-contents a:hover {
+                    text-decoration: underline;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
 
   </body>
 
