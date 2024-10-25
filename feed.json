@@ -7,10 +7,68 @@
 	"items": [
 		
 			{
+				"id": "http://shamonk.micro.blog/2024/10/23/i-visited-the.html",
+				
+				"content_html": "<p>I visited the Chiba City Museum of Art today. There was a special exhibition titled &ldquo;Rolling the Horizon&rdquo; featuring works by the artist duo Nerhol. To be honest, I found it quite incomprehensible.</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "I visited the Chiba City Museum of Art today. There was a special exhibition titled \"Rolling the Horizon\" featuring works by the artist duo Nerhol. To be honest, I found it quite incomprehensible.\n\n<img src=\"uploads/2024/r0000451.jpg\" width=\"600\" height=\"400\" alt=\"Nerhol's art\">\n",
+				"date_published": "2024-10-23T21:42:56+09:00",
+				"url": "https://blog.yostos.org/2024/10/23/i-visited-the.html"
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/10/23/signal-signalline.html",
+				
+				"content_html": "<p>市川強盗傷害事件で犯人たちが「秘匿性が高い通信アプリを使用」とアプリ名を伏せて報道されています。\nどうやら<a href=\"https://signal.org/ja/\">Signal</a>を使っていたようです。こうなるとバカなメディアや視聴者が「邪悪なアプリ」と騒ぎ出しそうですね。</p>\n<p>プライバシー（この場合「プライバシー」と呼ぶのが適当かわかりませんが)を考慮すると当然の選択ですね。公安や自衛隊でもSignalを奨励しているようです。不完全な暗号化やメタデータ収集を行うLINEとかいうアプリを使っている能天気なメディアや視聴者より、犯人たちのほうがよほどリテラシーがあったということでしょう。</p>\n<p>私自身は<a href=\"https://threema.ch/en\">Threema</a>を使用しています。</p>\n",
+				"content_text": "市川強盗傷害事件で犯人たちが「秘匿性が高い通信アプリを使用」とアプリ名を伏せて報道されています。\nどうやら[Signal](https://signal.org/ja/)を使っていたようです。こうなるとバカなメディアや視聴者が「邪悪なアプリ」と騒ぎ出しそうですね。\n\nプライバシー（この場合「プライバシー」と呼ぶのが適当かわかりませんが)を考慮すると当然の選択ですね。公安や自衛隊でもSignalを奨励しているようです。不完全な暗号化やメタデータ収集を行うLINEとかいうアプリを使っている能天気なメディアや視聴者より、犯人たちのほうがよほどリテラシーがあったということでしょう。\n\n私自身は[Threema](https://threema.ch/en)を使用しています。\n",
+				"date_published": "2024-10-23T08:56:33+09:00",
+				"url": "https://blog.yostos.org/2024/10/23/signal-signalline.html",
+				"tags": ["📰 Current Affairs"]
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/10/23/translucenta-thunderbolt-interface.html",
+				
+				"content_html": "<p>📷 <code>#translucent</code>\nA USB Hub with a translucent top panel showcasing its precision engineering. The design elegantly reveals the sophisticated internal circuitry beneath its minimalist exterior, offering a unique window into modern technology&rsquo;s artistry.</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "📷 `#translucent`\nA USB Hub with a translucent top panel showcasing its precision engineering. The design elegantly reveals the sophisticated internal circuitry beneath its minimalist exterior, offering a unique window into modern technology's artistry.\n\n<figure>\n  <img src=\"uploads/2024/r0000446.jpg\" width=\"600\" height=\"400\" alt=\"dockcase\">\n  <figcaption>Inner Beauty Revealed</figcaption>\n</figure>\n",
+				"date_published": "2024-10-23T08:31:53+09:00",
+				"url": "https://blog.yostos.org/2024/10/23/translucenta-thunderbolt-interface.html",
+				"tags": ["📷 Photo Friday"]
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/10/22/i-had-several.html",
+				
+				"content_html": "<p>I had several exchanges with support about the issue of <strong>pCloud Drive</strong> not activating at startup, but their final response was as follows. The &lsquo;technical&rsquo; support certainly doesn&rsquo;t live up to its name.</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "I had several exchanges with support about the issue of **pCloud Drive** not activating at startup, but their final response was as follows. The 'technical' support certainly doesn't live up to its name.\r\n\r\n<blockquote>\r\n<p>\r\nUnfortunately, we do not have a solution for your issues so you have to mount the virtual drive on each start-up.\"\r\n</p>\r\n<cite>pCloud's Technical Support's response</cite>\r\n</blockquote>\n",
+				"date_published": "2024-10-22T20:03:54+09:00",
+				"url": "https://blog.yostos.org/2024/10/22/i-had-several.html"
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/10/21/toto-africa-yostos.html",
+				
+				"content_html": "<p>Feeling nostalgic, I tried covering TOTO&rsquo;s famous song &ldquo;Africa&rdquo;.</p>\n<p>懐かしくなって、TOTOの名曲 &ldquo;Africa&quot;をカバーしてみました。</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "Feeling nostalgic, I tried covering TOTO's famous song \"Africa\".\n\n懐かしくなって、TOTOの名曲 \"Africa\"をカバーしてみました。\n\n\n<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1938595238&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/yostos\" title=\"Yostos\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Yostos</a> · <a href=\"https://soundcloud.com/yostos/africa\" title=\"Africa\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Africa</a></div>\n",
+				"date_published": "2024-10-21T18:28:01+09:00",
+				"url": "https://blog.yostos.org/2024/10/21/toto-africa-yostos.html"
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/10/21/cloudflareaws-s-usdssget.html",
+				
+				"content_html": "<p>メインブログを CloudflareからAWS S3に移行してみました。\n特に困っていたわけではありませんが、デプロイの自動化していると環境の違いで悩むこともあるのでローカルで生成したものをアップロードしようかなという気まぐれです。</p>\n<p>試算では以下の程度の月額です。大きく外れたらまた戻すかもしれません。</p>\n<table>\n<thead>\n<tr>\n<th>サービス</th>\n<th>コスト項目</th>\n<th>月間コスト (USD)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>S3</td>\n<td>ストレージ</td>\n<td>$0.0075</td>\n</tr>\n<tr>\n<td>S3</td>\n<td>GET リクエスト</td>\n<td>$0.0012</td>\n</tr>\n<tr>\n<td>ACM</td>\n<td>証明書</td>\n<td>$0</td>\n</tr>\n<tr>\n<td>CloudFront</td>\n<td>データ転送</td>\n<td>$0.765</td>\n</tr>\n<tr>\n<td>CloudFront</td>\n<td>HTTPS リクエスト</td>\n<td>$0.00225</td>\n</tr>\n<tr>\n<td><strong>合計</strong></td>\n<td></td>\n<td><strong>$0.78</strong></td>\n</tr>\n</tbody>\n</table>\n",
+				"content_text": "メインブログを CloudflareからAWS S3に移行してみました。\r\n特に困っていたわけではありませんが、デプロイの自動化していると環境の違いで悩むこともあるのでローカルで生成したものをアップロードしようかなという気まぐれです。\r\n\r\n試算では以下の程度の月額です。大きく外れたらまた戻すかもしれません。\r\n\r\n| サービス   | コスト項目       | 月間コスト (USD) |\r\n| ---------- | ---------------- | ---------------- |\r\n| S3         | ストレージ       | $0.0075          |\r\n| S3         | GET リクエスト   | $0.0012          |\r\n| ACM        | 証明書           | $0               |\r\n| CloudFront | データ転送       | $0.765           |\r\n| CloudFront | HTTPS リクエスト | $0.00225         |\r\n| **合計**   |                  | **$0.78**        |\r\n\r\n",
+				"date_published": "2024-10-21T18:26:24+09:00",
+				"url": "https://blog.yostos.org/2024/10/21/cloudflareaws-s-usdssget.html"
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/10/20/ive-decided-to.html",
+				
+				"content_html": "<p>I&rsquo;ve decided to forgo renewing my Microsoft 365 Business Standard subscription (I chose Business instead of Home because it&rsquo;s cheaper) that I&rsquo;ve been using at home. I do have some concerns about Excel, as there are cases where alternatives like Numbers can&rsquo;t fully replace it.</p>\n",
+				"content_text": "I've decided to forgo renewing my Microsoft 365 Business Standard subscription (I chose Business instead of Home because it's cheaper) that I've been using at home. I do have some concerns about Excel, as there are cases where alternatives like Numbers can't fully replace it.\n",
+				"date_published": "2024-10-20T06:35:24+09:00",
+				"url": "https://blog.yostos.org/2024/10/20/ive-decided-to.html"
+			},
+			{
 				"id": "http://shamonk.micro.blog/2024/10/19/weekly-buzz.html",
 				"title": "# Weekly Buzz🐝 2024-10-18",
 				"content_html": "<p>ちょっと間が開いてしまいましたが、この間にすっかり秋らしくなって涼しくなってきました。ただ、今週末も夏日になるというので油断できません。</p>\n<p>今週は、次の2つのトピックを取り上げてみます。</p>\n<ul>\n<li>宮崎空港不発弾について</li>\n<li>Nintendo Alarmoがやってきた</li>\n</ul>\n<h2 id=\"宮崎空港不発弾について\">宮崎空港不発弾について</h2>\n<p>10月2日に突然宮崎空港で不発弾が爆発しました。</p>\n<p>宮崎空港では2021年6月にも駐機場でアメリカ製の1トンの不発弾が見つかっていま\nす。宮崎空港は太平洋戦争当時は旧日本海軍の「赤江飛行場」として使用されてお\nり、米軍による空爆が行われていたことが原因です。2021年以前にも何度か不発弾が\n見つかっています。</p>\n<p>家族が現在宮崎で仕事をしており、私もたまに空港を使うことがあるので困ったもの\nです。</p>\n<p>防衛省の統合幕僚監部が発表する\n「<a href=\"https://www.mod.go.jp/js/pdf/2024/p20240729_02.pdf\">令和5年度における自衛隊の災害派遣</a>」\nを読むと、令和5年度に陸上で発見された不発弾だけでも沖縄だけで441件、全国で\n2,348件に上ります。しかも、終戦から80年近く経過しており、爆発物は不安定な化\n合物で時間が立つにつれより敏感なるため、そのリスクはますます高まっています。</p>\n<p>一方で不発弾撤去については自衛隊が処理に当たっているようですが、その費用負担\nについては法整備がされていません。2018年の大阪の事例では土地所有者が不発弾処\n理のための周辺警備などの費用580万円を負担し「戦後処理の一環として、行政が処\n理責任を負うべき」と裁判を起こしましたが退けられています。</p>\n<p>80年経ってもこれほどの負担を強いる「戦争」などという問題解決方法など安易に取\nるべきではないという教訓ですね。</p>\n<h2 id=\"nintendo-alarmoがやってきた\">Nintendo Alarmoがやってきた</h2>\n<!-- raw HTML omitted -->\n<p>任天堂が突然発売した目覚まし時計Alarmoを手に入れることができました。\nここ数日使っていますが、ベッドに入ると自動的に睡眠を誘う音楽を流してくれ、ス\nプラトゥーンの音楽で目覚ましアラームを鳴らしてくれ、ベッドから出ると指一本触\nれずにアラームが止まります。</p>\n<p>マリオやゼルダ、スプラトゥーンなど、任天堂の豊富なIPを活かしつつ、ゲーム要素を敢えて排除し純粋な目覚まし時計として設計したところが秀逸なところだと思います。</p>\n<p>UIなどボタン3つでここまで使いやすいデバイスに仕上げられるのを見ていると、ど\nこかの自動車メーカーなどぜひ参考にしてほしいものです。</p>",
-				"content_text": "ちょっと間が開いてしまいましたが、この間にすっかり秋らしくなって涼しくなってきました。ただ、今週末も夏日になるというので油断できません。\r\n\r\n\r\n今週は、次の2つのトピックを取り上げてみます。\r\n\r\n- 宮崎空港不発弾について\r\n- Nintendo Alarmoがやってきた\r\n\r\n<!--more-->\r\n\r\n## 宮崎空港不発弾について\r\n\r\n\r\n10月2日に突然宮崎空港で不発弾が爆発しました。\r\n\r\n\r\n宮崎空港では2021年6月にも駐機場でアメリカ製の1トンの不発弾が見つかっていま\r\nす。宮崎空港は太平洋戦争当時は旧日本海軍の「赤江飛行場」として使用されてお\r\nり、米軍による空爆が行われていたことが原因です。2021年以前にも何度か不発弾が\r\n見つかっています。\r\n\r\n\r\n家族が現在宮崎で仕事をしており、私もたまに空港を使うことがあるので困ったもの\r\nです。\r\n\r\n\r\n防衛省の統合幕僚監部が発表する\r\n「[令和5年度における自衛隊の災害派遣](https://www.mod.go.jp/js/pdf/2024/p20240729_02.pdf)」\r\nを読むと、令和5年度に陸上で発見された不発弾だけでも沖縄だけで441件、全国で\r\n2,348件に上ります。しかも、終戦から80年近く経過しており、爆発物は不安定な化\r\n合物で時間が立つにつれより敏感なるため、そのリスクはますます高まっています。\r\n\r\n\r\n一方で不発弾撤去については自衛隊が処理に当たっているようですが、その費用負担\r\nについては法整備がされていません。2018年の大阪の事例では土地所有者が不発弾処\r\n理のための周辺警備などの費用580万円を負担し「戦後処理の一環として、行政が処\r\n理責任を負うべき」と裁判を起こしましたが退けられています。\r\n\r\n\r\n80年経ってもこれほどの負担を強いる「戦争」などという問題解決方法など安易に取\r\nるべきではないという教訓ですね。\r\n\r\n\r\n## Nintendo Alarmoがやってきた\r\n\r\n\r\n\r\n\r\n<img src=\"uploads/2024/nintendo-alarmo.jpg\" width=\"600\" height=\"451\" alt=\"Auto-generated description: A digital alarm clock with a cartoon character displayed is on a wooden surface next to a game controller.\">\r\n\r\n\r\n任天堂が突然発売した目覚まし時計Alarmoを手に入れることができました。\r\nここ数日使っていますが、ベッドに入ると自動的に睡眠を誘う音楽を流してくれ、ス\r\nプラトゥーンの音楽で目覚ましアラームを鳴らしてくれ、ベッドから出ると指一本触\r\nれずにアラームが止まります。\r\n\r\n\r\nマリオやゼルダ、スプラトゥーンなど、任天堂の豊富なIPを活かしつつ、ゲーム要素を敢えて排除し純粋な目覚まし時計として設計したところが秀逸なところだと思います。\r\n\r\n\r\nUIなどボタン3つでここまで使いやすいデバイスに仕上げられるのを見ていると、ど\r\nこかの自動車メーカーなどぜひ参考にしてほしいものです。\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+				"content_text": "ちょっと間が開いてしまいましたが、この間にすっかり秋らしくなって涼しくなってきました。ただ、今週末も夏日になるというので油断できません。\r\n\r\n\r\n今週は、次の2つのトピックを取り上げてみます。\r\n\r\n- 宮崎空港不発弾について\r\n- Nintendo Alarmoがやってきた\r\n\r\n<!--more-->\r\n\r\n## 宮崎空港不発弾について\r\n\r\n\r\n10月2日に突然宮崎空港で不発弾が爆発しました。\r\n\r\n\r\n宮崎空港では2021年6月にも駐機場でアメリカ製の1トンの不発弾が見つかっていま\r\nす。宮崎空港は太平洋戦争当時は旧日本海軍の「赤江飛行場」として使用されてお\r\nり、米軍による空爆が行われていたことが原因です。2021年以前にも何度か不発弾が\r\n見つかっています。\r\n\r\n\r\n家族が現在宮崎で仕事をしており、私もたまに空港を使うことがあるので困ったもの\r\nです。\r\n\r\n\r\n防衛省の統合幕僚監部が発表する\r\n「[令和5年度における自衛隊の災害派遣](https://www.mod.go.jp/js/pdf/2024/p20240729_02.pdf)」\r\nを読むと、令和5年度に陸上で発見された不発弾だけでも沖縄だけで441件、全国で\r\n2,348件に上ります。しかも、終戦から80年近く経過しており、爆発物は不安定な化\r\n合物で時間が立つにつれより敏感なるため、そのリスクはますます高まっています。\r\n\r\n\r\n一方で不発弾撤去については自衛隊が処理に当たっているようですが、その費用負担\r\nについては法整備がされていません。2018年の大阪の事例では土地所有者が不発弾処\r\n理のための周辺警備などの費用580万円を負担し「戦後処理の一環として、行政が処\r\n理責任を負うべき」と裁判を起こしましたが退けられています。\r\n\r\n\r\n80年経ってもこれほどの負担を強いる「戦争」などという問題解決方法など安易に取\r\nるべきではないという教訓ですね。\r\n\r\n\r\n## Nintendo Alarmoがやってきた\r\n\r\n\r\n\r\n\r\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/nintendo-alarmo.jpg\" width=\"600\" height=\"451\" alt=\"Auto-generated description: A digital alarm clock with a cartoon character displayed is on a wooden surface next to a game controller.\">\r\n\r\n\r\n任天堂が突然発売した目覚まし時計Alarmoを手に入れることができました。\r\nここ数日使っていますが、ベッドに入ると自動的に睡眠を誘う音楽を流してくれ、ス\r\nプラトゥーンの音楽で目覚ましアラームを鳴らしてくれ、ベッドから出ると指一本触\r\nれずにアラームが止まります。\r\n\r\n\r\nマリオやゼルダ、スプラトゥーンなど、任天堂の豊富なIPを活かしつつ、ゲーム要素を敢えて排除し純粋な目覚まし時計として設計したところが秀逸なところだと思います。\r\n\r\n\r\nUIなどボタン3つでここまで使いやすいデバイスに仕上げられるのを見ていると、ど\r\nこかの自動車メーカーなどぜひ参考にしてほしいものです。\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
 				"date_published": "2024-10-19T11:34:31+09:00",
 				"url": "https://blog.yostos.org/2024/10/19/weekly-buzz.html",
 				"tags": ["🐝 Weekly Buzz"]
@@ -19,7 +77,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/18/131635.html",
 				
 				"content_html": "<p>佐倉市の佐倉ふるさと広場に昨日行ってきました。\n大阪から猿回しが来ていて、久しぶりに見て楽しめました。</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "佐倉市の佐倉ふるさと広場に昨日行ってきました。\r\n大阪から猿回しが来ていて、久しぶりに見て楽しめました。\n\n<img src=\"uploads/2024/r0000428.jpg\" width=\"600\" height=\"400\" alt=\"\"><img src=\"uploads/2024/r0000406.jpg\" width=\"600\" height=\"400\" alt=\"\">\n",
+				"content_text": "佐倉市の佐倉ふるさと広場に昨日行ってきました。\r\n大阪から猿回しが来ていて、久しぶりに見て楽しめました。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000428.jpg\" width=\"600\" height=\"400\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000406.jpg\" width=\"600\" height=\"400\" alt=\"\">\n",
 				"date_published": "2024-10-18T13:16:35+09:00",
 				"url": "https://blog.yostos.org/2024/10/18/131635.html"
 			},
@@ -35,7 +93,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/16/lost-the-ruins.html",
 				
 				"content_html": "<p>📷 #lost</p>\n<!-- raw HTML omitted -->\n<p>The ruins of Kemigawa Transmitting Station, once broadcasting Japan&rsquo;s voice to the world since the late Taisho era.\nDo countless words etched in history still slumber behind those rusted doors?</p>\n",
-				"content_text": "📷 #lost\n\n<figure>\n<img src=\"uploads/2024/r0000372.jpg\" width=\"600\" height=\"400\" alt=\"The ruins of Kemigawa Transmitting Station\">\n<figcaption>\n Station of Oblivion\n    </figcaption>\n</figure>\n\nThe ruins of Kemigawa Transmitting Station, once broadcasting Japan's voice to the world since the late Taisho era.\nDo countless words etched in history still slumber behind those rusted doors?\n\n\n\n\n\n\n\n",
+				"content_text": "📷 #lost\n\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000372.jpg\" width=\"600\" height=\"400\" alt=\"The ruins of Kemigawa Transmitting Station\">\n<figcaption>\n Station of Oblivion\n    </figcaption>\n</figure>\n\nThe ruins of Kemigawa Transmitting Station, once broadcasting Japan's voice to the world since the late Taisho era.\nDo countless words etched in history still slumber behind those rusted doors?\n\n\n\n\n\n\n\n",
 				"date_published": "2024-10-16T16:28:13+09:00",
 				"url": "https://blog.yostos.org/2024/10/16/lost-the-ruins.html",
 				"tags": ["📷 Photo Friday"]
