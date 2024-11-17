@@ -1,11 +1,63 @@
 {
 	"version": "https://jsonfeed.org/version/1",
-	"title": "Yostos Micro Blog",
+	"title": "yostos blog",
 	"icon": "https://micro.blog/yostos/avatar.jpg",
 	"home_page_url": "https://blog.yostos.org/",
 	"feed_url": "https://blog.yostos.org/feed.json",
 	"items": [
 		
+			{
+				"id": "http://shamonk.micro.blog/2024/11/15/the-inexpensive-semicustom.html",
+				
+				"content_html": "<p>The inexpensive semi-custom 🎸 I bought in August. Since there’s no undercoat treatment, the topcoat paint is all bumpy (lol). I like the  sound, but maybe because I changed the body wood to ash, the weight exceeds 4 kg.</p>\n<p>Since I bought a Fender, I’m thinking of selling it.</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "The inexpensive semi-custom 🎸 I bought in August. Since there’s no undercoat treatment, the topcoat paint is all bumpy (lol). I like the  sound, but maybe because I changed the body wood to ash, the weight exceeds 4 kg.\r\n\r\nSince I bought a Fender, I’m thinking of selling it.\n\n<img src=\"uploads/2024/2.jpg\" width=\"600\" height=\"511\" alt=\"A close-up of a sunburst electric guitar with a white pickguard and three single-coil pickups is shown.\">\n",
+				"date_published": "2024-11-15T13:02:30+09:00",
+				"url": "https://blog.yostos.org/2024/11/15/the-inexpensive-semicustom.html",
+				"tags": ["🎸 Guitar"]
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/11/14/finished-reading-tomorrow.html",
+				
+				"content_html": "<p>Finished reading: <a href=\"https://micro.blog/books/9780593321201\">Tomorrow, and Tomorrow, and Tomorrow</a> by Gabrielle Zevin 📚</p>\n<p>少し前に話題だったので読みました。</p>\n<p>Bill Gatesも彼のブログ記事 ”<a href=\"https://www.gatesnotes.com/Tomorrow-and-Tomorrow-and-Tomorrow\">This novel about video games felt personal to me</a>”で取り上げたりしたので人気だったのかな。</p>\n<blockquote>\n<p>Either way, I don’t think you need to be a hardcore gamer to enjoy Gabrielle Zevin’s terrific novel Tomorrow, and Tomorrow, and Tomorrow. It tells the story of Sam and Sadie, two friends who bond over Super Mario Bros. as kids and grow up to make video games together.</p>\n</blockquote>\n<p>「ゲームと現実の対比」、「ハリウッド的な結末でない現実的なストーリー」、「キャラクタの深み」などと評価されているようですが、正直現実っぽいストーリーが書かれているだけで正直「だから何？」と思ってしまいました。他の人の書評を見ても大半があらすじを書いているだけなので、そういうことかなと。</p>\n<p>1980年代後半から1990年代くらいまでの、「個人」がゲーム作者として名を上げることができた時代はBill Gatesと同様世代的に懐かしいなとは思いました。</p>\n",
+				"content_text": "Finished reading: [Tomorrow, and Tomorrow, and Tomorrow](https://micro.blog/books/9780593321201) by Gabrielle Zevin 📚\r\n\r\n少し前に話題だったので読みました。\r\n\r\nBill Gatesも彼のブログ記事 ”[This novel about video games felt personal to me](https://www.gatesnotes.com/Tomorrow-and-Tomorrow-and-Tomorrow)”で取り上げたりしたので人気だったのかな。\r\n\r\n> Either way, I don’t think you need to be a hardcore gamer to enjoy Gabrielle Zevin’s terrific novel Tomorrow, and Tomorrow, and Tomorrow. It tells the story of Sam and Sadie, two friends who bond over Super Mario Bros. as kids and grow up to make video games together. \r\n\r\n「ゲームと現実の対比」、「ハリウッド的な結末でない現実的なストーリー」、「キャラクタの深み」などと評価されているようですが、正直現実っぽいストーリーが書かれているだけで正直「だから何？」と思ってしまいました。他の人の書評を見ても大半があらすじを書いているだけなので、そういうことかなと。\r\n\r\n1980年代後半から1990年代くらいまでの、「個人」がゲーム作者として名を上げることができた時代はBill Gatesと同様世代的に懐かしいなとは思いました。 \n",
+				"date_published": "2024-11-14T09:41:51+09:00",
+				"url": "https://blog.yostos.org/2024/11/14/finished-reading-tomorrow.html",
+				"tags": ["📚 Books"]
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/11/14/subtle-silence-and.html",
+				
+				"content_html": "<p>📷 <code>subtle</code></p>\n<!-- raw HTML omitted -->\n<p>Soft light gently fills the traditional Japanese room, enveloping the space in quietude. The minimalist design and natural textures create a serene atmosphere, inviting a moment of stillness and reflection.</p>\n",
+				"content_text": "📷 `subtle`\r\n\r\n<figure>\r\n<img src=\"uploads/2024/r0000429.jpg\" width=\"600\" height=\"400\" alt=\"Auto-generated description: A traditional Japanese tatami room features cushions on the floor, a paper lantern, and a view of a garden through a shoji screen.\">\r\n<figcaption>Silence and Light</figcaption>\r\n</figure>\r\n\r\nSoft light gently fills the traditional Japanese room, enveloping the space in quietude. The minimalist design and natural textures create a serene atmosphere, inviting a moment of stillness and reflection.\n",
+				"date_published": "2024-11-14T09:08:07+09:00",
+				"url": "https://blog.yostos.org/2024/11/14/subtle-silence-and.html",
+				"tags": ["📷 Photo Friday"]
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/11/14/perplexity-profree-plan.html",
+				
+				"content_html": "<p>先月末から<strong>Perplexity Pro</strong>を使っていますが、Free Planでも十分かなと感じています。</p>\n<p>ProではGPT-4やClaude 3.5などのエンジンが使えて便利ですが、リアルタイム検索をAIに任せると、ソースは提示されるものの、Hallucinationが増える印象を受けました。画像生成機能もありますが、プロンプトを細かく扱えず、検索結果から生成されるだけなので使い勝手はいまひとつです。</p>\n<p>先月まで利用していたClaudeのArtifacts機能が便利でしたが、ChatGPTも<strong>Canvas</strong>という機能を出してきたので来月はこちらを検証しようかと思います。</p>\n",
+				"content_text": "先月末から**Perplexity Pro**を使っていますが、Free Planでも十分かなと感じています。\r\n\r\nProではGPT-4やClaude 3.5などのエンジンが使えて便利ですが、リアルタイム検索をAIに任せると、ソースは提示されるものの、Hallucinationが増える印象を受けました。画像生成機能もありますが、プロンプトを細かく扱えず、検索結果から生成されるだけなので使い勝手はいまひとつです。\r\n\r\n先月まで利用していたClaudeのArtifacts機能が便利でしたが、ChatGPTも**Canvas**という機能を出してきたので来月はこちらを検証しようかと思います。\n",
+				"date_published": "2024-11-14T08:35:32+09:00",
+				"url": "https://blog.yostos.org/2024/11/14/perplexity-profree-plan.html"
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/11/12/bartender-was-menu.html",
+				
+				"content_html": "<p><a href=\"https://www.macbartender.com/\">Bartender</a> was menu bar wizard I&rsquo;d been geeking out over. Turned out Ben Surtees had sold it to some shadowy outfit called Applause in March 2024. Reddit blew up with users freaking out.\nToday, I&rsquo;ve now ditched Bartender for Ice,too.</p>\n<p>Keep it FOSS, keep it safe, am I right?</p>\n",
+				"content_text": "[Bartender](https://www.macbartender.com/) was menu bar wizard I'd been geeking out over. Turned out Ben Surtees had sold it to some shadowy outfit called Applause in March 2024. Reddit blew up with users freaking out.\r\nToday, I've now ditched Bartender for Ice,too. \r\n\r\nKeep it FOSS, keep it safe, am I right?\r\n\r\n",
+				"date_published": "2024-11-12T18:26:38+09:00",
+				"url": "https://blog.yostos.org/2024/11/12/bartender-was-menu.html"
+			},
+			{
+				"id": "http://shamonk.micro.blog/2024/11/11/i-always-wanted.html",
+				
+				"content_html": "<p>I always wanted an original Fender🎸 at least once in my life. And by pure chance, I stumbled upon a <strong>70th Anniversary American Vintage II 1954 Stratocaster</strong> and it&rsquo;s only <strong>3.5Kg</strong>  - an absolute gem! I sped off in my car and bought it on the spot! Now, I&rsquo;ll let it sit for a while to cool off.</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "I always wanted an original Fender🎸 at least once in my life. And by pure chance, I stumbled upon a **70th Anniversary American Vintage II 1954 Stratocaster** and it's only **3.5Kg**  - an absolute gem! I sped off in my car and bought it on the spot! Now, I'll let it sit for a while to cool off.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/strat1954.jpg\" width=\"600\" height=\"451\" alt=\"A close-up view of a 70th Anniversary 1954 Stratocaster guitar showing its label.\">\n",
+				"date_published": "2024-11-11T17:38:07+09:00",
+				"url": "https://blog.yostos.org/2024/11/11/i-always-wanted.html",
+				"tags": ["🎸 Guitar"]
+			},
 			{
 				"id": "http://shamonk.micro.blog/2024/11/10/macnetflixkcaldigit-ts-plusdisplayportcaldigit.html",
 				
@@ -77,7 +129,7 @@
 				"id": "http://shamonk.micro.blog/2024/11/05/180520.html",
 				
 				"content_html": "<p>📷 <code>bold</code></p>\n<!-- raw HTML omitted -->\n<p>A pier stands resolute against the endless sea, cutting a pristine line toward where sky meets ocean. Its dignified presence, stark yet graceful, commands the vast seascape in perfect stillness. Shot with <strong>Nikon Ti35</strong>.</p>\n",
-				"content_text": "📷 `bold`\n<figure>\n<img src=\"uploads/2024/31450004.jpg\" width=\"600\" height=\"404\" alt=\"A long wooden pier stretches out into the calm ocean under a partly cloudy sky.\">\n<figcapture>Serene Geometry</figcapture>\n</figure>\n\nA pier stands resolute against the endless sea, cutting a pristine line toward where sky meets ocean. Its dignified presence, stark yet graceful, commands the vast seascape in perfect stillness. Shot with **Nikon Ti35**.\n",
+				"content_text": "📷 `bold`\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/31450004.jpg\" width=\"600\" height=\"404\" alt=\"A long wooden pier stretches out into the calm ocean under a partly cloudy sky.\">\n<figcapture>Serene Geometry</figcapture>\n</figure>\n\nA pier stands resolute against the endless sea, cutting a pristine line toward where sky meets ocean. Its dignified presence, stark yet graceful, commands the vast seascape in perfect stillness. Shot with **Nikon Ti35**.\n",
 				"date_published": "2024-11-05T18:05:20+09:00",
 				"url": "https://blog.yostos.org/2024/11/05/180520.html",
 				"tags": ["📷 Photo Friday"]
@@ -104,7 +156,7 @@
 				"id": "http://shamonk.micro.blog/2024/11/02/blueskytheads-midjourney.html",
 				
 				"content_html": "<p>このブログはBlueskyやTheadsにもフィードしていますが、その際プロフィール画像がついています。自分の写真を使っていましたが、ちょっと気になってしまいイラストに置き換えました。</p>\n<p>元の写真を元にMidjourneyで画像生成していたのですが、全然いい感じならず。面倒になってスプラトゥーン風イラストに。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "このブログはBlueskyやTheadsにもフィードしていますが、その際プロフィール画像がついています。自分の写真を使っていましたが、ちょっと気になってしまいイラストに置き換えました。\n\n元の写真を元にMidjourneyで画像生成していたのですが、全然いい感じならず。面倒になってスプラトゥーン風イラストに。\n\n<img src=\"uploads/2024/51cddd520b.jpg\" width=\"600\" height=\"149\" alt=\"image\">\n",
+				"content_text": "このブログはBlueskyやTheadsにもフィードしていますが、その際プロフィール画像がついています。自分の写真を使っていましたが、ちょっと気になってしまいイラストに置き換えました。\n\n元の写真を元にMidjourneyで画像生成していたのですが、全然いい感じならず。面倒になってスプラトゥーン風イラストに。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/51cddd520b.jpg\" width=\"600\" height=\"149\" alt=\"image\">\n",
 				"date_published": "2024-11-02T12:53:30+09:00",
 				"url": "https://blog.yostos.org/2024/11/02/blueskytheads-midjourney.html"
 			},
@@ -130,7 +182,7 @@
 				"id": "http://shamonk.micro.blog/2024/11/01/intel-nhk-cpuamdtsmcai.html",
 				
 				"content_html": "<p>Intelは今期も赤字で、しかも2兆円を上回る赤字だったそうです。</p>\n<!-- raw HTML omitted -->\n<p>今回は減損処理による特別損失のようですが、近年はCPU市場ではAMDの台頭、製造プロセスではTSMCに対抗できず、AI向けチップは完全に出遅れています。</p>\n<p>以下はPerplexityで作成したPC向けCPUのシェアです。AppleのIntel離反があるにしてもAMDにかなりやられているのがよくわかります(2021年以前についてはデータがないので、断片情報からの類推が含まれています。)</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Intelは今期も赤字で、しかも2兆円を上回る赤字だったそうです。\n\n<blockquote cite=\"https://www3.nhk.or.jp/news/html/20241101/k10014625881000.html\">\n<p>\n売り上げは前の年の同じ時期より6％減少して132億8400万ドル、日本円でおよそ2兆100億円、最終的な損益は166億3900万ドルの赤字、日本円でおよそ2兆5200億円の赤字でした。最終赤字となるのは3四半期連続です。</p>\n<cite><a href=\"https://www3.nhk.or.jp/news/html/20241101/k10014625881000.html\">米 インテル 約2兆5000億円の最終赤字 半導体めぐる競争で | NHK</a></cite>\n</blockquote>\n\n今回は減損処理による特別損失のようですが、近年はCPU市場ではAMDの台頭、製造プロセスではTSMCに対抗できず、AI向けチップは完全に出遅れています。\n\n以下はPerplexityで作成したPC向けCPUのシェアです。AppleのIntel離反があるにしてもAMDにかなりやられているのがよくわかります(2021年以前についてはデータがないので、断片情報からの類推が含まれています。)\n\n\n\n<img src=\"uploads/2024/intel-vs-amd.webp\" width=\"600\" height=\"297\" alt=\"\">\n",
+				"content_text": "Intelは今期も赤字で、しかも2兆円を上回る赤字だったそうです。\n\n<blockquote cite=\"https://www3.nhk.or.jp/news/html/20241101/k10014625881000.html\">\n<p>\n売り上げは前の年の同じ時期より6％減少して132億8400万ドル、日本円でおよそ2兆100億円、最終的な損益は166億3900万ドルの赤字、日本円でおよそ2兆5200億円の赤字でした。最終赤字となるのは3四半期連続です。</p>\n<cite><a href=\"https://www3.nhk.or.jp/news/html/20241101/k10014625881000.html\">米 インテル 約2兆5000億円の最終赤字 半導体めぐる競争で | NHK</a></cite>\n</blockquote>\n\n今回は減損処理による特別損失のようですが、近年はCPU市場ではAMDの台頭、製造プロセスではTSMCに対抗できず、AI向けチップは完全に出遅れています。\n\n以下はPerplexityで作成したPC向けCPUのシェアです。AppleのIntel離反があるにしてもAMDにかなりやられているのがよくわかります(2021年以前についてはデータがないので、断片情報からの類推が含まれています。)\n\n\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/intel-vs-amd.webp\" width=\"600\" height=\"297\" alt=\"\">\n",
 				"date_published": "2024-11-01T09:26:15+09:00",
 				"url": "https://blog.yostos.org/2024/11/01/intel-nhk-cpuamdtsmcai.html",
 				"tags": ["📰 Current Affairs"]
@@ -155,7 +207,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/30/eroded.html",
 				
 				"content_html": "<p>📷 <code>Eroded</code></p>\n<!-- raw HTML omitted -->\n<p>The history of life etched in the earth emerges before us as an exposed root system. Years of erosion have revealed the tree&rsquo;s lifelines, normally invisible to our eyes. This organic pattern appears as nature&rsquo;s artistry of eroded time.</p>\n",
-				"content_text": "📷 `Eroded`\n\n<figure>\n<img src=\"uploads/2024/r0000481.jpg\" width=\"600\" height=\"400\" alt=\"A tree with sprawling roots extends across a moss-covered ground\" loading=\"lazy\" >\n<figcaption>Temporal Veins</figcaption>\n</figure>\n\nThe history of life etched in the earth emerges before us as an exposed root system. Years of erosion have revealed the tree's lifelines, normally invisible to our eyes. This organic pattern appears as nature's artistry of eroded time. \n",
+				"content_text": "📷 `Eroded`\n\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000481.jpg\" width=\"600\" height=\"400\" alt=\"A tree with sprawling roots extends across a moss-covered ground\" loading=\"lazy\" >\n<figcaption>Temporal Veins</figcaption>\n</figure>\n\nThe history of life etched in the earth emerges before us as an exposed root system. Years of erosion have revealed the tree's lifelines, normally invisible to our eyes. This organic pattern appears as nature's artistry of eroded time. \n",
 				"date_published": "2024-10-30T20:09:03+09:00",
 				"url": "https://blog.yostos.org/2024/10/30/eroded.html",
 				"tags": ["📷 Photo Friday"]
@@ -164,7 +216,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/29/greco-svgibson-es.html",
 				
 				"content_html": "<p>先日実家で昔購入し実家を出るときに放置していたGrecoのセミアコ🎸を発掘。</p>\n<p>ラベルを確認して「SV-600」というモデルだと判明。1979年から1年半程度しか生産されなかったレアモデル。\nこのモデルはフジゲンが製作を担当しており、Gibson ES-335っぽいが小振りで独自の解釈で設計されています。</p>\n<p>シリアル番号から、おそらく1979年6月生産の初期の個体。初期モデルのSV-600はPUはU-2000のはずですが、なぜか上位モデルのSV-800と同じPU-2が2発搭載されていました。</p>\n<p>40年近い眠りから目覚めさせるべく、現在以下のリストア作業中。</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "先日実家で昔購入し実家を出るときに放置していたGrecoのセミアコ🎸を発掘。\r\n\r\nラベルを確認して「SV-600」というモデルだと判明。1979年から1年半程度しか生産されなかったレアモデル。\r\nこのモデルはフジゲンが製作を担当しており、Gibson ES-335っぽいが小振りで独自の解釈で設計されています。\r\n\r\nシリアル番号から、おそらく1979年6月生産の初期の個体。初期モデルのSV-600はPUはU-2000のはずですが、なぜか上位モデルのSV-800と同じPU-2が2発搭載されていました。\r\n\r\n40年近い眠りから目覚めさせるべく、現在以下のリストア作業中。\r\n\r\n\r\n\n\n<img src=\"uploads/2024/sv-600.jpg\" width=\"600\" height=\"365\" alt=\"Greco SV-600\"><img src=\"uploads/2024/af83cbf5c0.jpg\" width=\"600\" height=\"328\" alt=\"Label \">\n",
+				"content_text": "先日実家で昔購入し実家を出るときに放置していたGrecoのセミアコ🎸を発掘。\r\n\r\nラベルを確認して「SV-600」というモデルだと判明。1979年から1年半程度しか生産されなかったレアモデル。\r\nこのモデルはフジゲンが製作を担当しており、Gibson ES-335っぽいが小振りで独自の解釈で設計されています。\r\n\r\nシリアル番号から、おそらく1979年6月生産の初期の個体。初期モデルのSV-600はPUはU-2000のはずですが、なぜか上位モデルのSV-800と同じPU-2が2発搭載されていました。\r\n\r\n40年近い眠りから目覚めさせるべく、現在以下のリストア作業中。\r\n\r\n\r\n\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/sv-600.jpg\" width=\"600\" height=\"365\" alt=\"Greco SV-600\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/af83cbf5c0.jpg\" width=\"600\" height=\"328\" alt=\"Label \">\n",
 				"date_published": "2024-10-29T16:27:45+09:00",
 				"url": "https://blog.yostos.org/2024/10/29/greco-svgibson-es.html",
 				"tags": ["🎸 Guitar"]
@@ -182,7 +234,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/28/102102.html",
 				
 				"content_html": "<p>✈️ 世界遺産「大峯奥駈道」と日本百名山「大台ケ原」に囲まれた奈良県上北山村。この地の「<strong>フォレストかみきた</strong>」で週末を過ごしました。宿の脇を流れる小谷川は大台ケ原からの伏流水が注ぐ清流。上流に人は住まないため水道水をそののままいただけて冷たく美味しい。その清流で育つあまごの塩焼きは絶品。</p>\n<p>客室には自転車ハンガーが設置され、サイクリストへの配慮が行き届いています。この地域は大台ケ原へと続く標高差1,240メートルのヒルクライムコースで自転車の聖地として有名です。私は自転車に乗りませんが。</p>\n<p>雄大な自然に囲まれた静かな時間は、心身ともにリフレッシュできる贅沢な体験となりました。</p>\n<!-- raw HTML omitted -->\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "✈️ 世界遺産「大峯奥駈道」と日本百名山「大台ケ原」に囲まれた奈良県上北山村。この地の「**フォレストかみきた**」で週末を過ごしました。宿の脇を流れる小谷川は大台ケ原からの伏流水が注ぐ清流。上流に人は住まないため水道水をそののままいただけて冷たく美味しい。その清流で育つあまごの塩焼きは絶品。\n\n客室には自転車ハンガーが設置され、サイクリストへの配慮が行き届いています。この地域は大台ケ原へと続く標高差1,240メートルのヒルクライムコースで自転車の聖地として有名です。私は自転車に乗りませんが。\n\n雄大な自然に囲まれた静かな時間は、心身ともにリフレッシュできる贅沢な体験となりました。\n\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1690777.884116044!2d134.68247636509187!3d34.138651973124595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60068e41bc69bb83%3A0x5ece800d51d7f58b!2z44OV44Kp44Os44K544OI44GL44G_44GN44Gf!5e0!3m2!1sja!2sjp!4v1730077764738!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>\n\n<img src=\"uploads/2024/pxl-20241026-063831622.jpg\" width=\"600\" height=\"451\" alt=\"小谷川\"><img src=\"uploads/2024/pxl-20241026-091004990.jpg\" width=\"600\" height=\"451\" alt=\"あまごの塩焼き\">\n",
+				"content_text": "✈️ 世界遺産「大峯奥駈道」と日本百名山「大台ケ原」に囲まれた奈良県上北山村。この地の「**フォレストかみきた**」で週末を過ごしました。宿の脇を流れる小谷川は大台ケ原からの伏流水が注ぐ清流。上流に人は住まないため水道水をそののままいただけて冷たく美味しい。その清流で育つあまごの塩焼きは絶品。\n\n客室には自転車ハンガーが設置され、サイクリストへの配慮が行き届いています。この地域は大台ケ原へと続く標高差1,240メートルのヒルクライムコースで自転車の聖地として有名です。私は自転車に乗りませんが。\n\n雄大な自然に囲まれた静かな時間は、心身ともにリフレッシュできる贅沢な体験となりました。\n\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1690777.884116044!2d134.68247636509187!3d34.138651973124595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60068e41bc69bb83%3A0x5ece800d51d7f58b!2z44OV44Kp44Os44K544OI44GL44G_44GN44Gf!5e0!3m2!1sja!2sjp!4v1730077764738!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20241026-063831622.jpg\" width=\"600\" height=\"451\" alt=\"小谷川\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20241026-091004990.jpg\" width=\"600\" height=\"451\" alt=\"あまごの塩焼き\">\n",
 				"date_published": "2024-10-28T10:21:02+09:00",
 				"url": "https://blog.yostos.org/2024/10/28/102102.html"
 			},
@@ -199,7 +251,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/23/i-visited-the.html",
 				
 				"content_html": "<p>I visited the Chiba City Museum of Art today. There was a special exhibition titled &ldquo;Rolling the Horizon&rdquo; featuring works by the artist duo Nerhol. To be honest, I found it quite incomprehensible.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I visited the Chiba City Museum of Art today. There was a special exhibition titled \"Rolling the Horizon\" featuring works by the artist duo Nerhol. To be honest, I found it quite incomprehensible.\n\n<img src=\"uploads/2024/r0000451.jpg\" width=\"600\" height=\"400\" alt=\"Nerhol's art\">\n",
+				"content_text": "I visited the Chiba City Museum of Art today. There was a special exhibition titled \"Rolling the Horizon\" featuring works by the artist duo Nerhol. To be honest, I found it quite incomprehensible.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000451.jpg\" width=\"600\" height=\"400\" alt=\"Nerhol's art\">\n",
 				"date_published": "2024-10-23T21:42:56+09:00",
 				"url": "https://blog.yostos.org/2024/10/23/i-visited-the.html"
 			},
@@ -216,7 +268,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/23/translucenta-thunderbolt-interface.html",
 				
 				"content_html": "<p>📷 <code>#translucent</code>\nA USB Hub with a translucent top panel showcasing its precision engineering. The design elegantly reveals the sophisticated internal circuitry beneath its minimalist exterior, offering a unique window into modern technology&rsquo;s artistry.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 `#translucent`\nA USB Hub with a translucent top panel showcasing its precision engineering. The design elegantly reveals the sophisticated internal circuitry beneath its minimalist exterior, offering a unique window into modern technology's artistry.\n\n<figure>\n  <img src=\"uploads/2024/r0000446.jpg\" width=\"600\" height=\"400\" alt=\"dockcase\">\n  <figcaption>Inner Beauty Revealed</figcaption>\n</figure>\n",
+				"content_text": "📷 `#translucent`\nA USB Hub with a translucent top panel showcasing its precision engineering. The design elegantly reveals the sophisticated internal circuitry beneath its minimalist exterior, offering a unique window into modern technology's artistry.\n\n<figure>\n  <img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000446.jpg\" width=\"600\" height=\"400\" alt=\"dockcase\">\n  <figcaption>Inner Beauty Revealed</figcaption>\n</figure>\n",
 				"date_published": "2024-10-23T08:31:53+09:00",
 				"url": "https://blog.yostos.org/2024/10/23/translucenta-thunderbolt-interface.html",
 				"tags": ["📷 Photo Friday"]
@@ -258,7 +310,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/19/weekly-buzz.html",
 				"title": "# Weekly Buzz🐝 2024-10-18",
 				"content_html": "<p>ちょっと間が開いてしまいましたが、この間にすっかり秋らしくなって涼しくなってきました。ただ、今週末も夏日になるというので油断できません。</p>\n<p>今週は、次の2つのトピックを取り上げてみます。</p>\n<ul>\n<li>宮崎空港不発弾について</li>\n<li>Nintendo Alarmoがやってきた</li>\n</ul>\n<h2 id=\"宮崎空港不発弾について\">宮崎空港不発弾について</h2>\n<p>10月2日に突然宮崎空港で不発弾が爆発しました。</p>\n<p>宮崎空港では2021年6月にも駐機場でアメリカ製の1トンの不発弾が見つかっていま\nす。宮崎空港は太平洋戦争当時は旧日本海軍の「赤江飛行場」として使用されてお\nり、米軍による空爆が行われていたことが原因です。2021年以前にも何度か不発弾が\n見つかっています。</p>\n<p>家族が現在宮崎で仕事をしており、私もたまに空港を使うことがあるので困ったもの\nです。</p>\n<p>防衛省の統合幕僚監部が発表する\n「<a href=\"https://www.mod.go.jp/js/pdf/2024/p20240729_02.pdf\">令和5年度における自衛隊の災害派遣</a>」\nを読むと、令和5年度に陸上で発見された不発弾だけでも沖縄だけで441件、全国で\n2,348件に上ります。しかも、終戦から80年近く経過しており、爆発物は不安定な化\n合物で時間が立つにつれより敏感なるため、そのリスクはますます高まっています。</p>\n<p>一方で不発弾撤去については自衛隊が処理に当たっているようですが、その費用負担\nについては法整備がされていません。2018年の大阪の事例では土地所有者が不発弾処\n理のための周辺警備などの費用580万円を負担し「戦後処理の一環として、行政が処\n理責任を負うべき」と裁判を起こしましたが退けられています。</p>\n<p>80年経ってもこれほどの負担を強いる「戦争」などという問題解決方法など安易に取\nるべきではないという教訓ですね。</p>\n<h2 id=\"nintendo-alarmoがやってきた\">Nintendo Alarmoがやってきた</h2>\n<!-- raw HTML omitted -->\n<p>任天堂が突然発売した目覚まし時計Alarmoを手に入れることができました。\nここ数日使っていますが、ベッドに入ると自動的に睡眠を誘う音楽を流してくれ、ス\nプラトゥーンの音楽で目覚ましアラームを鳴らしてくれ、ベッドから出ると指一本触\nれずにアラームが止まります。</p>\n<p>マリオやゼルダ、スプラトゥーンなど、任天堂の豊富なIPを活かしつつ、ゲーム要素を敢えて排除し純粋な目覚まし時計として設計したところが秀逸なところだと思います。</p>\n<p>UIなどボタン3つでここまで使いやすいデバイスに仕上げられるのを見ていると、ど\nこかの自動車メーカーなどぜひ参考にしてほしいものです。</p>",
-				"content_text": "ちょっと間が開いてしまいましたが、この間にすっかり秋らしくなって涼しくなってきました。ただ、今週末も夏日になるというので油断できません。\r\n\r\n\r\n今週は、次の2つのトピックを取り上げてみます。\r\n\r\n- 宮崎空港不発弾について\r\n- Nintendo Alarmoがやってきた\r\n\r\n<!--more-->\r\n\r\n## 宮崎空港不発弾について\r\n\r\n\r\n10月2日に突然宮崎空港で不発弾が爆発しました。\r\n\r\n\r\n宮崎空港では2021年6月にも駐機場でアメリカ製の1トンの不発弾が見つかっていま\r\nす。宮崎空港は太平洋戦争当時は旧日本海軍の「赤江飛行場」として使用されてお\r\nり、米軍による空爆が行われていたことが原因です。2021年以前にも何度か不発弾が\r\n見つかっています。\r\n\r\n\r\n家族が現在宮崎で仕事をしており、私もたまに空港を使うことがあるので困ったもの\r\nです。\r\n\r\n\r\n防衛省の統合幕僚監部が発表する\r\n「[令和5年度における自衛隊の災害派遣](https://www.mod.go.jp/js/pdf/2024/p20240729_02.pdf)」\r\nを読むと、令和5年度に陸上で発見された不発弾だけでも沖縄だけで441件、全国で\r\n2,348件に上ります。しかも、終戦から80年近く経過しており、爆発物は不安定な化\r\n合物で時間が立つにつれより敏感なるため、そのリスクはますます高まっています。\r\n\r\n\r\n一方で不発弾撤去については自衛隊が処理に当たっているようですが、その費用負担\r\nについては法整備がされていません。2018年の大阪の事例では土地所有者が不発弾処\r\n理のための周辺警備などの費用580万円を負担し「戦後処理の一環として、行政が処\r\n理責任を負うべき」と裁判を起こしましたが退けられています。\r\n\r\n\r\n80年経ってもこれほどの負担を強いる「戦争」などという問題解決方法など安易に取\r\nるべきではないという教訓ですね。\r\n\r\n\r\n## Nintendo Alarmoがやってきた\r\n\r\n\r\n\r\n\r\n<img src=\"uploads/2024/nintendo-alarmo.jpg\" width=\"600\" height=\"451\" alt=\"Auto-generated description: A digital alarm clock with a cartoon character displayed is on a wooden surface next to a game controller.\">\r\n\r\n\r\n任天堂が突然発売した目覚まし時計Alarmoを手に入れることができました。\r\nここ数日使っていますが、ベッドに入ると自動的に睡眠を誘う音楽を流してくれ、ス\r\nプラトゥーンの音楽で目覚ましアラームを鳴らしてくれ、ベッドから出ると指一本触\r\nれずにアラームが止まります。\r\n\r\n\r\nマリオやゼルダ、スプラトゥーンなど、任天堂の豊富なIPを活かしつつ、ゲーム要素を敢えて排除し純粋な目覚まし時計として設計したところが秀逸なところだと思います。\r\n\r\n\r\nUIなどボタン3つでここまで使いやすいデバイスに仕上げられるのを見ていると、ど\r\nこかの自動車メーカーなどぜひ参考にしてほしいものです。\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+				"content_text": "ちょっと間が開いてしまいましたが、この間にすっかり秋らしくなって涼しくなってきました。ただ、今週末も夏日になるというので油断できません。\r\n\r\n\r\n今週は、次の2つのトピックを取り上げてみます。\r\n\r\n- 宮崎空港不発弾について\r\n- Nintendo Alarmoがやってきた\r\n\r\n<!--more-->\r\n\r\n## 宮崎空港不発弾について\r\n\r\n\r\n10月2日に突然宮崎空港で不発弾が爆発しました。\r\n\r\n\r\n宮崎空港では2021年6月にも駐機場でアメリカ製の1トンの不発弾が見つかっていま\r\nす。宮崎空港は太平洋戦争当時は旧日本海軍の「赤江飛行場」として使用されてお\r\nり、米軍による空爆が行われていたことが原因です。2021年以前にも何度か不発弾が\r\n見つかっています。\r\n\r\n\r\n家族が現在宮崎で仕事をしており、私もたまに空港を使うことがあるので困ったもの\r\nです。\r\n\r\n\r\n防衛省の統合幕僚監部が発表する\r\n「[令和5年度における自衛隊の災害派遣](https://www.mod.go.jp/js/pdf/2024/p20240729_02.pdf)」\r\nを読むと、令和5年度に陸上で発見された不発弾だけでも沖縄だけで441件、全国で\r\n2,348件に上ります。しかも、終戦から80年近く経過しており、爆発物は不安定な化\r\n合物で時間が立つにつれより敏感なるため、そのリスクはますます高まっています。\r\n\r\n\r\n一方で不発弾撤去については自衛隊が処理に当たっているようですが、その費用負担\r\nについては法整備がされていません。2018年の大阪の事例では土地所有者が不発弾処\r\n理のための周辺警備などの費用580万円を負担し「戦後処理の一環として、行政が処\r\n理責任を負うべき」と裁判を起こしましたが退けられています。\r\n\r\n\r\n80年経ってもこれほどの負担を強いる「戦争」などという問題解決方法など安易に取\r\nるべきではないという教訓ですね。\r\n\r\n\r\n## Nintendo Alarmoがやってきた\r\n\r\n\r\n\r\n\r\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/nintendo-alarmo.jpg\" width=\"600\" height=\"451\" alt=\"Auto-generated description: A digital alarm clock with a cartoon character displayed is on a wooden surface next to a game controller.\">\r\n\r\n\r\n任天堂が突然発売した目覚まし時計Alarmoを手に入れることができました。\r\nここ数日使っていますが、ベッドに入ると自動的に睡眠を誘う音楽を流してくれ、ス\r\nプラトゥーンの音楽で目覚ましアラームを鳴らしてくれ、ベッドから出ると指一本触\r\nれずにアラームが止まります。\r\n\r\n\r\nマリオやゼルダ、スプラトゥーンなど、任天堂の豊富なIPを活かしつつ、ゲーム要素を敢えて排除し純粋な目覚まし時計として設計したところが秀逸なところだと思います。\r\n\r\n\r\nUIなどボタン3つでここまで使いやすいデバイスに仕上げられるのを見ていると、ど\r\nこかの自動車メーカーなどぜひ参考にしてほしいものです。\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
 				"date_published": "2024-10-19T11:34:31+09:00",
 				"url": "https://blog.yostos.org/2024/10/19/weekly-buzz.html",
 				"tags": ["🐝 Weekly Buzz"]
@@ -267,7 +319,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/18/131635.html",
 				
 				"content_html": "<p>佐倉市の佐倉ふるさと広場に昨日行ってきました。\n大阪から猿回しが来ていて、久しぶりに見て楽しめました。</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "佐倉市の佐倉ふるさと広場に昨日行ってきました。\r\n大阪から猿回しが来ていて、久しぶりに見て楽しめました。\n\n<img src=\"uploads/2024/r0000428.jpg\" width=\"600\" height=\"400\" alt=\"\"><img src=\"uploads/2024/r0000406.jpg\" width=\"600\" height=\"400\" alt=\"\">\n",
+				"content_text": "佐倉市の佐倉ふるさと広場に昨日行ってきました。\r\n大阪から猿回しが来ていて、久しぶりに見て楽しめました。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000428.jpg\" width=\"600\" height=\"400\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000406.jpg\" width=\"600\" height=\"400\" alt=\"\">\n",
 				"date_published": "2024-10-18T13:16:35+09:00",
 				"url": "https://blog.yostos.org/2024/10/18/131635.html"
 			},
@@ -283,7 +335,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/16/lost-the-ruins.html",
 				
 				"content_html": "<p>📷 #lost</p>\n<!-- raw HTML omitted -->\n<p>The ruins of Kemigawa Transmitting Station, once broadcasting Japan&rsquo;s voice to the world since the late Taisho era.\nDo countless words etched in history still slumber behind those rusted doors?</p>\n",
-				"content_text": "📷 #lost\n\n<figure>\n<img src=\"uploads/2024/r0000372.jpg\" width=\"600\" height=\"400\" alt=\"The ruins of Kemigawa Transmitting Station\">\n<figcaption>\n Station of Oblivion\n    </figcaption>\n</figure>\n\nThe ruins of Kemigawa Transmitting Station, once broadcasting Japan's voice to the world since the late Taisho era.\nDo countless words etched in history still slumber behind those rusted doors?\n\n\n\n\n\n\n\n",
+				"content_text": "📷 #lost\n\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000372.jpg\" width=\"600\" height=\"400\" alt=\"The ruins of Kemigawa Transmitting Station\">\n<figcaption>\n Station of Oblivion\n    </figcaption>\n</figure>\n\nThe ruins of Kemigawa Transmitting Station, once broadcasting Japan's voice to the world since the late Taisho era.\nDo countless words etched in history still slumber behind those rusted doors?\n\n\n\n\n\n\n\n",
 				"date_published": "2024-10-16T16:28:13+09:00",
 				"url": "https://blog.yostos.org/2024/10/16/lost-the-ruins.html",
 				"tags": ["📷 Photo Friday"]
@@ -300,7 +352,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/16/nintendoalarmo.html",
 				
 				"content_html": "<p>Nintendo🎮が作った目覚まし時計<a href=\"https://www.nintendo.com/jp/hardware/alarmo/index.html\">Alarmo</a>が届きました。発表と同時に申し込みましたが、もう品切れ状態のようです。センサー付きなので、起床時触れずにアラームが自動で止まります。ボタンが3つしかないのに、設定などスムーズなところはさすがです。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Nintendo🎮が作った目覚まし時計[Alarmo](https://www.nintendo.com/jp/hardware/alarmo/index.html)が届きました。発表と同時に申し込みましたが、もう品切れ状態のようです。センサー付きなので、起床時触れずにアラームが自動で止まります。ボタンが3つしかないのに、設定などスムーズなところはさすがです。\n\n<img src=\"uploads/2024/nintendo-alarmo.jpg\" width=\"600\" height=\"451\" alt=\"Nintendo Alarmo\">\n",
+				"content_text": "Nintendo🎮が作った目覚まし時計[Alarmo](https://www.nintendo.com/jp/hardware/alarmo/index.html)が届きました。発表と同時に申し込みましたが、もう品切れ状態のようです。センサー付きなので、起床時触れずにアラームが自動で止まります。ボタンが3つしかないのに、設定などスムーズなところはさすがです。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/nintendo-alarmo.jpg\" width=\"600\" height=\"451\" alt=\"Nintendo Alarmo\">\n",
 				"date_published": "2024-10-16T10:16:58+09:00",
 				"url": "https://blog.yostos.org/2024/10/16/nintendoalarmo.html",
 				"tags": ["🎮 Games"]
@@ -342,7 +394,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/11/awssaa-sapsaapcpearson.html",
 				
 				"content_html": "<p>もう要らないかなと思いましたが、AWSのSAA再認定を取りました。</p>\n<p>「SAPじゃなく、3年前のSAAの再認定だし楽勝！」とフラリと受けたら、その3年でサービスも増えてて出題範囲自体が広くなってて焦りました。しかも、受験してたPCが途中30分程度フリーズしてPearsonの対応もよくわからないのでぶち切れて帰るところでした。</p>\n<p>以前はその場で結果が出ましたが、現在は「5日以内に通知」とされているようです。他の合格者の記事を読むと当日の夜21時にメールされてくることが多いようです。私の場合まだメールは来ていませんが、Cermetricsの&quot;Exam History&quot;で確認できました。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "もう要らないかなと思いましたが、AWSのSAA再認定を取りました。\n\n「SAPじゃなく、3年前のSAAの再認定だし楽勝！」とフラリと受けたら、その3年でサービスも増えてて出題範囲自体が広くなってて焦りました。しかも、受験してたPCが途中30分程度フリーズしてPearsonの対応もよくわからないのでぶち切れて帰るところでした。\n\n以前はその場で結果が出ましたが、現在は「5日以内に通知」とされているようです。他の合格者の記事を読むと当日の夜21時にメールされてくることが多いようです。私の場合まだメールは来ていませんが、Cermetricsの\"Exam History\"で確認できました。\n\n<img src=\"uploads/2024/saa.jpg\" width=\"600\" height=\"471\" alt=\"試験結果の通知\">\n",
+				"content_text": "もう要らないかなと思いましたが、AWSのSAA再認定を取りました。\n\n「SAPじゃなく、3年前のSAAの再認定だし楽勝！」とフラリと受けたら、その3年でサービスも増えてて出題範囲自体が広くなってて焦りました。しかも、受験してたPCが途中30分程度フリーズしてPearsonの対応もよくわからないのでぶち切れて帰るところでした。\n\n以前はその場で結果が出ましたが、現在は「5日以内に通知」とされているようです。他の合格者の記事を読むと当日の夜21時にメールされてくることが多いようです。私の場合まだメールは来ていませんが、Cermetricsの\"Exam History\"で確認できました。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/saa.jpg\" width=\"600\" height=\"471\" alt=\"試験結果の通知\">\n",
 				"date_published": "2024-10-11T21:22:30+09:00",
 				"url": "https://blog.yostos.org/2024/10/11/awssaa-sapsaapcpearson.html"
 			},
@@ -358,7 +410,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/11/shade-dsubscription.html",
 				
 				"content_html": "<p>机を注文するのにデザインを確認するために昔使っていた<a href=\"https://shade3d.jp/\">Shade 3D</a>を年初から使い始めましたが、Subscriptionなので更新しないことにしました。昔は買い切りでユーザーもたくさんいて盛況でしたが、今は見る影もなく、マイナーなソフトウェアになってしまいました。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "机を注文するのにデザインを確認するために昔使っていた[Shade 3D](https://shade3d.jp/)を年初から使い始めましたが、Subscriptionなので更新しないことにしました。昔は買い切りでユーザーもたくさんいて盛況でしたが、今は見る影もなく、マイナーなソフトウェアになってしまいました。\r\n\n\n<img src=\"uploads/2024/2024-10-11-13-01-16.jpg\" width=\"600\" height=\"283\" alt=\"Shade 3D\">\n",
+				"content_text": "机を注文するのにデザインを確認するために昔使っていた[Shade 3D](https://shade3d.jp/)を年初から使い始めましたが、Subscriptionなので更新しないことにしました。昔は買い切りでユーザーもたくさんいて盛況でしたが、今は見る影もなく、マイナーなソフトウェアになってしまいました。\r\n\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/2024-10-11-13-01-16.jpg\" width=\"600\" height=\"283\" alt=\"Shade 3D\">\n",
 				"date_published": "2024-10-11T13:21:45+09:00",
 				"url": "https://blog.yostos.org/2024/10/11/shade-dsubscription.html"
 			},
@@ -383,7 +435,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/04/the-spider-lilies.html",
 				
 				"content_html": "<p>The spider lilies are in bloom, and it finally feels like autumn.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "The spider lilies are in bloom, and it finally feels like autumn.\n\n<img src=\"uploads/2024/r0000334.jpg\" width=\"600\" height=\"400\" alt=\"\">\n",
+				"content_text": "The spider lilies are in bloom, and it finally feels like autumn.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000334.jpg\" width=\"600\" height=\"400\" alt=\"\">\n",
 				"date_published": "2024-10-04T08:08:37+09:00",
 				"url": "https://blog.yostos.org/2024/10/04/the-spider-lilies.html"
 			},
@@ -391,7 +443,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/04/silence-in-green.html",
 				
 				"content_html": "<p>📷 #gloomy</p>\n<!-- raw HTML omitted -->\n<p>A lone withered tree stands quietly in a space surrounded by lush forest. The contrast between the vibrant green and the decaying old tree evokes thoughts of time&rsquo;s passage and nature&rsquo;s cycle.</p>\n",
-				"content_text": "📷 #gloomy\n<figure>\n<img src=\"uploads/2024/r00003292.jpg\" width=\"600\" height=\"400\" alt=\"Auto-generated description: A leafless tree leans to one side in a grassy field surrounded by dense greenery.\">\n<figcaption>\n Silence in Green\n    </figcaption>\n</figure>\n\n\nA lone withered tree stands quietly in a space surrounded by lush forest. The contrast between the vibrant green and the decaying old tree evokes thoughts of time's passage and nature's cycle. \n",
+				"content_text": "📷 #gloomy\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r00003292.jpg\" width=\"600\" height=\"400\" alt=\"Auto-generated description: A leafless tree leans to one side in a grassy field surrounded by dense greenery.\">\n<figcaption>\n Silence in Green\n    </figcaption>\n</figure>\n\n\nA lone withered tree stands quietly in a space surrounded by lush forest. The contrast between the vibrant green and the decaying old tree evokes thoughts of time's passage and nature's cycle. \n",
 				"date_published": "2024-10-04T04:57:59+09:00",
 				"url": "https://blog.yostos.org/2024/10/04/silence-in-green.html",
 				"tags": ["📷 Photo Friday"]
@@ -400,7 +452,7 @@
 				"id": "http://shamonk.micro.blog/2024/10/02/casio-gwjf-disassembled.html",
 				
 				"content_html": "<!-- raw HTML omitted -->\n<p>While it looks like an ordinary G-SHOCK, this is actually a &ldquo;Made in Japan&rdquo; premium model featuring a screw-back case. I&rsquo;ve replaced the strap and cleaned the interior of the case.</p>\n",
-				"content_text": "<figure>\r\n  <img src=\"uploads/2024/pxl-20241001-134316865.mp.jpg\" \r\n       width=\"600\" \r\n       height=\"451\" \r\n       alt=\"A disassembled Casio GW-5000-1JF watch with its replacement strap and screws laid out on a wooden surface.\" \r\n       loading=\"lazy\">\r\n  <figcaption>CASIO GW-5000-1JF Disassembled</figcaption>\r\n</figure>\r\n\r\nWhile it looks like an ordinary G-SHOCK, this is actually a \"Made in Japan\" premium model featuring a screw-back case. I've replaced the strap and cleaned the interior of the case.\n",
+				"content_text": "<figure>\r\n  <img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20241001-134316865.mp.jpg\" \r\n       width=\"600\" \r\n       height=\"451\" \r\n       alt=\"A disassembled Casio GW-5000-1JF watch with its replacement strap and screws laid out on a wooden surface.\" \r\n       loading=\"lazy\">\r\n  <figcaption>CASIO GW-5000-1JF Disassembled</figcaption>\r\n</figure>\r\n\r\nWhile it looks like an ordinary G-SHOCK, this is actually a \"Made in Japan\" premium model featuring a screw-back case. I've replaced the strap and cleaned the interior of the case.\n",
 				"date_published": "2024-10-02T10:23:24+09:00",
 				"url": "https://blog.yostos.org/2024/10/02/casio-gwjf-disassembled.html"
 			},
@@ -491,7 +543,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/26/natures-vivid-hues.html",
 				
 				"content_html": "<p>📷 #vibrant</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 #vibrant\n\n<figure>\n<img src=\"uploads/2024/r0000239.jpg\" width=\"600\" height=\"400\" alt=\"\">\n<figcaption>City Berries</figcaption>\n</figure>\nNature's vivid hues bloom in a corner of the city. The bright red berries set against a backdrop of buildings made me feel the contrast between urban and natural elements, as well as an overflowing vitality.\n",
+				"content_text": "📷 #vibrant\n\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000239.jpg\" width=\"600\" height=\"400\" alt=\"\">\n<figcaption>City Berries</figcaption>\n</figure>\nNature's vivid hues bloom in a corner of the city. The bright red berries set against a backdrop of buildings made me feel the contrast between urban and natural elements, as well as an overflowing vitality.\n",
 				"date_published": "2024-09-26T14:18:50+09:00",
 				"url": "https://blog.yostos.org/2024/09/26/natures-vivid-hues.html",
 				"tags": ["📷 Photo Friday"]
@@ -508,7 +560,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/24/the-movie-tonight.html",
 				
 				"content_html": "<!-- raw HTML omitted -->\n<p>🎥『機動警察パトレイバー THE MOVIE』(1989年)のリバイバル上映を今晩見てきました。「思い出補正」で作品評価を必要以上に上げていて見直すとがっかりするのではと懸念していましたが、予想に反してしっかりと楽しむことができました。\n1989年と言えば、昭和天皇の崩御、ベルリンの壁崩壊、冷戦終結の年。三菱地所がロックフェラー・センターを買収し、任天堂がゲームボーイを発売。振り返ると、現代とは異なる世界線だったように感じます。</p>\n<p>🎥Tonight, I attended a revival screening of &ldquo;Patlabor: The Movie&rdquo; (1989). I was concerned that &ldquo;nostalgia goggles&rdquo; might have inflated my evaluation of the film, potentially leading to disappointment upon rewatching. However, contrary to my expectations, I found myself thoroughly enjoying it.\nThe year 1989 was marked by significant events: the death of Emperor Hirohito, the fall of the Berlin Wall, and the end of the Cold War. It was also the year Mitsubishi Estate purchased Rockefeller Center, and Nintendo released the Game Boy. Looking back, it feels like we were living in a different timeline compared to today.</p>\n",
-				"content_text": "<img src=\"uploads/2024/pxl-20240923-123403852.mp.jpg\" width=\"600\" height=\"364\" alt=\"A promotional poster features two different Patlabor movies, one titled Patlabor EZY with a release date of 2026 and the other Patlabor: The Movie set in 1999.\">\r\n\r\n🎥『機動警察パトレイバー THE MOVIE』(1989年)のリバイバル上映を今晩見てきました。「思い出補正」で作品評価を必要以上に上げていて見直すとがっかりするのではと懸念していましたが、予想に反してしっかりと楽しむことができました。\r\n1989年と言えば、昭和天皇の崩御、ベルリンの壁崩壊、冷戦終結の年。三菱地所がロックフェラー・センターを買収し、任天堂がゲームボーイを発売。振り返ると、現代とは異なる世界線だったように感じます。\r\n\r\n🎥Tonight, I attended a revival screening of \"Patlabor: The Movie\" (1989). I was concerned that \"nostalgia goggles\" might have inflated my evaluation of the film, potentially leading to disappointment upon rewatching. However, contrary to my expectations, I found myself thoroughly enjoying it.\r\nThe year 1989 was marked by significant events: the death of Emperor Hirohito, the fall of the Berlin Wall, and the end of the Cold War. It was also the year Mitsubishi Estate purchased Rockefeller Center, and Nintendo released the Game Boy. Looking back, it feels like we were living in a different timeline compared to today.\n",
+				"content_text": "<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240923-123403852.mp.jpg\" width=\"600\" height=\"364\" alt=\"A promotional poster features two different Patlabor movies, one titled Patlabor EZY with a release date of 2026 and the other Patlabor: The Movie set in 1999.\">\r\n\r\n🎥『機動警察パトレイバー THE MOVIE』(1989年)のリバイバル上映を今晩見てきました。「思い出補正」で作品評価を必要以上に上げていて見直すとがっかりするのではと懸念していましたが、予想に反してしっかりと楽しむことができました。\r\n1989年と言えば、昭和天皇の崩御、ベルリンの壁崩壊、冷戦終結の年。三菱地所がロックフェラー・センターを買収し、任天堂がゲームボーイを発売。振り返ると、現代とは異なる世界線だったように感じます。\r\n\r\n🎥Tonight, I attended a revival screening of \"Patlabor: The Movie\" (1989). I was concerned that \"nostalgia goggles\" might have inflated my evaluation of the film, potentially leading to disappointment upon rewatching. However, contrary to my expectations, I found myself thoroughly enjoying it.\r\nThe year 1989 was marked by significant events: the death of Emperor Hirohito, the fall of the Berlin Wall, and the end of the Cold War. It was also the year Mitsubishi Estate purchased Rockefeller Center, and Nintendo released the Game Boy. Looking back, it feels like we were living in a different timeline compared to today.\n",
 				"date_published": "2024-09-24T01:01:44+09:00",
 				"url": "https://blog.yostos.org/2024/09/24/the-movie-tonight.html",
 				"tags": ["🎥 Films"]
@@ -591,7 +643,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/18/173936.html",
 				
 				"content_html": "<!-- raw HTML omitted -->\n<p>I finally went to see <a href=\"https://maps.app.goo.gl/5s5SKX3dz3hKVnTe6\">Haraoka Pier</a> , which I had wanted to visit for a long time. It was so hot!</p>\n<p>一度見に行きたかった<a href=\"https://maps.app.goo.gl/5s5SKX3dz3hKVnTe6\">原岡桟橋</a>を見に行ってきました。暑かったぁ！</p>\n",
-				"content_text": "<figure>\n  <img src=\"uploads/2024/r0000298.jpg\" \n       width=\"600\" \n       height=\"399\" \n       alt=\"Haraoka Pier in Chiba, Japan\" \n       title=\"Haraoka Pier in Chiba, Japan, known for its scenic views.\">\n  <figcaption>\n    Haraoka Pier in Chiba, Japan, known for its scenic views.\n  </figcaption>\n</figure>\n\nI finally went to see [Haraoka Pier](https://maps.app.goo.gl/5s5SKX3dz3hKVnTe6) , which I had wanted to visit for a long time. It was so hot!\n\n一度見に行きたかった[原岡桟橋](https://maps.app.goo.gl/5s5SKX3dz3hKVnTe6)を見に行ってきました。暑かったぁ！\n",
+				"content_text": "<figure>\n  <img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000298.jpg\" \n       width=\"600\" \n       height=\"399\" \n       alt=\"Haraoka Pier in Chiba, Japan\" \n       title=\"Haraoka Pier in Chiba, Japan, known for its scenic views.\">\n  <figcaption>\n    Haraoka Pier in Chiba, Japan, known for its scenic views.\n  </figcaption>\n</figure>\n\nI finally went to see [Haraoka Pier](https://maps.app.goo.gl/5s5SKX3dz3hKVnTe6) , which I had wanted to visit for a long time. It was so hot!\n\n一度見に行きたかった[原岡桟橋](https://maps.app.goo.gl/5s5SKX3dz3hKVnTe6)を見に行ってきました。暑かったぁ！\n",
 				"date_published": "2024-09-18T17:39:36+09:00",
 				"url": "https://blog.yostos.org/2024/09/18/173936.html"
 			},
@@ -599,7 +651,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/17/these-are-laserdisc.html",
 				
 				"content_html": "<p>📷 #album_cover\nThese are LaserDisc albums, which were once a cutting-edge medium. Now, I no longer have a LaserDisc player, so I cannot play them.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 #album_cover\nThese are LaserDisc albums, which were once a cutting-edge medium. Now, I no longer have a LaserDisc player, so I cannot play them.\n\n\n\n<figure>\n<img src=\"uploads/2024/r0000284.jpg\" width=\"600\" height=\"399\" alt=\"An album cover features a stylized yellow submarine with \"The Beatles Yellow Submarine\" text above it.\">\n<figcaption>LazserDisc Albums</figcaption>\n</figure>\n",
+				"content_text": "📷 #album_cover\nThese are LaserDisc albums, which were once a cutting-edge medium. Now, I no longer have a LaserDisc player, so I cannot play them.\n\n\n\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000284.jpg\" width=\"600\" height=\"399\" alt=\"An album cover features a stylized yellow submarine with \"The Beatles Yellow Submarine\" text above it.\">\n<figcaption>LazserDisc Albums</figcaption>\n</figure>\n",
 				"date_published": "2024-09-17T18:42:31+09:00",
 				"url": "https://blog.yostos.org/2024/09/17/these-are-laserdisc.html",
 				"tags": ["📷 Photo Friday"]
@@ -675,7 +727,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/10/i-got-tired.html",
 				
 				"content_html": "<p>I got tired of the ugliness of the iPhone and switched to the Essential Phone, and then to the Pixel. But the exceptionally ugly design of the Pixel 9 is probably no longer an option for me.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I got tired of the ugliness of the iPhone and switched to the Essential Phone, and then to the Pixel. But the exceptionally ugly design of the Pixel 9 is probably no longer an option for me.\n\n<img src=\"uploads/2024/2024-09-10-16-50-35.jpg\" width=\"546\" height=\"394\" alt=\"Pixel 9\">\n",
+				"content_text": "I got tired of the ugliness of the iPhone and switched to the Essential Phone, and then to the Pixel. But the exceptionally ugly design of the Pixel 9 is probably no longer an option for me.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/2024-09-10-16-50-35.jpg\" width=\"546\" height=\"394\" alt=\"Pixel 9\">\n",
 				"date_published": "2024-09-10T16:53:58+09:00",
 				"url": "https://blog.yostos.org/2024/09/10/i-got-tired.html"
 			},
@@ -691,7 +743,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/09/gathering-points-in.html",
 				
 				"content_html": "<p>📷 #many</p>\n<!-- raw HTML omitted -->\n<p>In a quiet corner of the city, a man on a bench while a group of crows gathers on a nearby bridge railing. The contrast between the solitary human and the flocking crows in the urban environment they inhabit provokes thought on the theme of individual vs collective.</p>\n",
-				"content_text": "📷 #many\n\n\n\n<figure>\n<img src=\"uploads/2024/many.jpg\" width=\"600\" height=\"399\" alt=\"A group of crows is perched on a bridge railing while a person sits nearby looking at a smartphone.\">\n<figcaption>Gathering Points</figcaption>\n</figure>\n\nIn a quiet corner of the city, a man on a bench while a group of crows gathers on a nearby bridge railing. The contrast between the solitary human and the flocking crows in the urban environment they inhabit provokes thought on the theme of individual vs collective.\n",
+				"content_text": "📷 #many\n\n\n\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/many.jpg\" width=\"600\" height=\"399\" alt=\"A group of crows is perched on a bridge railing while a person sits nearby looking at a smartphone.\">\n<figcaption>Gathering Points</figcaption>\n</figure>\n\nIn a quiet corner of the city, a man on a bench while a group of crows gathers on a nearby bridge railing. The contrast between the solitary human and the flocking crows in the urban environment they inhabit provokes thought on the theme of individual vs collective.\n",
 				"date_published": "2024-09-09T18:39:04+09:00",
 				"url": "https://blog.yostos.org/2024/09/09/gathering-points-in.html",
 				"tags": ["📷 Photo Friday"]
@@ -700,7 +752,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/09/132233.html",
 				
 				"content_html": "<p>ピザーラでセラーノペッパーにハーフトッピングでパインを注文して、届いたピザがコレ。\nパインが載っている側にセラーノペッパーが載ってない。電話で確認したらセラーノペッパーの量に間違えはないので、自分でセラーノペッパーを散らして食えとのこと。楽しみにしていただけに、なんかモヤモヤ。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "ピザーラでセラーノペッパーにハーフトッピングでパインを注文して、届いたピザがコレ。\r\nパインが載っている側にセラーノペッパーが載ってない。電話で確認したらセラーノペッパーの量に間違えはないので、自分でセラーノペッパーを散らして食えとのこと。楽しみにしていただけに、なんかモヤモヤ。\r\n\n\n<img src=\"uploads/2024/pxl-20240909-032742436.jpg\" width=\"600\" height=\"451\" alt=\"A pizza in a box is topped with melted cheese, diced potatoes, pepperoni, and sliced green peppers.\">\n",
+				"content_text": "ピザーラでセラーノペッパーにハーフトッピングでパインを注文して、届いたピザがコレ。\r\nパインが載っている側にセラーノペッパーが載ってない。電話で確認したらセラーノペッパーの量に間違えはないので、自分でセラーノペッパーを散らして食えとのこと。楽しみにしていただけに、なんかモヤモヤ。\r\n\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240909-032742436.jpg\" width=\"600\" height=\"451\" alt=\"A pizza in a box is topped with melted cheese, diced potatoes, pepperoni, and sliced green peppers.\">\n",
 				"date_published": "2024-09-09T13:22:33+09:00",
 				"url": "https://blog.yostos.org/2024/09/09/132233.html"
 			},
@@ -743,7 +795,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/05/amiibo-to-get.html",
 				
 				"content_html": "<!-- raw HTML omitted -->\n<p>To get into the spirit of the &ldquo;Grand Festival&rdquo; for Splatoon 3, scheduled to start on September 13th, I got my hands on the newly released Tentacles amiibo set, which came out on September 5th! I pre-ordered it, thinking it would likely become scarce.</p>\n",
-				"content_text": "<img src=\"uploads/2024/r0000272.jpg\" width=\"600\" height=\"376\" alt=\"Two amiibo figurines inside a packaging box featuring characters with distinct outfits and hairstyles.\">\n\nTo get into the spirit of the \"Grand Festival\" for Splatoon 3, scheduled to start on September 13th, I got my hands on the newly released Tentacles amiibo set, which came out on September 5th! I pre-ordered it, thinking it would likely become scarce.\n\n\n",
+				"content_text": "<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000272.jpg\" width=\"600\" height=\"376\" alt=\"Two amiibo figurines inside a packaging box featuring characters with distinct outfits and hairstyles.\">\n\nTo get into the spirit of the \"Grand Festival\" for Splatoon 3, scheduled to start on September 13th, I got my hands on the newly released Tentacles amiibo set, which came out on September 5th! I pre-ordered it, thinking it would likely become scarce.\n\n\n",
 				"date_published": "2024-09-05T15:15:06+09:00",
 				"url": "https://blog.yostos.org/2024/09/05/amiibo-to-get.html"
 			},
@@ -751,7 +803,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/05/095005.html",
 				
 				"content_html": "<p>1977年に開業した津田沼のイトーヨーカドーが今月末に閉店になるので、昨日行ってきました。店内は暗くカビ臭く、客の大半は老人で、導線も悪く商品の並びも乱雑。隣のイオンモールの開業が2003年とは言え、店内が恐らくかなりアップデートされているのとは対照的。かつては「津田沼戦争」とか言われて話題になった出店だったのでしょうが、いつのまにか休戦してたんですかね。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "1977年に開業した津田沼のイトーヨーカドーが今月末に閉店になるので、昨日行ってきました。店内は暗くカビ臭く、客の大半は老人で、導線も悪く商品の並びも乱雑。隣のイオンモールの開業が2003年とは言え、店内が恐らくかなりアップデートされているのとは対照的。かつては「津田沼戦争」とか言われて話題になった出店だったのでしょうが、いつのまにか休戦してたんですかね。\r\n\n\n<img src=\"uploads/2024/r0000251.jpg\" width=\"600\" height=\"399\" alt=\"イトーヨーカドー津田沼店閉店のお知らせ\">\n",
+				"content_text": "1977年に開業した津田沼のイトーヨーカドーが今月末に閉店になるので、昨日行ってきました。店内は暗くカビ臭く、客の大半は老人で、導線も悪く商品の並びも乱雑。隣のイオンモールの開業が2003年とは言え、店内が恐らくかなりアップデートされているのとは対照的。かつては「津田沼戦争」とか言われて話題になった出店だったのでしょうが、いつのまにか休戦してたんですかね。\r\n\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000251.jpg\" width=\"600\" height=\"399\" alt=\"イトーヨーカドー津田沼店閉店のお知らせ\">\n",
 				"date_published": "2024-09-05T09:50:05+09:00",
 				"url": "https://blog.yostos.org/2024/09/05/095005.html"
 			},
@@ -759,7 +811,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/03/today-i-visited.html",
 				
 				"content_html": "<p>Today, I visited <a href=\"https://www.iinumahonke.co.jp/lp/kinoene-omoya/\">Kinoene Omoya</a>, a restaurant run by Iinumahonke, a sake brewery in Chiba known for its Japanese sake brand, 甲子(Kinoene).  I enjoyed a three-tiered bento box, a traditional Japanese meal presentation where different dishes are served in a set of three stacked boxes. 🍽️</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "Today, I visited [Kinoene Omoya](https://www.iinumahonke.co.jp/lp/kinoene-omoya/), a restaurant run by Iinumahonke, a sake brewery in Chiba known for its Japanese sake brand, 甲子(Kinoene).  I enjoyed a three-tiered bento box, a traditional Japanese meal presentation where different dishes are served in a set of three stacked boxes. 🍽️\n\n<img src=\"uploads/2024/pxl-20240903-044101436.jpg\" width=\"600\" height=\"451\" alt=\"\"><img src=\"uploads/2024/pxl-20240903-041046968.mp.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
+				"content_text": "Today, I visited [Kinoene Omoya](https://www.iinumahonke.co.jp/lp/kinoene-omoya/), a restaurant run by Iinumahonke, a sake brewery in Chiba known for its Japanese sake brand, 甲子(Kinoene).  I enjoyed a three-tiered bento box, a traditional Japanese meal presentation where different dishes are served in a set of three stacked boxes. 🍽️\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240903-044101436.jpg\" width=\"600\" height=\"451\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240903-041046968.mp.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
 				"date_published": "2024-09-03T17:01:27+09:00",
 				"url": "https://blog.yostos.org/2024/09/03/today-i-visited.html",
 				"tags": ["🍽️ Dining"]
@@ -776,7 +828,7 @@
 				"id": "http://shamonk.micro.blog/2024/09/02/i-had-the.html",
 				
 				"content_html": "<p>I had the chance to ride in a vehicle from Chiba City&rsquo;s <a href=\"https://www.city.chiba.jp/toshi/toshi/kotsu/gurisuro.html\">Green Slow Mobility</a> demonstration experiment, which was being conducted in the Makuhari Baytown area. Since these are electric vehicles, they might be more cost-effective and practical than the community buses often used in rural areas. The photo shows the friendly drivers who kindly gave me a ride.</p>\n<p>It was slow but comfortable.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I had the chance to ride in a vehicle from Chiba City's [Green Slow Mobility](https://www.city.chiba.jp/toshi/toshi/kotsu/gurisuro.html) demonstration experiment, which was being conducted in the Makuhari Baytown area. Since these are electric vehicles, they might be more cost-effective and practical than the community buses often used in rural areas. The photo shows the friendly drivers who kindly gave me a ride.\r\n\r\n\r\nIt was slow but comfortable.\r\n\r\n\n\n<img src=\"uploads/2024/r0000233.jpg\" width=\"600\" height=\"399\" alt=\"\">\n",
+				"content_text": "I had the chance to ride in a vehicle from Chiba City's [Green Slow Mobility](https://www.city.chiba.jp/toshi/toshi/kotsu/gurisuro.html) demonstration experiment, which was being conducted in the Makuhari Baytown area. Since these are electric vehicles, they might be more cost-effective and practical than the community buses often used in rural areas. The photo shows the friendly drivers who kindly gave me a ride.\r\n\r\n\r\nIt was slow but comfortable.\r\n\r\n\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000233.jpg\" width=\"600\" height=\"399\" alt=\"\">\n",
 				"date_published": "2024-09-02T14:59:00+09:00",
 				"url": "https://blog.yostos.org/2024/09/02/i-had-the.html"
 			},
@@ -817,7 +869,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/31/photofriday-in-the.html",
 				
 				"content_html": "<p>📷  #windshield_shot</p>\n<!-- raw HTML omitted -->\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷  #windshield_shot\n<figure>\n<img src=\"uploads/2024/r0000199.jpg\" width=\"600\" height=\"399\" alt=\"\">\n<figcaption> In the Tyhoon</figcaption>\n</figure>\n\n<p>\nWhile driving a SUBARU car in Typhoon ShanShan, the rain was so heavy that visibility became poor, and even Subaru’s EyeSight system stopped functioning.</p>\n",
+				"content_text": "📷  #windshield_shot\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000199.jpg\" width=\"600\" height=\"399\" alt=\"\">\n<figcaption> In the Tyhoon</figcaption>\n</figure>\n\n<p>\nWhile driving a SUBARU car in Typhoon ShanShan, the rain was so heavy that visibility became poor, and even Subaru’s EyeSight system stopped functioning.</p>\n",
 				"date_published": "2024-08-31T17:32:37+09:00",
 				"url": "https://blog.yostos.org/2024/08/31/photofriday-in-the.html",
 				"tags": ["📷 Photo Friday"]
@@ -851,7 +903,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/29/microsoftterminal-cascadia-codecascadia.html",
 				
 				"content_html": "<p>MicrosoftがTerminal用フォント Cascadia Codeを日本語、繁体・簡体字に対応させて<strong>Cascadia Next</strong>として発表。早速Macにインストールして試してみました。リガチャもサポートしててWindows標準となるとコーディング用フォントしてはいい感じです。愛用しているMonoLisa + M PLUS 1 CODE(20pxで表示)とCascadia Next JP(22pxで表示)を比較。個人的には小さめで詰め込み過ぎに感じます。MonoLisaがゆったり目なので、慣れと好みの問題でしょう。</p>\n<p>ターミナルを使わないようなエンジニアもどきには関係ありませんが。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "MicrosoftがTerminal用フォント Cascadia Codeを日本語、繁体・簡体字に対応させて**Cascadia Next**として発表。早速Macにインストールして試してみました。リガチャもサポートしててWindows標準となるとコーディング用フォントしてはいい感じです。愛用しているMonoLisa + M PLUS 1 CODE(20pxで表示)とCascadia Next JP(22pxで表示)を比較。個人的には小さめで詰め込み過ぎに感じます。MonoLisaがゆったり目なので、慣れと好みの問題でしょう。\n\nターミナルを使わないようなエンジニアもどきには関係ありませんが。\n\n<img src=\"uploads/2024/cascadia-code.webp\" width=\"600\" height=\"289\" alt=\"Font Comparison\">\n",
+				"content_text": "MicrosoftがTerminal用フォント Cascadia Codeを日本語、繁体・簡体字に対応させて**Cascadia Next**として発表。早速Macにインストールして試してみました。リガチャもサポートしててWindows標準となるとコーディング用フォントしてはいい感じです。愛用しているMonoLisa + M PLUS 1 CODE(20pxで表示)とCascadia Next JP(22pxで表示)を比較。個人的には小さめで詰め込み過ぎに感じます。MonoLisaがゆったり目なので、慣れと好みの問題でしょう。\n\nターミナルを使わないようなエンジニアもどきには関係ありませんが。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/cascadia-code.webp\" width=\"600\" height=\"289\" alt=\"Font Comparison\">\n",
 				"date_published": "2024-08-29T21:23:44+09:00",
 				"url": "https://blog.yostos.org/2024/08/29/microsoftterminal-cascadia-codecascadia.html",
 				"tags": ["🪄 Technologies"]
@@ -868,7 +920,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/28/i-was-concerned.html",
 				
 				"content_html": "<p>I was concerned about the typhoon and was looking at <strong>Ventusky</strong>. Out of curiosity, I checked the air pollution layer and saw that a lot of pollutants were being carried over from <strong>that country</strong> by the typhoon winds! I really wish something could be done about it.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I was concerned about the typhoon and was looking at **Ventusky**. Out of curiosity, I checked the air pollution layer and saw that a lot of pollutants were being carried over from **that country** by the typhoon winds! I really wish something could be done about it.\n\n<img src=\"uploads/2024/weather.jpg\" width=\"600\" height=\"427\" alt=\"\">\n",
+				"content_text": "I was concerned about the typhoon and was looking at **Ventusky**. Out of curiosity, I checked the air pollution layer and saw that a lot of pollutants were being carried over from **that country** by the typhoon winds! I really wish something could be done about it.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/weather.jpg\" width=\"600\" height=\"427\" alt=\"\">\n",
 				"date_published": "2024-08-28T15:57:11+09:00",
 				"url": "https://blog.yostos.org/2024/08/28/i-was-concerned.html"
 			},
@@ -900,7 +952,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/27/i-recently-bought.html",
 				
 				"content_html": "<p>I recently bought a digital camera for the first time in a while: the <strong>RICOH GR IIIx HDF</strong>. Compared to the original GR DIGITAL, which I previously owned, I was amazed by the improved image quality that now rivals a DSLR. What’s more, this camera is actually based on a model from five years ago!</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I recently bought a digital camera for the first time in a while: the **RICOH GR IIIx HDF**. Compared to the original GR DIGITAL, which I previously owned, I was amazed by the improved image quality that now rivals a DSLR. What’s more, this camera is actually based on a model from five years ago!\n\n<img src=\"uploads/2024/r0000109.jpg\" width=\"600\" height=\"399\" alt=\"Sample photo taken with the GR IIIx\">\n",
+				"content_text": "I recently bought a digital camera for the first time in a while: the **RICOH GR IIIx HDF**. Compared to the original GR DIGITAL, which I previously owned, I was amazed by the improved image quality that now rivals a DSLR. What’s more, this camera is actually based on a model from five years ago!\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000109.jpg\" width=\"600\" height=\"399\" alt=\"Sample photo taken with the GR IIIx\">\n",
 				"date_published": "2024-08-27T11:22:19+09:00",
 				"url": "https://blog.yostos.org/2024/08/27/i-recently-bought.html"
 			},
@@ -908,7 +960,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/26/cafe.html",
 				
 				"content_html": "<p>道の駅「保田小学校」のCafe金次郎の揚げパンサンド。濃厚なソフトクリームと、それが溶けて揚げパンに滲みたしんなり部分と元のカリカリ部分の混在する食感が楽しい。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "道の駅「保田小学校」のCafe金次郎の揚げパンサンド。濃厚なソフトクリームと、それが溶けて揚げパンに滲みたしんなり部分と元のカリカリ部分の混在する食感が楽しい。\n\n<img src=\"uploads/2024/r0000100.jpg\" width=\"600\" height=\"399\" alt=\"A fried bun filled with soft serve ice cream\">\n",
+				"content_text": "道の駅「保田小学校」のCafe金次郎の揚げパンサンド。濃厚なソフトクリームと、それが溶けて揚げパンに滲みたしんなり部分と元のカリカリ部分の混在する食感が楽しい。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000100.jpg\" width=\"600\" height=\"399\" alt=\"A fried bun filled with soft serve ice cream\">\n",
 				"date_published": "2024-08-26T16:27:33+09:00",
 				"url": "https://blog.yostos.org/2024/08/26/cafe.html"
 			},
@@ -916,7 +968,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/26/i-visited-oyama.html",
 				
 				"content_html": "<p>I visited <strong>Oyama Senmaida(大山千枚田)</strong> in Chiba Pref, Japan. These terraced rice fields, dating back to before the 1600s, are ingeniously built on hillside slopes, forming 30 levels with 375 paddies still in use today. They are the quintessential rural landscape of Japan.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "I visited **Oyama Senmaida(大山千枚田)** in Chiba Pref, Japan. These terraced rice fields, dating back to before the 1600s, are ingeniously built on hillside slopes, forming 30 levels with 375 paddies still in use today. They are the quintessential rural landscape of Japan.\n\n<img src=\"uploads/2024/r0000090.jpg\" width=\"600\" height=\"399\" alt=\"\"><img src=\"uploads/2024/r0000093.jpg\" width=\"600\" height=\"399\" alt=\"\">\n",
+				"content_text": "I visited **Oyama Senmaida(大山千枚田)** in Chiba Pref, Japan. These terraced rice fields, dating back to before the 1600s, are ingeniously built on hillside slopes, forming 30 levels with 375 paddies still in use today. They are the quintessential rural landscape of Japan.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000090.jpg\" width=\"600\" height=\"399\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/r0000093.jpg\" width=\"600\" height=\"399\" alt=\"\">\n",
 				"date_published": "2024-08-26T16:15:48+09:00",
 				"url": "https://blog.yostos.org/2024/08/26/i-visited-oyama.html"
 			},
@@ -967,7 +1019,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/23/175725.html",
 				
 				"content_html": "<p>『ぼっち・ざ・ろっく』のタイトルにはフリーフォントの<a href=\"https://www.vector.co.jp/soft/data/writing/se334877.html\">アームド・レモン</a>が使われているらしい。それらしくタイトル画像を作ってみたら、なるほどそのものです。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "『ぼっち・ざ・ろっく』のタイトルにはフリーフォントの[アームド・レモン](https://www.vector.co.jp/soft/data/writing/se334877.html)が使われているらしい。それらしくタイトル画像を作ってみたら、なるほどそのものです。\n\n<img src=\"uploads/2024/bocchi.webp\" width=\"600\" height=\"357\" alt=\"Bocchi The Rock Title\">\n",
+				"content_text": "『ぼっち・ざ・ろっく』のタイトルにはフリーフォントの[アームド・レモン](https://www.vector.co.jp/soft/data/writing/se334877.html)が使われているらしい。それらしくタイトル画像を作ってみたら、なるほどそのものです。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/bocchi.webp\" width=\"600\" height=\"357\" alt=\"Bocchi The Rock Title\">\n",
 				"date_published": "2024-08-23T17:57:25+09:00",
 				"url": "https://blog.yostos.org/2024/08/23/175725.html"
 			},
@@ -984,7 +1036,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/23/i-spotted-a.html",
 				
 				"content_html": "<p>I spotted a toad being attacked by a mouse! I chased the mouse away and saved the toad. Do you think this toad will come back to repay the favor someday, just like in those Japanese folktales like Urashima Taro or The Grateful Crane?</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I spotted a toad being attacked by a mouse! I chased the mouse away and saved the toad. Do you think this toad will come back to repay the favor someday, just like in those Japanese folktales like Urashima Taro or The Grateful Crane?\n\n<img src=\"uploads/2024/pxl-20240823-032758118.jpg\" width=\"600\" height=\"361\" alt=\"The frog that was being attacked by a mouse\">\n",
+				"content_text": "I spotted a toad being attacked by a mouse! I chased the mouse away and saved the toad. Do you think this toad will come back to repay the favor someday, just like in those Japanese folktales like Urashima Taro or The Grateful Crane?\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240823-032758118.jpg\" width=\"600\" height=\"361\" alt=\"The frog that was being attacked by a mouse\">\n",
 				"date_published": "2024-08-23T13:13:26+09:00",
 				"url": "https://blog.yostos.org/2024/08/23/i-spotted-a.html"
 			},
@@ -1000,7 +1052,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/22/this-is-a.html",
 				
 				"content_html": "<p>This is a ridiculous device installed in the restroom at Chiba City Hall. It seems to be meant for explaining how to use the toilet in different languages. But first of all, it’s hard to even understand what this device is for, and using flags to identify languages is just not practical. For example, just because it’s the Chinese flag doesn’t mean the person understands Mandarin.</p>\n<p>When it comes to something like toilet instructions, simple pictograms would be much easier to understand. These days, it’s so easy to just take a picture of the Japanese text with your smartphone and translate it into your own language, so wouldn’t just having Japanese be enough?</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "This is a ridiculous device installed in the restroom at Chiba City Hall. It seems to be meant for explaining how to use the toilet in different languages. But first of all, it’s hard to even understand what this device is for, and using flags to identify languages is just not practical. For example, just because it’s the Chinese flag doesn’t mean the person understands Mandarin.\n\nWhen it comes to something like toilet instructions, simple pictograms would be much easier to understand. These days, it’s so easy to just take a picture of the Japanese text with your smartphone and translate it into your own language, so wouldn’t just having Japanese be enough?\n\n<img src=\"uploads/2024/2024-08-22-20-22-37.png\" width=\"600\" height=\"180\" alt=\" ridiculous device installed in the restroom\">\n",
+				"content_text": "This is a ridiculous device installed in the restroom at Chiba City Hall. It seems to be meant for explaining how to use the toilet in different languages. But first of all, it’s hard to even understand what this device is for, and using flags to identify languages is just not practical. For example, just because it’s the Chinese flag doesn’t mean the person understands Mandarin.\n\nWhen it comes to something like toilet instructions, simple pictograms would be much easier to understand. These days, it’s so easy to just take a picture of the Japanese text with your smartphone and translate it into your own language, so wouldn’t just having Japanese be enough?\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/2024-08-22-20-22-37.png\" width=\"600\" height=\"180\" alt=\" ridiculous device installed in the restroom\">\n",
 				"date_published": "2024-08-22T20:36:06+09:00",
 				"url": "https://blog.yostos.org/2024/08/22/this-is-a.html"
 			},
@@ -1044,7 +1096,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/20/the-hiyodorizaka-is.html",
 				
 				"content_html": "<p>📷 <code>#Path</code></p>\n<!-- raw HTML omitted -->\n",
-				"content_text": " 📷 `#Path`\n\n\n<figure>\n<img src=\"uploads/2024/pxl-20240820-033046609.jpg\" width=\"600\" height=\"451\" alt=\"\">\n<figcaption>Hiyodori-zaka</figcaption>\n</figure>\nThe Hiyodori-zaka is an old path adjacent to an ancient samurai residence street, surrounded by a beautiful bamboo grove that has remained almost unchanged since the Edo period.\n",
+				"content_text": " 📷 `#Path`\n\n\n<figure>\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240820-033046609.jpg\" width=\"600\" height=\"451\" alt=\"\">\n<figcaption>Hiyodori-zaka</figcaption>\n</figure>\nThe Hiyodori-zaka is an old path adjacent to an ancient samurai residence street, surrounded by a beautiful bamboo grove that has remained almost unchanged since the Edo period.\n",
 				"date_published": "2024-08-20T21:11:35+09:00",
 				"url": "https://blog.yostos.org/2024/08/20/the-hiyodorizaka-is.html",
 				"tags": ["📷 Photo Friday"]
@@ -1061,7 +1113,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/20/the-new-webbased.html",
 				
 				"content_html": "<p>The new web-based Micro.blog editor seems to have issues with Japanese input.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "The new web-based Micro.blog editor seems to have issues with Japanese input.\n\n<video controls=\"controls\" playsinline=\"playsinline\" src=\"https://blog.yostos.org/uploads/2024/microblog.mp4\" width=\"640\" height=\"360\" poster=\"https://blog.yostos.org/uploads/2024/poster.png\" preload=\"none\"></video>\n",
+				"content_text": "The new web-based Micro.blog editor seems to have issues with Japanese input.\n\n<video controls=\"controls\" playsinline=\"playsinline\" src=\"https://cdn.uploads.micro.blog/170124/2024/microblog.mp4\" width=\"640\" height=\"360\" poster=\"https://blog.yostos.org/uploads/2024/poster.png\" preload=\"none\"></video>\n",
 				"date_published": "2024-08-20T09:41:22+09:00",
 				"url": "https://blog.yostos.org/2024/08/20/the-new-webbased.html"
 			},
@@ -1069,7 +1121,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/19/ive-started-using.html",
 				
 				"content_html": "<p>I&rsquo;ve started using  <a href=\"https://surfshark.club/friend/vLx3TyyC\">SurfShark VPN</a> to avoid facing the same issues as Chika Shigetani, a member of Japan&rsquo;s Paralympic team for Paris. <!-- raw HTML omitted -->\nカフェでMacを使ってFree WiFiでネットに接続しながら、ちょっとした作業をすることが多くなった。パリ・パラリンピック日本代表の重定知佳さんのような事態を避けるため、個人で <a href=\"https://surfshark.club/friend/vLx3TyyC\">SurfShark VPN</a> を使用し始めた。</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "I've started using  [SurfShark VPN](https://surfshark.club/friend/vLx3TyyC) to avoid facing the same issues as Chika Shigetani, a member of Japan's Paralympic team for Paris. <br />\nカフェでMacを使ってFree WiFiでネットに接続しながら、ちょっとした作業をすることが多くなった。パリ・パラリンピック日本代表の重定知佳さんのような事態を避けるため、個人で [SurfShark VPN](https://surfshark.club/friend/vLx3TyyC) を使用し始めた。\n\n<a href=\"https://surfshark.club/friend/vLx3TyyC\"><img src=\"uploads/2024/surfshark.jpg\" width=\"600\" height=\"337\" alt=\"SurfShark VPM\"></a>\n",
+				"content_text": "I've started using  [SurfShark VPN](https://surfshark.club/friend/vLx3TyyC) to avoid facing the same issues as Chika Shigetani, a member of Japan's Paralympic team for Paris. <br />\nカフェでMacを使ってFree WiFiでネットに接続しながら、ちょっとした作業をすることが多くなった。パリ・パラリンピック日本代表の重定知佳さんのような事態を避けるため、個人で [SurfShark VPN](https://surfshark.club/friend/vLx3TyyC) を使用し始めた。\n\n<a href=\"https://surfshark.club/friend/vLx3TyyC\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/surfshark.jpg\" width=\"600\" height=\"337\" alt=\"SurfShark VPM\"></a>\n",
 				"date_published": "2024-08-19T21:26:36+09:00",
 				"url": "https://blog.yostos.org/2024/08/19/ive-started-using.html",
 				"tags": ["🪄 Technologies"]
@@ -1078,7 +1130,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/19/i-visited-bangla.html",
 				
 				"content_html": "<p>I visited <a href=\"https://x.com/banglakitchiba\">Bangla Kitchen</a> for lunch🍽️, a place I’ve been wanting to try for a while. As the name suggests, this restaurant offers Bangladeshi cuisine. Today, I had the mutton biryani, which was what I was looking forward to. Delicious!</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I visited [Bangla Kitchen](https://x.com/banglakitchiba) for lunch🍽️, a place I’ve been wanting to try for a while. As the name suggests, this restaurant offers Bangladeshi cuisine. Today, I had the mutton biryani, which was what I was looking forward to. Delicious!\n\n<img src=\"uploads/2024/pxl-20240819-025601378.jpg\" width=\"600\" height=\"451\" alt=\"Mutton Biryani\">\n",
+				"content_text": "I visited [Bangla Kitchen](https://x.com/banglakitchiba) for lunch🍽️, a place I’ve been wanting to try for a while. As the name suggests, this restaurant offers Bangladeshi cuisine. Today, I had the mutton biryani, which was what I was looking forward to. Delicious!\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240819-025601378.jpg\" width=\"600\" height=\"451\" alt=\"Mutton Biryani\">\n",
 				"date_published": "2024-08-19T13:49:41+09:00",
 				"url": "https://blog.yostos.org/2024/08/19/i-visited-bangla.html",
 				"tags": ["🍽️ Dining"]
@@ -1096,7 +1148,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/18/when-i-looked.html",
 				
 				"content_html": "<p>When I looked at the street trees near my home, I noticed that these insects were quite prevalent, which was creepy.</p>\n<p>自宅近くの街路樹を見たら、この虫がかなり発生していて、不気味。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "When I looked at the street trees near my home, I noticed that these insects were quite prevalent, which was creepy.\r\n\r\n自宅近くの街路樹を見たら、この虫がかなり発生していて、不気味。\n\n<img src=\"uploads/2024/insect.jpg\" width=\"600\" height=\"270\" alt=\"\">\n",
+				"content_text": "When I looked at the street trees near my home, I noticed that these insects were quite prevalent, which was creepy.\r\n\r\n自宅近くの街路樹を見たら、この虫がかなり発生していて、不気味。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/insect.jpg\" width=\"600\" height=\"270\" alt=\"\">\n",
 				"date_published": "2024-08-18T13:21:55+09:00",
 				"url": "https://blog.yostos.org/2024/08/18/when-i-looked.html"
 			},
@@ -1130,7 +1182,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/15/161035.html",
 				
 				"content_html": "<p>愛知に来たけど、22日間猛暑日を記録してて頭がおかしくなりそうなので帰ろう。今日を逃すと台風に持ち込まれるし。</p>\n<!-- raw HTML omitted -->\n<p>途中沼津辺りでアイサイトが機能不能になるほどの豪雨に襲われましたが、無事自宅にたどり着きました。自宅に着いた途端、また雨降ってきた。</p>\n",
-				"content_text": "愛知に来たけど、22日間猛暑日を記録してて頭がおかしくなりそうなので帰ろう。今日を逃すと台風に持ち込まれるし。\n\n\n<img src=\"uploads/2024/image.jpg\" width=\"600\" height=\"451\" alt=\"静岡の空\">\n\n\n途中沼津辺りでアイサイトが機能不能になるほどの豪雨に襲われましたが、無事自宅にたどり着きました。自宅に着いた途端、また雨降ってきた。\n",
+				"content_text": "愛知に来たけど、22日間猛暑日を記録してて頭がおかしくなりそうなので帰ろう。今日を逃すと台風に持ち込まれるし。\n\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/image.jpg\" width=\"600\" height=\"451\" alt=\"静岡の空\">\n\n\n途中沼津辺りでアイサイトが機能不能になるほどの豪雨に襲われましたが、無事自宅にたどり着きました。自宅に着いた途端、また雨降ってきた。\n",
 				"date_published": "2024-08-15T16:10:35+09:00",
 				"url": "https://blog.yostos.org/2024/08/15/161035.html"
 			},
@@ -1138,7 +1190,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/14/055739.html",
 				
 				"content_html": "<p>夜通しで東名高速を下って来た。空いてたけど、疲れた。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "夜通しで東名高速を下って来た。空いてたけど、疲れた。\n\n<img src=\"uploads/2024/pxl-20240813-205232000.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
+				"content_text": "夜通しで東名高速を下って来た。空いてたけど、疲れた。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240813-205232000.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
 				"date_published": "2024-08-14T05:57:39+09:00",
 				"url": "https://blog.yostos.org/2024/08/14/055739.html"
 			},
@@ -1181,7 +1233,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/11/wifimineoesim.html",
 				
 				"content_html": "<p>モバイルWiFiを解約しデザリングで生きていくので、スマートフォンの通信会社を遅いMineoから楽天モバイルに移行しました。楽天モバイルはeSIM対応なので30分程度で移行が終わります。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "モバイルWiFiを解約しデザリングで生きていくので、スマートフォンの通信会社を遅いMineoから楽天モバイルに移行しました。楽天モバイルはeSIM対応なので30分程度で移行が終わります。\r\n\r\n<img src=\"uploads/2024/mineo.jpg\" width=\"600\" height=\"410\" alt=\"Auto-generated description: A group of people, all dressed in green and white outfits, are depicted under the mineo logo on a document with Japanese text mentioning graduation and years of service.\">\n",
+				"content_text": "モバイルWiFiを解約しデザリングで生きていくので、スマートフォンの通信会社を遅いMineoから楽天モバイルに移行しました。楽天モバイルはeSIM対応なので30分程度で移行が終わります。\r\n\r\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/mineo.jpg\" width=\"600\" height=\"410\" alt=\"Auto-generated description: A group of people, all dressed in green and white outfits, are depicted under the mineo logo on a document with Japanese text mentioning graduation and years of service.\">\n",
 				"date_published": "2024-08-11T11:04:50+09:00",
 				"url": "https://blog.yostos.org/2024/08/11/wifimineoesim.html"
 			},
@@ -1189,7 +1241,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/10/i-decided-to.html",
 				
 				"content_html": "<p>I decided to create a business card, even though it doesn&rsquo;t really matter much since I&rsquo;ve already quit my job. Instead of the usual offset printing, I decided to go the extra mile and use letterpress printing for my business cards.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I decided to create a business card, even though it doesn't really matter much since I've already quit my job. Instead of the usual offset printing, I decided to go the extra mile and use letterpress printing for my business cards.\n\n<img src=\"uploads/2024/meishi.jpg\" width=\"600\" height=\"351\" alt=\"Auto-generated description: A business card displaying the name Yoshida Toshiyuki and a website URL https://blog.yostos.org against a plain background.\">\n",
+				"content_text": "I decided to create a business card, even though it doesn't really matter much since I've already quit my job. Instead of the usual offset printing, I decided to go the extra mile and use letterpress printing for my business cards.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/meishi.jpg\" width=\"600\" height=\"351\" alt=\"Auto-generated description: A business card displaying the name Yoshida Toshiyuki and a website URL https://blog.yostos.org against a plain background.\">\n",
 				"date_published": "2024-08-10T12:09:08+09:00",
 				"url": "https://blog.yostos.org/2024/08/10/i-decided-to.html"
 			},
@@ -1224,7 +1276,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/08/i-went-to.html",
 				
 				"content_html": "<!-- raw HTML omitted -->\n<p>I went to Roppongi to see Paul McCartney’s photo exhibition “Eyes of the Storm.” The photos, taken between 1963 and 1964, capture their everyday life but were forgotten until 2020. These unseen photos of the Beatles during their peak success made the exhibition very fascinating.</p>\n",
-				"content_text": "<img src=\"uploads/2024/pxl-20240808-014936962.jpg\" width=\"600\" height=\"451\" alt=\"Paul McCartney’s photo exhibition\">\n\nI went to Roppongi to see Paul McCartney’s photo exhibition “Eyes of the Storm.” The photos, taken between 1963 and 1964, capture their everyday life but were forgotten until 2020. These unseen photos of the Beatles during their peak success made the exhibition very fascinating.\n\n",
+				"content_text": "<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240808-014936962.jpg\" width=\"600\" height=\"451\" alt=\"Paul McCartney’s photo exhibition\">\n\nI went to Roppongi to see Paul McCartney’s photo exhibition “Eyes of the Storm.” The photos, taken between 1963 and 1964, capture their everyday life but were forgotten until 2020. These unseen photos of the Beatles during their peak success made the exhibition very fascinating.\n\n",
 				"date_published": "2024-08-08T17:26:06+09:00",
 				"url": "https://blog.yostos.org/2024/08/08/i-went-to.html",
 				"tags": ["📷 Photo Friday"]
@@ -1241,7 +1293,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/08/this-earthquake-in.html",
 				
 				"content_html": "<p>This earthquake in Miyazaki might be quite big!!!</p>\n<!-- raw HTML omitted -->\n<p>📰</p>\n",
-				"content_text": "This earthquake in Miyazaki might be quite big!!!\n\n<img src=\"uploads/2024/20240808-164721.jpg\" width=\"600\" height=\"254\" alt=\"\">\n\n📰\n",
+				"content_text": "This earthquake in Miyazaki might be quite big!!!\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/20240808-164721.jpg\" width=\"600\" height=\"254\" alt=\"\">\n\n📰\n",
 				"date_published": "2024-08-08T16:53:12+09:00",
 				"url": "https://blog.yostos.org/2024/08/08/this-earthquake-in.html",
 				"tags": ["📰 Current Affairs"]
@@ -1275,7 +1327,7 @@
 				"id": "http://shamonk.micro.blog/2024/08/06/i-visited-chiba.html",
 				
 				"content_html": "<!-- raw HTML omitted -->\n<p>📷 I visited Chiba Castle. It is said that the Chiba clan built it on Mount Inohana in 1126, but the exact location is unclear. The current castle, built by Chiba City in 1967, is a completely fabricated structure without any historical basis.</p>\n<p>千葉城に行ってきた。 1967年に千葉市が他の有名な城をパクってノリで建てた歴史的根拠のないで出鱈目な建物。</p>\n",
-				"content_text": "<img src=\"uploads/2024/pxl-20240802-071057170.jpg\" width=\"600\" height=\"451\" alt=\"\">\n\n📷 I visited Chiba Castle. It is said that the Chiba clan built it on Mount Inohana in 1126, but the exact location is unclear. The current castle, built by Chiba City in 1967, is a completely fabricated structure without any historical basis.\n\n千葉城に行ってきた。 1967年に千葉市が他の有名な城をパクってノリで建てた歴史的根拠のないで出鱈目な建物。\n\n",
+				"content_text": "<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240802-071057170.jpg\" width=\"600\" height=\"451\" alt=\"\">\n\n📷 I visited Chiba Castle. It is said that the Chiba clan built it on Mount Inohana in 1126, but the exact location is unclear. The current castle, built by Chiba City in 1967, is a completely fabricated structure without any historical basis.\n\n千葉城に行ってきた。 1967年に千葉市が他の有名な城をパクってノリで建てた歴史的根拠のないで出鱈目な建物。\n\n",
 				"date_published": "2024-08-06T20:06:33+09:00",
 				"url": "https://blog.yostos.org/2024/08/06/i-visited-chiba.html"
 			},
@@ -1298,8 +1350,8 @@
 			{
 				"id": "http://shamonk.micro.blog/2024/08/05/recently-my-subaru.html",
 				
-				"content_html": "<p><img src=\"https://blog.yostos.org/uploads/2024/cars.webp\" alt=\"My Subaru\"></p>\n<p>Recently my Subaru 🚗  has been sandwiched between two maniacal cars in a parking lot. By the way, the one on the left is a nearly 60 year old Toyota sports car and the one on the right is the latest Toyota sports car, both of which belong to the same owner.</p>\n",
-				"content_text": "![My Subaru](https://blog.yostos.org/uploads/2024/cars.webp)\n\nRecently my Subaru 🚗  has been sandwiched between two maniacal cars in a parking lot. By the way, the one on the left is a nearly 60 year old Toyota sports car and the one on the right is the latest Toyota sports car, both of which belong to the same owner.\n\n",
+				"content_html": "<p><img src=\"https://cdn.uploads.micro.blog/170124/2024/cars.webp\" alt=\"My Subaru\"></p>\n<p>Recently my Subaru 🚗  has been sandwiched between two maniacal cars in a parking lot. By the way, the one on the left is a nearly 60 year old Toyota sports car and the one on the right is the latest Toyota sports car, both of which belong to the same owner.</p>\n",
+				"content_text": "![My Subaru](https://cdn.uploads.micro.blog/170124/2024/cars.webp)\n\nRecently my Subaru 🚗  has been sandwiched between two maniacal cars in a parking lot. By the way, the one on the left is a nearly 60 year old Toyota sports car and the one on the right is the latest Toyota sports car, both of which belong to the same owner.\n\n",
 				"date_published": "2024-08-05T17:47:59+09:00",
 				"url": "https://blog.yostos.org/2024/08/05/recently-my-subaru.html",
 				"tags": ["🚗 Car"]
@@ -1358,7 +1410,7 @@
 				"id": "http://shamonk.micro.blog/2024/07/31/epiphone-usa-texangibson.html",
 				
 				"content_html": "<p>先日購入したEpiphone USA Texan🎸、ローズウッドのブリッジがボディから剥離しているというトラブル。\n試奏の時はボディの傷とかは見てたけど、そのレベルで問題があると思わなかったので見てなかった。さすがGibsonクオリティ。</p>\n<p>楽器店で在庫から同じモデルを見つけて交換していただけました。ありがたや。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "先日購入したEpiphone USA Texan🎸、ローズウッドのブリッジがボディから剥離しているというトラブル。\n試奏の時はボディの傷とかは見てたけど、そのレベルで問題があると思わなかったので見てなかった。さすがGibsonクオリティ。\n\n楽器店で在庫から同じモデルを見つけて交換していただけました。ありがたや。\n\n<img src=\"uploads/2024/b70b93d2cf.jpg\" width=\"600\" height=\"455\" alt=\"Epiphone USA Texan\">\n",
+				"content_text": "先日購入したEpiphone USA Texan🎸、ローズウッドのブリッジがボディから剥離しているというトラブル。\n試奏の時はボディの傷とかは見てたけど、そのレベルで問題があると思わなかったので見てなかった。さすがGibsonクオリティ。\n\n楽器店で在庫から同じモデルを見つけて交換していただけました。ありがたや。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/b70b93d2cf.jpg\" width=\"600\" height=\"455\" alt=\"Epiphone USA Texan\">\n",
 				"date_published": "2024-07-31T20:45:33+09:00",
 				"url": "https://blog.yostos.org/2024/07/31/epiphone-usa-texangibson.html",
 				"tags": ["🎸 Guitar"]
@@ -1407,7 +1459,7 @@
 				"id": "http://shamonk.micro.blog/2024/07/29/futrakg.html",
 				
 				"content_html": "<p>セミオーダーで注文したFutraのストラト🎸だが、4.4Kg近くある。\nレスポールより重いし塗装はボコボコだが、ネックをローステッドメイプルしたせいか剛性感はあり、パキッとしたクリアトーンはちょっといいかも。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "セミオーダーで注文したFutraのストラト🎸だが、4.4Kg近くある。\nレスポールより重いし塗装はボコボコだが、ネックをローステッドメイプルしたせいか剛性感はあり、パキッとしたクリアトーンはちょっといいかも。\n\n<img src=\"uploads/2024/futra.webp\" width=\"600\" height=\"296\" alt=\"\">\n",
+				"content_text": "セミオーダーで注文したFutraのストラト🎸だが、4.4Kg近くある。\nレスポールより重いし塗装はボコボコだが、ネックをローステッドメイプルしたせいか剛性感はあり、パキッとしたクリアトーンはちょっといいかも。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/futra.webp\" width=\"600\" height=\"296\" alt=\"\">\n",
 				"date_published": "2024-07-29T10:15:16+09:00",
 				"url": "https://blog.yostos.org/2024/07/29/futrakg.html"
 			},
@@ -1475,7 +1527,7 @@
 				"id": "http://shamonk.micro.blog/2024/07/24/kattunyoutube.html",
 				
 				"content_html": "<p>知らない内にKAT―TUN中丸雄一さんとスプラトゥーン3で🎮対戦してたらしい。しかも、Youtubeでめっちゃ負けとる動画を公開されとる。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "知らない内にKAT―TUN中丸雄一さんとスプラトゥーン3で🎮対戦してたらしい。しかも、Youtubeでめっちゃ負けとる動画を公開されとる。\n\n<img src=\"uploads/2024/2024-07-23-08-20-30.png\" width=\"600\" height=\"253\" alt=\"\">\n",
+				"content_text": "知らない内にKAT―TUN中丸雄一さんとスプラトゥーン3で🎮対戦してたらしい。しかも、Youtubeでめっちゃ負けとる動画を公開されとる。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/2024-07-23-08-20-30.png\" width=\"600\" height=\"253\" alt=\"\">\n",
 				"date_published": "2024-07-24T18:24:50+09:00",
 				"url": "https://blog.yostos.org/2024/07/24/kattunyoutube.html",
 				"tags": ["🎮 Games"]
@@ -1484,7 +1536,7 @@
 				"id": "http://shamonk.micro.blog/2024/07/24/gibson-jepiphone-texan.html",
 				
 				"content_html": "<p>Gibson J-45と弾き比べて、ついEpiphone Texan USA　を買ってしまった。こちらも腐ってもGibson謹製。</p>\n<p>I ended up buying the Epiphone Texan USA after comparing it with the Gibson J-45. After all, even though it’s an Epiphone, it’s still made by Gibson.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Gibson J-45と弾き比べて、ついEpiphone Texan USA　を買ってしまった。こちらも腐ってもGibson謹製。\n\nI ended up buying the Epiphone Texan USA after comparing it with the Gibson J-45. After all, even though it’s an Epiphone, it’s still made by Gibson.\n\n<img src=\"uploads/2024/26ea4a35cea0fed7dc8ca03195bacdb288e630.jpg\" width=\"600\" height=\"600\" alt=\"\">\n",
+				"content_text": "Gibson J-45と弾き比べて、ついEpiphone Texan USA　を買ってしまった。こちらも腐ってもGibson謹製。\n\nI ended up buying the Epiphone Texan USA after comparing it with the Gibson J-45. After all, even though it’s an Epiphone, it’s still made by Gibson.\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/26ea4a35cea0fed7dc8ca03195bacdb288e630.jpg\" width=\"600\" height=\"600\" alt=\"\">\n",
 				"date_published": "2024-07-24T15:00:11+09:00",
 				"url": "https://blog.yostos.org/2024/07/24/gibson-jepiphone-texan.html",
 				"tags": ["🎸 Guitar"]
@@ -1510,7 +1562,7 @@
 				"id": "http://shamonk.micro.blog/2024/07/17/home-gmiraiya-bookmark.html",
 				
 				"content_html": "<p>大量のファイルをアップロードする必要があったのだけど、自宅をHome 5Gにしてからアップロード速度がでない。仕方がないので、<a href=\"https://bookmarklounge.rsvsys.jp/\">MIRAIYA Bookmark Lounge</a>に来た。リーズナブルな割に快適。しかも、未来書店の本を三冊まで持ち込んで良いらしい。</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "大量のファイルをアップロードする必要があったのだけど、自宅をHome 5Gにしてからアップロード速度がでない。仕方がないので、[MIRAIYA Bookmark Lounge](https://bookmarklounge.rsvsys.jp/)に来た。リーズナブルな割に快適。しかも、未来書店の本を三冊まで持ち込んで良いらしい。\n\n<img src=\"uploads/2024/pxl-20240717-020406842.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
+				"content_text": "大量のファイルをアップロードする必要があったのだけど、自宅をHome 5Gにしてからアップロード速度がでない。仕方がないので、[MIRAIYA Bookmark Lounge](https://bookmarklounge.rsvsys.jp/)に来た。リーズナブルな割に快適。しかも、未来書店の本を三冊まで持ち込んで良いらしい。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/pxl-20240717-020406842.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
 				"date_published": "2024-07-17T11:10:03+09:00",
 				"url": "https://blog.yostos.org/2024/07/17/home-gmiraiya-bookmark.html"
 			},
@@ -1562,7 +1614,7 @@
 				"id": "http://shamonk.micro.blog/2024/07/15/180707.html",
 				
 				"content_html": "<p>先月家族がぶつけてしまったSUBARUのフロント部分。昨日ディーラーに修理を依頼し今日仕上がってきました。フロント部分を丸ごと取り換えでした。</p>\n<p>The front part of our Subaru, which my wife accidentally damaged last month, was taken to the dealer for repair yesterday and was completed today. The entire front section was replaced.</p>\n<p>🚘</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "先月家族がぶつけてしまったSUBARUのフロント部分。昨日ディーラーに修理を依頼し今日仕上がってきました。フロント部分を丸ごと取り換えでした。\n\nThe front part of our Subaru, which my wife accidentally damaged last month, was taken to the dealer for repair yesterday and was completed today. The entire front section was replaced.\n\n🚘\n\n<img src=\"uploads/2024/0ad5c0bf39.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
+				"content_text": "先月家族がぶつけてしまったSUBARUのフロント部分。昨日ディーラーに修理を依頼し今日仕上がってきました。フロント部分を丸ごと取り換えでした。\n\nThe front part of our Subaru, which my wife accidentally damaged last month, was taken to the dealer for repair yesterday and was completed today. The entire front section was replaced.\n\n🚘\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/0ad5c0bf39.jpg\" width=\"600\" height=\"451\" alt=\"\">\n",
 				"date_published": "2024-07-15T18:07:07+09:00",
 				"url": "https://blog.yostos.org/2024/07/15/180707.html",
 				"tags": ["🚗 Car"]
@@ -1571,7 +1623,7 @@
 				"id": "http://shamonk.micro.blog/2024/07/15/130345.html",
 				
 				"content_html": "<p>東船橋の<a href=\"https://www.instagram.com/yousyokuyadiningmidorikawa/?hl=ja\">洋食屋ダイニングみどりかわ</a>にて、頂くイサキのラタトューユ添え。プリンを追加。</p>\n<p>美味しいけど、サラダ、メインディッシュ、パンのみで2700円なのでコスパは良くない。</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<p>🍽️</p>\n",
-				"content_text": "東船橋の[洋食屋ダイニングみどりかわ](https://www.instagram.com/yousyokuyadiningmidorikawa/?hl=ja)にて、頂くイサキのラタトューユ添え。プリンを追加。\n\n美味しいけど、サラダ、メインディッシュ、パンのみで2700円なのでコスパは良くない。\n\n<img src=\"uploads/2024/bbc925adc5.jpg\" width=\"600\" height=\"451\" alt=\"イサキ\"><img src=\"uploads/2024/f58719e4b0.jpg\" width=\"600\" height=\"451\" alt=\"プリン\">\n\n🍽️\n",
+				"content_text": "東船橋の[洋食屋ダイニングみどりかわ](https://www.instagram.com/yousyokuyadiningmidorikawa/?hl=ja)にて、頂くイサキのラタトューユ添え。プリンを追加。\n\n美味しいけど、サラダ、メインディッシュ、パンのみで2700円なのでコスパは良くない。\n\n<img src=\"https://cdn.uploads.micro.blog/170124/2024/bbc925adc5.jpg\" width=\"600\" height=\"451\" alt=\"イサキ\"><img src=\"https://cdn.uploads.micro.blog/170124/2024/f58719e4b0.jpg\" width=\"600\" height=\"451\" alt=\"プリン\">\n\n🍽️\n",
 				"date_published": "2024-07-15T13:03:45+09:00",
 				"url": "https://blog.yostos.org/2024/07/15/130345.html",
 				"tags": ["🍽️ Dining"]
