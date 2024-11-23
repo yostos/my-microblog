@@ -25,6 +25,410 @@
 	  <div class="h-entry">
 		
 
+		<a href="https://blog.yostos.org/2024/11/23/finished-reading-why.html" class="u-url"><time class="dt-published" datetime="2024-11-23 10:28:14 &#43;0900">Nov 23, 2024</time></a>
+
+		<div class="e-content">
+			 <p>Finished reading: <a href="https://micro.blog/books/9784098254576">世界はなぜ地獄になるのか(Why is the world becoming a dystopia?)</a> by 橘玲 📚</p>
+<p>A book that discusses the mechanism by which the &ldquo;liberalism&rdquo; that emerged since the 1960s—allowing people to live authentically due to technological advancements—has expanded inequality and further given rise to cancel culture.</p>
+<p>If a dystopia is born from a utopia, then it&rsquo;s an unpalatable conclusion that we cannot escape and can only avoid stepping on landmines, but I am greatly convinced.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/22/slender-the-boundary.html" class="u-url"><time class="dt-published" datetime="2024-11-22 15:54:59 &#43;0900">Nov 22, 2024</time></a>
+
+		<div class="e-content">
+			 <p>📷 <code>slender</code></p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/22/i-switched-back.html" class="u-url"><time class="dt-published" datetime="2024-11-22 10:29:59 &#43;0900">Nov 22, 2024</time></a>
+
+		<div class="e-content">
+			 <p>I switched back to ChatGPT from Perplexity. I&rsquo;m testing ChatGPT now because it has a new Canvas feature. It&rsquo;s similar to Claude&rsquo;s Artifacts feature, but since users can directly edit it, it feels more like &ldquo;creating together&rdquo; compared to Artifacts, which I really like.</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/21/the-two-new.html" class="u-url"><time class="dt-published" datetime="2024-11-21 20:49:46 &#43;0900">Nov 21, 2024</time></a>
+
+		<div class="e-content">
+			 <!-- raw HTML omitted -->
+<p>What the heck?! I just bought a GR III this year, and now they&rsquo;re releasing the GR IV next year?! Sure, the GR III is based on 2019 tech, so yeah, it’s been 5 years, but the image quality is still absolutely killer. So, what’s gonna be different with the GR IV?!</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/21/i-just-sold.html" class="u-url"><time class="dt-published" datetime="2024-11-21 18:21:22 &#43;0900">Nov 21, 2024</time></a>
+
+		<div class="e-content">
+			 <p>I just sold my  Nikon Ti35, which I purchased nearly 30 years ago.</p>
+<p>Although it was still functioning perfectly, I decided to let it go due to the difficulty of obtaining film and the inconvenience of developing it nowadays.</p>
+<p>I&rsquo;ve compiled some sample photos taken with it here &ndash;&gt; <a href="https://flic.kr/s/aHBqjBStNn">Flickr</a>.</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2024/11/21/how-to-prevent.html">How to Prevent Image Reuse on Micro.blog</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2024/11/21/how-to-prevent.html" class="u-url"><time class="dt-published" datetime="2024-11-21 09:52:38 &#43;0900">Nov 21, 2024</time></a>
+
+		<div class="e-content">
+			 <p>I have compiled methods to prevent image reuse on Micro.blog. While I
+initially wrote this in Japanese, I&rsquo;ve updated and rewritten it in English
+since there are few Japanese users.</p>
+<h2 id="pinterest-protection">Pinterest Protection</h2>
+<p>To prevent Pinterest users from pinning your images, add the following meta
+tag to your blog:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pinterest&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nopin&#34;</span> /&gt;
+</code></pre></div><p>This can be implemented using the Meta tags plug-in<a href="https://github.com/microdotblog/plugin-metatags">Meta tags plug-in</a>.</p>
+<h2 id="automated-watermarking-system">Automated Watermarking System</h2>
+<p>I&rsquo;ve created a shell script to simplify the process. This script performs
+three key functions:</p>
+<ul>
+<li>Optimizes images for Micro.blog through resizing</li>
+<li>Adds copyright information</li>
+<li>Converts images to TIFF format and optimizes file size using Optimage</li>
+</ul>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>macOS operating system</li>
+<li>ImageMagick version 7.x or higher</li>
+<li>Optimage application</li>
+</ul>
+<p>The copyright text is hard-coded in the script - please replace it with your
+own information when using.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e"># Argument check</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -ne <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;Usage: </span>$0<span style="color:#e6db74"> &lt;input-image-file&gt;&#34;</span>
+    exit <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">fi</span>
+
+
+<span style="color:#75715e"># Input file existence check</span>
+input_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -f <span style="color:#e6db74">&#34;</span>$input_file<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;Error: File &#39;</span>$input_file<span style="color:#e6db74">&#39; not found&#34;</span>
+    exit <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">fi</span>
+
+
+<span style="color:#75715e"># Create backup file</span>
+backup_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>input_file<span style="color:#e6db74">}</span><span style="color:#e6db74">.bak&#34;</span>
+<span style="color:#66d9ef">if</span> ! cp <span style="color:#e6db74">&#34;</span>$input_file<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$backup_file<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;Error: Failed to create backup file&#34;</span>
+    exit <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">fi</span>
+echo <span style="color:#e6db74">&#34;Backup created: </span>$backup_file<span style="color:#e6db74">&#34;</span>
+
+
+<span style="color:#75715e"># Create temporary file</span>
+temp_tiff<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tmp/image_</span><span style="color:#66d9ef">$(</span>date +%s<span style="color:#66d9ef">)</span><span style="color:#e6db74">.tiff&#34;</span>
+
+
+<span style="color:#75715e"># Image processing</span>
+<span style="color:#66d9ef">if</span> ! magick <span style="color:#e6db74">&#34;</span>$input_file<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -resize 1800x1800 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -gravity southeast <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -fill white <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -pointsize <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -annotate +15+30 <span style="color:#e6db74">&#39;© 2024 Toshiyuki Yoshida&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -pointsize <span style="color:#ae81ff">16</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -annotate +15+10 <span style="color:#e6db74">&#39;CC BY-NC-SA 4.0&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -format tiff <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#e6db74">&#34;</span>$temp_tiff<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;Error: Image processing failed&#34;</span>
+    rm -f <span style="color:#e6db74">&#34;</span>$temp_tiff<span style="color:#e6db74">&#34;</span>
+    exit <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">fi</span>
+
+
+<span style="color:#75715e"># Optimize with Optimage (outputs jpg)</span>
+open <span style="color:#e6db74">&#34;</span>$temp_tiff<span style="color:#e6db74">&#34;</span> -W -n -a Optimage --args -exit YES
+
+
+<span style="color:#75715e"># Find Optimage-created jpg file</span>
+optimized_jpg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>temp_tiff%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">.jpg&#34;</span>
+
+
+<span style="color:#75715e"># Check optimized file existence</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -f <span style="color:#e6db74">&#34;</span>$optimized_jpg<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;Error: Optimage output file not found&#34;</span>
+    rm -f <span style="color:#e6db74">&#34;</span>$temp_tiff<span style="color:#e6db74">&#34;</span>
+    exit <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">fi</span>
+
+
+<span style="color:#75715e"># Overwrite original file</span>
+<span style="color:#66d9ef">if</span> ! mv <span style="color:#e6db74">&#34;</span>$optimized_jpg<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$input_file<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;Error: Failed to update original file&#34;</span>
+    rm -f <span style="color:#e6db74">&#34;</span>$temp_tiff<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$optimized_jpg<span style="color:#e6db74">&#34;</span>
+    exit <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">fi</span>
+
+
+<span style="color:#75715e"># Clean up temporary files</span>
+rm -f <span style="color:#e6db74">&#34;</span>$temp_tiff<span style="color:#e6db74">&#34;</span>
+rm -f <span style="color:#e6db74">&#34;</span>$optimized_jpg<span style="color:#e6db74">&#34;</span>
+
+
+echo <span style="color:#e6db74">&#34;Image processing completed: </span>$input_file<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>The script automatically resizes images, adds a watermark with copyright
+information, and optimizes the file size while maintaining quality. The
+watermark includes both a copyright notice and Creative Commons license
+information.</p>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/21/takezinpagecopyright-magick-inputjpg.html" class="u-url"><time class="dt-published" datetime="2024-11-21 06:37:59 &#43;0900">Nov 21, 2024</time></a>
+
+		<div class="e-content">
+			 <p><a href="https://takezin.page/2024/11/20/xtlalt.html">Takezin.Pageの画像についてのポスト</a>を見ていて気になったので、このブログのCopyright<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>に合わない転載を防ぐための防止策を施してみました。</p>
+<h2 id="pinterest-のピン止め禁止">Pinterest のピン止め禁止</h2>
+<p>以 下を Meta Tagに追加します。追加にはMeta Tagsのプラグインを使用しました。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pinterest&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nopin&#34;</span> /&gt;
+</code></pre></div><h2 id="画像への透かし追加">画像への透かし追加</h2>
+<p>面倒なのでコマンドラインで実施します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">magick input.jpg <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -gravity southeast <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -fill white <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -pointsize <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -annotate +15+30 <span style="color:#e6db74">&#39;© 2024 Toshiyuki Yoshida&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -pointsize <span style="color:#ae81ff">16</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -annotate +15+50 <span style="color:#e6db74">&#39;CC BY-NC-SA 4.0&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      output.jpg
+</code></pre></div><p>この後に<a href="https://optimage.app/">optimage</a>で最適化を行います<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<h2 id="メタ情報の追加">メタ情報の追加</h2>
+<p>(追記) Micro.blogでは画像の最適化を行っているため、メタ情報がすべて削除されます。よって、以下は意味がありませんでした。</p>
+<p>Exif情報に権利表記を入れておきます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">exiftool -Copyright<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;© 2024 Toshiyuki Yoshida (CC BY-NC-SA 4.0)&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -Rights<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;This work is licensed under CC BY-NC-SA 4.0&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      -Artist<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Toshiyuki Yoshida&#34;</span> output.jpg
+</code></pre></div><p>こんな感じになります。</p>
+<!-- raw HTML omitted -->
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>CC BY-NC-SA 4.0 です。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/20/just-discovered-nintendo.html" class="u-url"><time class="dt-published" datetime="2024-11-20 21:06:17 &#43;0900">Nov 20, 2024</time></a>
+
+		<div class="e-content">
+			 <p>Just discovered Nintendo Music is out! It&rsquo;s amazing to listen to all those tunes from the games I used to play! 🎮🎵</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.nintendo.znba">Get it on Google Play</a></p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/20/174338.html" class="u-url"><time class="dt-published" datetime="2024-11-20 17:43:38 &#43;0900">Nov 20, 2024</time></a>
+
+		<div class="e-content">
+			 <p>今年も更新してしまった。
+一度も使ったことがない国内Ｂ級ライセンス・・・</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/20/121310.html" class="u-url"><time class="dt-published" datetime="2024-11-20 12:13:10 &#43;0900">Nov 20, 2024</time></a>
+
+		<div class="e-content">
+			 <p>バングラキッチン西千葉にまた行こうか悩み中。</p>
+<p>写真は昨日いただいた日替わりセットで、タンドリーチキンが乗ったブナキチェリ。
+ブナ＝汁気のない、キチュリ＝豆と米のお粥という意味で、キチェリは雨の日や寒い日に食べるらしい。</p>
+<p>ネパール人がやってる「なんちゃってインド料理」の店が多い中、ちゃんとバングラデッシュの料理をいただけるこのお店は貴重。</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/20/hhkbpfu.html" class="u-url"><time class="dt-published" datetime="2024-11-20 11:50:25 &#43;0900">Nov 20, 2024</time></a>
+
+		<div class="e-content">
+			 <p>HHKBの<a href="https://www.pfu.ricoh.com/direct/hhkb/hhkb-option/detail_pd-kb400ktlgc.html">山葵キートップ</a>が限定で限定735台。限定と聞くと欲しくなりますが、そもそもブラインドタイプするからキーボード見ないしな。</p>
+<p>タイピングがわかるキープロファイルが違うキートップを発売するならわかりますが、配色変えた限定品を連発するPFUには堕落を感じます。まぁ、新しいキープロファイルの型を作ってとなると採算が合わないのはわかりますが。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/19/i-played-my.html" class="u-url"><time class="dt-published" datetime="2024-11-19 16:13:27 &#43;0900">Nov 19, 2024</time></a>
+
+		<div class="e-content">
+			 <p>I played my new Stratocaster with some random backing tracks to check out its sound. Man, it feels absolutely amazing!</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/19/httpswwwbloombergcojpnewsarticlessngptumw.html" class="u-url"><time class="dt-published" datetime="2024-11-19 10:57:21 &#43;0900">Nov 19, 2024</time></a>
+
+		<div class="e-content">
+			 <p><a href="https://www.bloomberg.co.jp/news/articles/2024-11-18/SN63GPT1UM0W00">www.bloomberg.co.jp/news/arti&hellip;</a></p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/18/yamaha-sgi-sghshpu.html" class="u-url"><time class="dt-published" datetime="2024-11-18 20:20:15 &#43;0900">Nov 18, 2024</time></a>
+
+		<div class="e-content">
+			 <!-- raw HTML omitted -->
+<p>YAMAHA SG-Iか、<a href="https://www.digimart.net/cat01/shop57/DS09289147/">デジマート</a>に出てるとつい見てしまう。</p>
+<blockquote>
+<p>カシオペア野呂一生モデル。SGという名が付いてはいますがモデル独自のデザインで、スルーネック、セミホロウ・ボディ、HSHのPUレイアウト、ロック式トレモロ搭載。社外品ハードケース付属。</p>
+</blockquote>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/18/amazon.html" class="u-url"><time class="dt-published" datetime="2024-11-18 18:28:40 &#43;0900">Nov 18, 2024</time></a>
+
+		<div class="e-content">
+			 <p>Amazonの利用をやめようか検討中です。</p>
+<p>置き荷指定すると何度注意してもマンションの隣の部屋の出窓においてゆき、置き荷不可とすると１階ロビーに宅配ボックスがあるにも関わらず不在時持ち帰る。</p>
+<p>できたばかりの千葉港の配送センターだと思いますが、バカなのか？</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/11/18/awk-posted-with.html" class="u-url"><time class="dt-published" datetime="2024-11-18 13:05:58 &#43;0900">Nov 18, 2024</time></a>
+
+		<div class="e-content">
+			 <p>35年ぶりぐらいで第二版が出ていたので、購入してみました。懐かしい・・・</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2024/11/17/weekly-buzz.html">Weekly Buzz🐝 2024-11-15</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2024/11/17/weekly-buzz.html" class="u-url"><time class="dt-published" datetime="2024-11-17 18:13:48 &#43;0900">Nov 17, 2024</time></a>
+
+		<div class="e-content">
+			 <p>すっかり寒くなり、先週末にGoogle Cloudの資格取得で新橋に行ったときにすっかり
+風邪を引いてしまいました。</p>
+<p>今週は次の3つのトピックです。</p>
+<ul>
+<li>VMWareデスクトップ製品無償化</li>
+<li>Google Cloud Digital Leader認定資格</li>
+<li>Fender ストラトキャスターについて</li>
+</ul>
+<h2 id="vmwareデスクトップ製品無償化">VMwareデスクトップ製品無償化</h2>
+<p>VMwareは2024年11月13日、デスクトップ向け仮想化製品のWorkstation ProとFusion Proの完全無償化を<a href="https://blogs.vmware.com/cloud-foundation/2024/11/11/vmware-fusion-and-workstation-are-now-free-for-all-users/">発表</a>しました。商用利用を含むすべての利用が可能となり、Pro版の全機能が制限なく使えるようになります。</p>
+<p>個人的は歓迎ですが、企業には不安が広がっているようです。</p>
+<h3 id="broadcomによるvmware買収に関するこれまでの懸念">BroadcomによるVMWare買収に関するこれまでの懸念</h3>
+<p>そもそもBroadcomの買収により、ユーザー企業は非常に混乱していました。</p>
+<p>買収後、vSphereやvSANなどのエンタープライズ向け製品の価格が最大300%上昇していました。</p>
+<p>年間売上高50万ドル未満のパートナーがプログラムから除外され、多くの企業が混乱に直面していました。また、サポート品質の低下や技術者の離職も相次ぎ、代替製品への移行を検討する企業が増加していました。</p>
+<h3 id="vmware無償化の影響">VMWare無償化の影響</h3>
+<p>今回個人開発者や小規模チーム向けのデスクトップ製品（WorkstationとFusion）を無償化する一方で、
+データセンターで使用されるエンタープライズ製品の価格は更に引き上げられています。</p>
+<p>この対照的な動きは、Broadcomが大規模企業向けビジネスに集中し、中小規模の顧客を切り捨てる戦略を示唆しています。
+無償化された製品のサポートはコミュニティベースとなり、企業ユーザーの不安は一層深まっています。</p>
+<p>私がAWS在職中もVMWareを使ってCloud移行を検討していたお客様も多く居ましたが、
+VMware Cloud on AWSについてはAWS及びそのチャネルパートナーによる直接販売が終
+了しライセンスコストも上がったと聞いています。</p>
+<p>オンプレミスのVMWareをそのままCloudに移行するというのは以前よく行われていましたが、
+全くお勧めしません。</p>
+<h2 id="google-cloud--cloud-digital-leader認定資格">Google Cloud / Cloud DIgital Leader認定資格</h2>
+<p>Google Cloud2 の&quot;Cloud Digital Leader(CDL)&quot; とは、Google Cloudの基礎的な知識、 Google Cloudの概要や各サービスの特徴、基本的な利用方法を理解しているという資格認定です。
+Amazon Web Services(AWS)の資格で言うと、&ldquo;Cloud Practitioner&quot;に当たるものかな と思います。</p>
+<p>暇だったので今週受験してきました。AWSの知識があれば、多分この程度で「Compute Engine ってAWSのEC2ね」などと大体 対応が理解できるので十分かなと思います。</p>
+<p>Cloud Digital Leaderは初学者向けなので、次のような人が目指すとよいと思いま す。</p>
+<ul>
+<li>職種はNon Techだが、クラウドを利用したシステムの開発や運営に何らかの形で関 わる方</li>
+<li>これから技術職を目指す学生や、他職種から転職を目指す方</li>
+</ul>
+<p>あくまで初学者レベルなので、業務で扱うことのある技術者であればCloud Digital Leaderはスキップして Associate Cloud Engineerを目指したほうが よいと思います。
+会社が「とにかく資格、バッチ取ってこい よ」というモードで報償金が出る場合は
+別ですが。</p>
+<h2 id="fender-ストラトキャスターについて">Fender ストラトキャスターについて</h2>
+<p>今週はFender 70th Anniversary American Vintage II 1954 Stratocasterを購入し
+てテンションが上がっているので、ストラトキャスターについて語ってみたいと思い
+ます。</p>
+<p>私がギターを始めた頃の1970年代から80年代はハードロックが流行っていて、ギターシーンではレスポールやハムバッカー搭載のギターが主流でした。当時はエリック・クラプトン、ジェフ・ベック、ジミー・ペイジといったギターヒーローたちの影響で、ハイゲインとサスティーンの得やすいレスポールが好まれていました。</p>
+<p>80年代後半になると、ストラトキャスターの形状をベースにハムバッカーやロッキングトレモロを搭載した「スーパーストラト」が台頭。しかし、これは伝統的なストラトキャスターとは別もので、Fenderはそれほど注目されていなかったと思います
+。</p>
+<p>転機は2000年代以降で音楽シーンがグランジやオルタナティブロックへと変化し、ハードロックはもはやオールディーズになりました。それに伴いテクニカルなソロよりもバンドサウンドに溶け込むギターワークが重視されるようになりました。
+またエフェクター技術の進化によりシングルコイルの弱点だった出力の低さやサスティーンの短さも克服されました。</p>
+<p>こうなるとハムバッカーの音しかでないレスポールよりも、
+むしろストラトキャスターの3ピックアップによる多彩な音色が好まれるようになり
+ました。
+。
+現在、ストラトキャスターの人気は過去最高潮に達しています。2020年にはフェンダー社の売上が過去最高を記録し、
+特に若い世代や女性プレイヤーの増加が顕著です。
+その理由として、クリアで多様なトーン、演奏性の高さ、そして軽量で扱いやすいボディが、現代の多様な音楽表現に適していることが挙げられます。</p>
+<p>Custom Shopなど100万円を超える価格でFender自らが「投資」というようなのはどう
+かと思いますが、今購入するギターとしては、本質的な魅力を失うことなく進化を続けながら
+現代の音楽シーンにおいてその価値を高めているストラトキャスターはお勧めのギ
+ターです。</p>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
 		<a href="https://blog.yostos.org/2024/11/15/the-inexpensive-semicustom.html" class="u-url"><time class="dt-published" datetime="2024-11-15 13:02:30 &#43;0900">Nov 15, 2024</time></a>
 
 		<div class="e-content">
