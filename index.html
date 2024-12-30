@@ -24,6 +24,375 @@
 	
 	  <div class="h-entry">
 		
+			<h1><a href="https://blog.yostos.org/2024/12/30/a-command-to-sync-exif.html">A Command to Sync EXIF Data with File System Timestamps</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2024/12/30/a-command-to-sync-exif.html" class="u-url"><time class="dt-published" datetime="2024-12-30 10:21:01 &#43;0900">Dec 30, 2024</time></a>
+
+		<div class="e-content">
+			 <h3 id="getting-started-with-pfu-scansnap-ix1600">Getting Started with PFU ScanSnap iX1600</h3>
+<p>I recently embarked on a journey to digitize my old photographs. Since my pre-digital photos exist only as physical prints, I decided to invest in a PFU scanner to bring these memories into the digital age.</p>
+<p>The scanner&rsquo;s performance has been impressive - it handled even my old San Francisco business trip photos from 2001 beautifully, producing crisp, clear scans.</p>
+<p><img src="https://blog.yostos.org/uploads/2024/20241230-031.jpg" alt="Scanned Photo"></p>
+<h3 id="setting-exif-information">Setting EXIF Information</h3>
+<p>Unlike photos taken with a digital camera, scanned images don&rsquo;t come with proper EXIF data. To preserve the actual capture dates of these photos, I used exiftool from the command line to set the correct EXIF information:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#75715e"># Example: Setting the original capture date
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exiftool</span> <span style="color:#e6db74">&#34;-DateTimeOriginal=2001:04:15 10:00:00&#34;</span> photo.jpg
+</code></pre></div><p>This command successfully embeds the correct capture date in the photo&rsquo;s EXIF data.</p>
+<h3 id="the-photo-organization">The Photo Organization</h3>
+<p>For managing my photo files, I rely on Hazel, a powerful file organization tool for Mac. Hazel offers some fantastic automation features:</p>
+<ul>
+<li>Filtering based on file creation and modification dates</li>
+<li>Automatic folder organization</li>
+<li>Smart file renaming</li>
+</ul>
+<p>However, Hazel has one limitation that&rsquo;s been bugging me: it can&rsquo;t directly read EXIF data. This means that even though I&rsquo;ve carefully added the correct capture dates to the EXIF data, I can&rsquo;t use this information for Hazel&rsquo;s automated organization.</p>
+<h3 id="the-solution-adj-photodate-script">The Solution: adj-photodate Script</h3>
+<p>To bridge this gap, I created a script that syncs EXIF information with the file system timestamps (creation and modification dates). This enables Hazel to organize photos based on their actual capture dates.</p>
+<p>The script provides the following features:</p>
+<ul>
+<li>Syncs <code>DateTimeOriginal</code> from EXIF to file system timestamps</li>
+<li>Includes a dry-run mode for previewing changes</li>
+<li>Handles batch processing of multiple files</li>
+<li>Supports recursive directory processing</li>
+</ul>
+<h4 id="installation">Installation</h4>
+<ol>
+<li>Create a file named &ldquo;adj-photodate&rdquo; and paste the following script:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"></code></pre></div></li>
+</ol>
+<p>#!/usr/bin/env fish</p>
+<h1 id="---coding-utf-8---">-<em>- coding: utf-8 -</em>-</h1>
+<h1 id="heading"></h1>
+<h1 id="fish-script-to-update-filesystem-timestamps-from-exif-information-in-jpeg-images">Fish script to update filesystem timestamps from EXIF information in JPEG images</h1>
+<h1 id="heading-1"></h1>
+<p>function show_help
+echo &ldquo;Usage: &ldquo;(status basename)&rdquo; [options] <!-- raw HTML omitted -->&rdquo;
+echo &quot;&quot;
+echo &ldquo;Options:&rdquo;
+echo &quot;  -h, &ndash;help     Show this help message&quot;
+echo &quot;  -n, &ndash;dry-run  Show what would be done without actually doing it&quot;
+echo &quot;  -r, &ndash;recurse  Recursively process directories&quot;
+echo &quot;&quot;
+echo &ldquo;This script updates file system timestamps based on EXIF data in JPEG files.&rdquo;
+end</p>
+<h1 id="parse-command-line-options">Parse command line options</h1>
+<p>set -l options (fish_opt -s h -l help)
+set options $options (fish_opt -s n -l dry-run)
+set options $options (fish_opt -s r -l recurse)
+argparse $options &ndash; $argv
+or begin
+show_help
+exit 1
+end</p>
+<p>if set -q _flag_help
+show_help
+exit 0
+end</p>
+<h1 id="check-dry-run-flag">Check dry-run flag</h1>
+<p>set -l exiftool_args
+if set -q _flag_dry_run
+# -v3: 詳細な処理内容を表示
+# -s3: タグ名とその値を表示（グループ名付き）
+# -G: グループ名を表示
+set exiftool_args -v3 -s3 -G
+end</p>
+<h1 id="check-recursive-flag">Check recursive flag</h1>
+<p>if set -q _flag_recurse
+set exiftool_args $exiftool_args -r
+end</p>
+<h1 id="show-help-if-no-arguments-provided">Show help if no arguments provided</h1>
+<p>if test (count $argv) -eq 0
+show_help
+exit 1
+end</p>
+<h1 id="main-processing">Main processing</h1>
+<p>for target in $argv
+if test -e $target
+echo &ldquo;Processing: $target&rdquo;</p>
+<pre><code>    # Display current values in dry-run mode
+    if set -q _flag_dry_run
+        echo &quot;Current values:&quot;
+        exiftool -s3 -G \
+            -FileCreateDate \
+            -FileModifyDate \
+            -DateTimeOriginal \
+            $target
+        echo &quot;\nProposed changes:&quot;
+    end
+
+
+    # Update filesystem timestamps
+    # -overwrite_original: don't create backup files
+    # -preserve: preserve all other attributes
+    # FileCreateDate: file creation timestamp
+    # FileModifyDate: file modification timestamp
+    exiftool $exiftool_args \
+        -overwrite_original \
+        -preserve \
+        &quot;-FileCreateDate&lt;DateTimeOriginal&quot; \
+        &quot;-FileModifyDate&lt;DateTimeOriginal&quot; \
+        $target
+
+
+    if test $status -ne 0
+        echo &quot;Error processing: $target&quot; &gt;&amp;2
+    end
+else
+    echo &quot;File or directory not found: $target&quot; &gt;&amp;2
+end
+</code></pre>
+<p>end</p>
+<pre tabindex="0"><code>2. Make it executable:
+```fish
+chmod +x adj-photodate
+</code></pre><ol start="3">
+<li>Optionally, move it to your path:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#a6e22e">cp</span> adj-photodate ~/bin/
+</code></pre></div></li>
+</ol>
+<p>Dependencies:</p>
+<ul>
+<li>fish shell</li>
+<li>exiftool</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#75715e"># Process a single file
+</span><span style="color:#75715e"></span>./adj-photodate photo.jpg
+
+<span style="color:#75715e"># Preview changes with dry-run
+</span><span style="color:#75715e"></span>./adj-photodate <span style="color:#a6e22e">-n</span> photo.jpg
+
+<span style="color:#75715e"># Process all JPEG files in a directory recursively
+</span><span style="color:#75715e"></span>./adj-photodate <span style="color:#a6e22e">-r</span> ~/Pictures/Scanned
+</code></pre></div><p>To see available options:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./adj-photodate --help
+</code></pre></div>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/12/29/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-12-29 21:21:01 &#43;0900">Dec 29, 2024</time></a>
+
+		<div class="e-content">
+			 <p>Finished reading: <a href="https://micro.blog/books/9784163919089">婚活マエストロ</a> by 宮島未奈 📚</p>
+<p>ドラマティックな事は何も起こらず、エンディングもフワッとしてるが、たまにはこういうほんものよいかなと思いました。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2024/12/28/in-japan-there-is-a.html" class="u-url"><time class="dt-published" datetime="2024-12-28 09:29:02 &#43;0900">Dec 28, 2024</time></a>
+
+		<div class="e-content">
+			 <p>In Japan, there is a tradition of sending New Year&rsquo;s greetings by postcards, but as someone of the digital age, I set up a scheduled email in Fastmail to send mine on New Year&rsquo;s Day. I created <a href="https://d2qrq6r3uw9f5f.cloudfront.net/">a dedicated website</a> for the greeting itself.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2024/12/27/handson-with-berkeley-mono-v.html">Hands-on with Berkeley Mono v2 (TX-02): More Features and New Pricing Model</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2024/12/27/handson-with-berkeley-mono-v.html" class="u-url"><time class="dt-published" datetime="2024-12-27 09:56:29 &#43;0900">Dec 27, 2024</time></a>
+
+		<div class="e-content">
+			 <p>The <a href="https://usgraphics.com/products/berkeley-mono">Berkeley Mono font</a> that I recently purchased has released a new Version 2.</p>
+<h3 id="major-changes-in-berkeley-mono-version-2">Major Changes in Berkeley Mono Version 2</h3>
+<p>Berkeley Mono Version 2 includes the following changes:</p>
+<ul>
+<li>Font width variations have increased to five options: Normal / Semi Condensed / Condensed / Extra Condensed / Ultra Condensed</li>
+<li>Font weights have increased to 12 options</li>
+<li>Slants have increased to 2 options</li>
+<li>Variable fonts, which were previously split between normal and italic, now have three axes: width, weight, and slant</li>
+<li>Ligatures, which were in beta, are now officially supported with over 150 ligatures available</li>
+<li>Font name has changed from &ldquo;Berkeley Mono&rdquo; to &ldquo;TX-02&rdquo;</li>
+<li>Improved Glyph customization</li>
+<li>Addition of Super Type compiler for more detailed custom modifications</li>
+</ul>
+<p>With the improved customization and addition of the Super Type compiler, the distribution method has changed. Previously, users would download prepared fonts after selecting glyphs, but now even with a standard license, fonts are compiled through the Standard compiler based on customization settings.</p>
+<p><img src="https://blog.yostos.org/uploads/2024/berkeley-mono.jpg" alt="Compiling Berkeley Mono."></p>
+<h3 id="berkeley-mono-version-2-license-changes">Berkeley Mono Version 2 License Changes</h3>
+<p>The license tiers have been divided more finely than before.
+The Developer License for individual users remains at $75 but now only includes &ldquo;MX-002 Berkeley Mono™ Standard Fonts,&rdquo; which contains:</p>
+<ul>
+<li>Width: Normal</li>
+<li>Weights: Regular, Bold</li>
+<li>Slants: Regular, Oblique(-16)</li>
+</ul>
+<p>Web fonts and Variable fonts that were previously included are no longer part of the package, and ligatures that were available in beta can no longer be used, effectively making this a price increase.</p>
+<p>As a previous Berkeley Mono™ Developer license owner, I was migrated to the following licenses with Version 2&rsquo;s release<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>Item</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MX-002</td>
+<td>Berkeley Mono™ Standard Fonts</td>
+<td>inc</td>
+</tr>
+<tr>
+<td>MX-007</td>
+<td>Berkeley Mono™ Master Fonts</td>
+<td>$50.0</td>
+</tr>
+<tr>
+<td>MX-017</td>
+<td>Berkeley Mono™ Ligatures</td>
+<td>$20.0</td>
+</tr>
+<tr>
+<td>TS-024</td>
+<td>Berkeley Mono™ Standard Compiler</td>
+<td>inc</td>
+</tr>
+</tbody>
+</table>
+<p>I can now use the newly added width and weight variations along with ligatures.
+It seems they gave me a bonus worth $70.0 (thank you).
+However, Variable fonts and Web fonts now require the following additional licenses:</p>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>Function</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MX-012</td>
+<td>Berkeley Mono™ Web Fonts</td>
+<td>$45.0</td>
+</tr>
+<tr>
+<td>MX-030</td>
+<td>Berkeley Mono™ Variable Fonts</td>
+<td>$24.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evaluation-of-berkeley-mono-version-2">Evaluation of Berkeley Mono Version 2</h3>
+<p>With Version 2, the font has become more flexible and suitable for a wider range of uses compared to Version 1.
+While the name change to &ldquo;TX-02&rdquo; makes it simpler to specify in configurations, it feels less personal and harder to develop an attachment to compared to the original &ldquo;Berkeley Mono&rdquo; name.
+Particularly, the significantly improved customization allows for more detailed adjustments when using it for programming and design.</p>
+<p>For programming use, being able to adjust the font width and weight according to preference is a welcome feature. The Variable font is especially convenient as you can adjust to your preferred settings by simply changing the weight specification without switching between different fonts.</p>
+<p>However, Web fonts, Variable fonts, and additional width and weight options now require additional licenses.
+While this may seem like a downgrade to existing users and partially unfavorable, I think it might be the best way to maintain prices while delivering extended functionality to those who need it, as users requiring these features are limited.</p>
+<p>I didn&rsquo;t purchase the Super Type compiler, but I did buy additional licenses for Web fonts and Variable fonts.</p>
+<h3 id="my-wezterm-font-settings-for-berkeley-mono-version-2">My WezTerm Font Settings for Berkeley Mono Version 2</h3>
+<p>While I don&rsquo;t use Variable fonts in web environments due to compatibility issues, I do utilize them in my local environment. Below are my WezTerm font-related settings, updated for Berkeley Mono Version 2:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">config.font <span style="color:#f92672">=</span> wezterm.font_with_fallback({
+ {
+  family <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TX-02&#34;</span>,
+  weight <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>, <span style="color:#75715e">-- Regular weight</span>
+  style <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Normal&#34;</span>,
+ },
+ {
+  family <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hiragino Kaku Gothic&#34;</span>,
+  weight <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>,
+ },
+})
+
+
+<span style="color:#75715e">-- Settings for Bold and Oblique text</span>
+config.bold_brightens_ansi_colors <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+config.font_rules <span style="color:#f92672">=</span> {
+ {
+  intensity <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bold&#34;</span>,
+  font <span style="color:#f92672">=</span> wezterm.font({
+   family <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TX-02&#34;</span>,
+   weight <span style="color:#f92672">=</span> <span style="color:#ae81ff">700</span>, <span style="color:#75715e">-- Bold weight</span>
+  }),
+ },
+ {
+  italic <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>,
+  font <span style="color:#f92672">=</span> wezterm.font({
+   family <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TX-02&#34;</span>,
+   style <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Oblique&#34;</span>,
+  }),
+ },
+ <span style="color:#75715e">-- Bold + Oblique combination</span>
+ {
+  italic <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>,
+  intensity <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bold&#34;</span>,
+  font <span style="color:#f92672">=</span> wezterm.font({
+   family <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TX-02&#34;</span>,
+   weight <span style="color:#f92672">=</span> <span style="color:#ae81ff">700</span>,
+   style <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Oblique&#34;</span>,
+  }),
+ },
+}
+</code></pre></div><section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>I&rsquo;m not sure if this migration was because of my recent purchase or if all users were eligible for migration.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2024/12/26/vin-antique-ppse-classic-artisanal.html">Vin Antique PPSE Classic - Artisanal Warmth Over Drive</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2024/12/26/vin-antique-ppse-classic-artisanal.html" class="u-url"><time class="dt-published" datetime="2024-12-26 16:50:10 &#43;0900">Dec 26, 2024</time></a>
+
+		<div class="e-content">
+			 <p>Vin Antique, a small effects pedal brand from Kyoto, has released a new overdrive pedal called &ldquo;PPSE Classic&rdquo;. Although it was produced in small quantities, I was fortunate enough to get my hands on one.</p>
+<!-- raw HTML omitted -->
+<p>Vin Antique has previously released an overdrive pedal called PPSE &lsquo;79 which received high praise, and this PPSE Classic is considered its sister version. PPSE stands for &ldquo;Pike Place Smoky Emerald&rdquo;, named after the color of the sign at Seattle&rsquo;s Pike Place Market, and this color is applied to the aluminum CNC-machined pedal enclosure.
+As this is the &ldquo;Classic&rdquo; version, it&rsquo;s painted in a slightly more vivid color than the PPSE &lsquo;79, representing &ldquo;the sign&rsquo;s color before it faded&rdquo;.</p>
+<p>While the PPSE &lsquo;79 features asymmetric clipping that produces a gritty distortion rich in harmonics, the PPSE Classic uses symmetric clipping that&rsquo;s closer to the original Tube Screamer, providing a well-defined tone that&rsquo;s great for boosting your amp.</p>
+<p>I might connect both in series to switch between them.</p>
+<p>Below is a sound sample where I play with the PPSE Classic in the first half and the PPSE &lsquo;79 in the second half.</p>
+<hr>
+<p>京都発の小さなエフェクターブランド Vin Antiqueから新しいOver Drive &ldquo;PPSE Classic&quot;が発売されました。小ロットしか出荷されなかったようですが、幸いにも入手できました。</p>
+<p>Vin AntiqueはPPSE &lsquo;79というOver Driveをリリースしており高い評価を受けていますが、今回のPPSE Classicは姉妹版ということになります。 PPSEは&quot;Pike Place Smoky Emerald&quot;の略でシアトルのパイクプレース・マーケットの看板の色に因んだネーミングだそうで、
+アルミ削り出しのエフェクター筐体がその色に塗られています。
+今回Classicということで「看板の褪色する前の色」ということで PPSE'79より若干鮮やかな色で塗装されています。</p>
+<p>PPSE'79が非対称クリッピングで倍音を多く含んだざらっとした歪みなのに対して、PPSE Classicは対称クリッピングで本家のTube Screamerに近く輪郭がしっかりしアンプをブーストするのにいい感じです。</p>
+<p>どちらも直列に繋いで使い分けようかな。</p>
+<p>以下は前半はPPSE Classic、後半をPPSE'79で弾き分けたものです。</p>
+<!-- raw HTML omitted -->
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2024/12/25/the-new-years-card-season.html">The New Year&#39;s Card Season Has Arrived</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2024/12/25/the-new-years-card-season.html" class="u-url"><time class="dt-published" datetime="2024-12-25 10:29:38 &#43;0900">Dec 25, 2024</time></a>
+
+		<div class="e-content">
+			 <p>In Japan, there&rsquo;s a tradition where people exchange greeting postcards called nengajo, carefully timed to arrive on New Year&rsquo;s Day.</p>
+<p>Years ago, I used to enjoy making woodblock prints and illustrations for these cards. But the whole process - printing them and writing addresses - became incredibly tedious, and I&rsquo;ve grown to despise this custom over the past few years. What&rsquo;s worse, most of these cards go to distant relatives whose faces I can barely remember, or work contacts I haven&rsquo;t seen in years.</p>
+<p>Unable to make a clean break from the tradition, I&rsquo;ve been lazily outsourcing everything to a printing service these past few years - from printing to mailing. It&rsquo;s simple enough: pick a stock illustration and message, check off names from my saved address book, and I&rsquo;m done.</p>
+<p>But what&rsquo;s the point of all this?</p>
+<p>And in this digital age, why are we still relying on physical mail?!!!!</p>
+<p>I ordered my New Year&rsquo;s cards from the printing service again this year.
+However, this time I added one crucial line: &ldquo;As I reach a turning point in my life, I&rsquo;ll be switching to email for New Year&rsquo;s greetings from next year onward.&rdquo;</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 
 		<a href="https://blog.yostos.org/2024/12/25/i-recently-purchased-the-keychron.html" class="u-url"><time class="dt-published" datetime="2024-12-25 09:35:32 &#43;0900">Dec 25, 2024</time></a>
 
