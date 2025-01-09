@@ -24,6 +24,327 @@
 	
 	  <div class="h-entry">
 		
+
+		<a href="https://blog.yostos.org/2025/01/07/dic.html" class="u-url"><time class="dt-published" datetime="2025-01-07 09:14:11 &#43;0900">Jan 7, 2025</time></a>
+
+		<div class="e-content">
+			 <p>年末閉館すると言われていた<a href="https://kawamura-museum.dic.co.jp/">DIC川村記念美術館</a>ですが、親会社の<a href="https://pdf.irpocket.com/C4631/MjRP/fjrt/bQuk.pdf">クリスマス明けの発表</a>で閉館は3月末に延期になったようです。4月以降に美術品の4分の3程度を売却して都内に移転するとか。</p>
+<p>佐倉市郊外の広大な敷地で美術品だけでなく庭園もゆったり楽しめるよい美術館でしたが、やはり立地的にそれほど集客できていたわけではないと思います。親会社の株保有をしている香港の投資ファンドあたりに指摘されれば閉館・売却は仕方ないでしょう。</p>
+<p>佐倉市長や千葉県知事、市民から移転を惜しむ声も出ており、<a href="https://kawamura-museum.dic.co.jp/news/09-raikan/">運営に問題</a>が出るほど来客数が増えているようです。これまで定常時は来館などしていなかったでしょうから、浅ましいものです。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/06/i-just-realized-that-google.html" class="u-url"><time class="dt-published" datetime="2025-01-06 13:52:56 &#43;0900">Jan 6, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I just realized that Google silently discontinued Android File Transfer, their official MTP connection tool for Android and Mac, last year (typical of Google&rsquo;s lack of continuity).</p>
+<p>I guess I&rsquo;ll have to use third-party Macdroid instead.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/06/line-line-linenaver-cloudlinenaver-line.html" class="u-url"><time class="dt-published" datetime="2025-01-06 12:08:38 &#43;0900">Jan 6, 2025</time></a>
+
+		<div class="e-content">
+			 <p>「年賀状仕舞い」を送ったため、ありがたいことに何人かの方から「引き続き別の手段
+で繋がっていましょう」とのメッセージをいただきました。その中に少なからずLINE
+へのお誘いがありました。</p>
+<p>LINEを使うリスクについては以前技術上の観点から<a href="https://blog.yostos.org/2024/10/23/signal-signalline.html">記事</a>にまとめました。</p>
+<p>技術的な観点以外でも、LINEは韓国・NAVER Cloudが委託していた企業の従業員が所有するパソコンがマルウェアに感染し
+LINEに関わる利用者情報などが流出する事案を起こしています。NAVERとのネット
+ワーク分離ができておらず常にリスクがある状態です。</p>
+<p>総務省は2回<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>に渡りLINEヤフー対し行政指導を行っており、資本関係にまで踏み込
+んで改善を求めている異常な状態です。</p>
+<p>よくみんな平気でLINEを使っているものだなぁと思います。
+そんな状況でLINEを行政サービスに利用している自治体や行政機関も問題ですが。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>2024年3月<a href="https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000224.html">LINEヤフー株式会社に対する通信の秘密の保護及びサイバーセキュリティの確保に係る措置（指導）</a>、2024年4月<a href="https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000230.html">LINEヤフー株式会社に対する通信の秘密の保護及び サイバーセキュリティの確保の徹底に向けた措置（指導）</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2025/01/06/a-failed-experiment-using-opencv.html">A Failed Experiment: Using OpenCV to Read Printed Dates from Scanned Photos</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2025/01/06/a-failed-experiment-using-opencv.html" class="u-url"><time class="dt-published" datetime="2025-01-06 10:37:27 &#43;0900">Jan 6, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I recently purchased a scanner and was challenged to see if I could capture the shooting date from the images when digitizing old photos that have dates printed on them.</p>
+<!-- raw HTML omitted -->
+<h3 id="organizing-old-photographs">Organizing Old Photographs</h3>
+<p>I recently purchased a scanner at the end of the year to digitize old photographs. The photographs have dates printed on them, and I&rsquo;ve been manually setting these dates in the EXIF information using ExifTool.</p>
+<p>I use Hazel to organize image files, and I&rsquo;ve already created a tool that updates file creation dates that Hazel can read with the shooting dates from EXIF data. However, since setting EXIF information manually is time-consuming, I explored the possibility of automating this process using OpenCV.</p>
+<h3 id="date-reading-tool">Date Reading Tool</h3>
+<p>Below is a script that uses OpenCV to read dates from images and set them using ExifTool.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> sys
+<span style="color:#f92672">import</span> pytesseract
+<span style="color:#f92672">import</span> cv2
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+<span style="color:#f92672">import</span> subprocess
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">preprocess_image</span>(image_path):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Extract and process the date stamp portion from the image
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#75715e"># Load image</span>
+    img <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(image_path)
+    height, width <span style="color:#f92672">=</span> img<span style="color:#f92672">.</span>shape[:<span style="color:#ae81ff">2</span>]
+    
+    <span style="color:#75715e"># Crop the bottom right region</span>
+    x1 <span style="color:#f92672">=</span> int(width <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.65</span>)
+    y1 <span style="color:#f92672">=</span> int(height <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.75</span>)
+    cropped <span style="color:#f92672">=</span> img[y1:height, x1:width]
+    
+    <span style="color:#75715e"># Split channels</span>
+    b, g, r <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>split(cropped)
+    
+    <span style="color:#75715e"># Enhance red channel</span>
+    red_emphasis <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>subtract(r, cv2<span style="color:#f92672">.</span>max(b, g))
+    
+    <span style="color:#75715e"># Enhance contrast using CLAHE</span>
+    clahe <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>createCLAHE(clipLimit<span style="color:#f92672">=</span><span style="color:#ae81ff">3.0</span>, tileGridSize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">8</span>))
+    enhanced <span style="color:#f92672">=</span> clahe<span style="color:#f92672">.</span>apply(red_emphasis)
+    
+    <span style="color:#75715e"># Strong thresholding</span>
+    _, binary <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>threshold(enhanced, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">255</span>, cv2<span style="color:#f92672">.</span>THRESH_BINARY)
+    
+    <span style="color:#75715e"># Remove noise</span>
+    kernel <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>ones((<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>), np<span style="color:#f92672">.</span>uint8)
+    cleaned <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>morphologyEx(binary, cv2<span style="color:#f92672">.</span>MORPH_OPEN, kernel)
+    
+    <span style="color:#75715e"># Detect and filter contours</span>
+    contours, _ <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>findContours(cleaned, cv2<span style="color:#f92672">.</span>RETR_EXTERNAL, cv2<span style="color:#f92672">.</span>CHAIN_APPROX_SIMPLE)
+    
+    <span style="color:#75715e"># Filter by area</span>
+    mask <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros_like(cleaned)
+    min_area <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+    max_area <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>
+    
+    <span style="color:#66d9ef">for</span> contour <span style="color:#f92672">in</span> contours:
+        area <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>contourArea(contour)
+        <span style="color:#66d9ef">if</span> min_area <span style="color:#f92672">&lt;</span> area <span style="color:#f92672">&lt;</span> max_area:
+            cv2<span style="color:#f92672">.</span>drawContours(mask, [contour], <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, (<span style="color:#ae81ff">255</span>), <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    
+    <span style="color:#75715e"># Resize to 4x</span>
+    result <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>resize(mask, <span style="color:#66d9ef">None</span>, fx<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, fy<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, interpolation<span style="color:#f92672">=</span>cv2<span style="color:#f92672">.</span>INTER_CUBIC)
+    
+    <span style="color:#75715e"># Save debug images</span>
+    debug_dir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(image_path), <span style="color:#e6db74">&#39;debug&#39;</span>)
+    os<span style="color:#f92672">.</span>makedirs(debug_dir, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+    
+    basename <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(image_path)
+    cv2<span style="color:#f92672">.</span>imwrite(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(debug_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;cropped_</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>), cropped)
+    cv2<span style="color:#f92672">.</span>imwrite(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(debug_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;red_emphasis_</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>), red_emphasis)
+    cv2<span style="color:#f92672">.</span>imwrite(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(debug_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;enhanced_</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>), enhanced)
+    cv2<span style="color:#f92672">.</span>imwrite(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(debug_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;binary_</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>), binary)
+    cv2<span style="color:#f92672">.</span>imwrite(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(debug_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;result_</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>), result)
+    
+    <span style="color:#66d9ef">return</span> result
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_date_from_image</span>(image_path):
+    <span style="color:#e6db74">&#34;&#34;&#34;Extract date from image using OCR&#34;&#34;&#34;</span>
+    <span style="color:#75715e"># Preprocess image</span>
+    processed_image <span style="color:#f92672">=</span> preprocess_image(image_path)
+    
+    <span style="color:#75715e"># OCR configuration for single line text</span>
+    custom_configs <span style="color:#f92672">=</span> [
+        <span style="color:#e6db74">&#39;--psm 6 -c tessedit_char_whitelist=&#34;0123456789</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74"> &#34;&#39;</span>,  <span style="color:#75715e"># Uniform text block</span>
+        <span style="color:#e6db74">&#39;--psm 7 -c tessedit_char_whitelist=&#34;0123456789</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74"> &#34;&#39;</span>,  <span style="color:#75715e"># Single text line</span>
+        <span style="color:#e6db74">&#39;--psm 8 -c tessedit_char_whitelist=&#34;0123456789</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74"> &#34;&#39;</span>,  <span style="color:#75715e"># Single word</span>
+        <span style="color:#e6db74">&#39;--psm 10 -c tessedit_char_whitelist=&#34;0123456789</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74"> &#34;&#39;</span>  <span style="color:#75715e"># Single character</span>
+    ]
+    
+    <span style="color:#66d9ef">for</span> config <span style="color:#f92672">in</span> custom_configs:
+        <span style="color:#75715e"># Run OCR</span>
+        text <span style="color:#f92672">=</span> pytesseract<span style="color:#f92672">.</span>image_to_string(processed_image, config<span style="color:#f92672">=</span>config)
+        text <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>strip()
+        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;OCR result (config=</span><span style="color:#e6db74">{</span>config<span style="color:#e6db74">}</span><span style="color:#e6db74">): [</span><span style="color:#e6db74">{</span>text<span style="color:#e6db74">}</span><span style="color:#e6db74">]&#34;</span>)
+        
+        <span style="color:#75715e"># Normalize spaces</span>
+        text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(text<span style="color:#f92672">.</span>split())
+        
+        <span style="color:#75715e"># Simple pattern matching</span>
+        pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;&#39;?(\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)\s*(\d{1,2})\s*(\d{1,2})&#34;</span>
+        match <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, text)
+        
+        <span style="color:#66d9ef">if</span> match:
+            <span style="color:#66d9ef">try</span>:
+                year <span style="color:#f92672">=</span> int(match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>))
+                month <span style="color:#f92672">=</span> int(match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>))
+                day <span style="color:#f92672">=</span> int(match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">3</span>))
+                
+                <span style="color:#75715e"># Handle 2000s</span>
+                year <span style="color:#f92672">=</span> <span style="color:#ae81ff">2000</span> <span style="color:#f92672">+</span> year <span style="color:#66d9ef">if</span> year <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">50</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">1900</span> <span style="color:#f92672">+</span> year
+                
+                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;=</span> month <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">and</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;=</span> day <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">31</span>:
+                    <span style="color:#66d9ef">return</span> datetime(year, month, day)
+            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+                <span style="color:#66d9ef">continue</span>
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">set_exif_date</span>(image_path, date):
+    <span style="color:#e6db74">&#34;&#34;&#34;Set EXIF date information using ExifTool&#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> date:
+        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;No date found in: </span><span style="color:#e6db74">{</span>image_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+        
+    date_str <span style="color:#f92672">=</span> date<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y:%m:</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span>)
+    
+    <span style="color:#75715e"># EXIF tags to set</span>
+    exif_tags <span style="color:#f92672">=</span> [
+        <span style="color:#e6db74">&#34;DateTimeOriginal&#34;</span>,
+        <span style="color:#e6db74">&#34;CreateDate&#34;</span>,
+        <span style="color:#e6db74">&#34;ModifyDate&#34;</span>
+    ]
+    
+    command <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;exiftool&#34;</span>, <span style="color:#e6db74">&#34;-overwrite_original_in_place&#34;</span>]
+    <span style="color:#66d9ef">for</span> tag <span style="color:#f92672">in</span> exif_tags:
+        command<span style="color:#f92672">.</span>extend([<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;-</span><span style="color:#e6db74">{</span>tag<span style="color:#e6db74">}</span><span style="color:#e6db74">=</span><span style="color:#e6db74">{</span>date_str<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>])
+    command<span style="color:#f92672">.</span>append(image_path)
+    
+    <span style="color:#66d9ef">try</span>:
+        subprocess<span style="color:#f92672">.</span>run(command, check<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, capture_output<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Date set successfully: </span><span style="color:#e6db74">{</span>image_path<span style="color:#e6db74">}</span><span style="color:#e6db74"> -&gt; </span><span style="color:#e6db74">{</span>date_str<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+    <span style="color:#66d9ef">except</span> subprocess<span style="color:#f92672">.</span>CalledProcessError <span style="color:#66d9ef">as</span> e:
+        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Failed to set EXIF information: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_images</span>(directory):
+    <span style="color:#e6db74">&#34;&#34;&#34;Process all images in the specified directory&#34;&#34;&#34;</span>
+    processed <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    failed <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    
+    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(directory):
+        <span style="color:#66d9ef">if</span> filename<span style="color:#f92672">.</span>lower()<span style="color:#f92672">.</span>endswith((<span style="color:#e6db74">&#39;.png&#39;</span>, <span style="color:#e6db74">&#39;.jpg&#39;</span>, <span style="color:#e6db74">&#39;.jpeg&#39;</span>)):
+            image_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(directory, filename)
+            date <span style="color:#f92672">=</span> extract_date_from_image(image_path)
+            
+            <span style="color:#66d9ef">if</span> set_exif_date(image_path, date):
+                processed <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                failed <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    
+    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Processing complete:&#34;</span>)
+    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Success: </span><span style="color:#e6db74">{</span>processed<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Failed: </span><span style="color:#e6db74">{</span>failed<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    <span style="color:#66d9ef">if</span> len(sys<span style="color:#f92672">.</span>argv) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span>:
+        print(<span style="color:#e6db74">&#34;Usage: photodate &lt;image_directory&gt;&#34;</span>)
+        sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+    
+    directory <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>]
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isdir(directory):
+        print(<span style="color:#e6db74">&#34;Specified path is not a valid directory&#34;</span>)
+        sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+    
+    process_images(directory)
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    main()
+</code></pre></div><h3 id="results">Results</h3>
+<p>I tested the script on 27 scanned photographs.</p>
+<p>Out of 27 images, the script only detected dates in 4 images, and among those, only 1 date was correctly recognized.</p>
+<p>Well, this isn&rsquo;t practical enough to use.</p>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/06/eight.html" class="u-url"><time class="dt-published" datetime="2025-01-06 03:06:58 &#43;0900">Jan 6, 2025</time></a>
+
+		<div class="e-content">
+			 <p>名刺管理を使うこともなくなったので、Eightのアカウントを削除。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2025/01/05/finished-reading-mifes-revolution.html">Finished reading: MIFES Revolution 1985 📚</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2025/01/05/finished-reading-mifes-revolution.html" class="u-url"><time class="dt-published" datetime="2025-01-05 12:19:45 &#43;0900">Jan 5, 2025</time></a>
+
+		<div class="e-content">
+			 <p><a href="https://amzn.to/4fNTHcN">MIFES革命1985: エディタはワープロを超えた・文章とソースを書いた20世紀の個人史</a>  by 川俣 晶 📚</p>
+<p>This book appears to be a memoir about text editors on PCs in Japan, focusing on the MS-DOS era from the late 1980s to 1990s.</p>
+<p>Back then in Japan, PC editor users were divided into two camps - MIFES users and Vz users - and I was a Vz user. Vz was the ultimate editor that pushed MS-DOS and the 8086 architecture to their absolute limits. It could run as a TSR (Terminate and Stay Resident) program to enhance command-line functionality, and its macro capabilities could handle everything from managing PC communication logs to supporting BBS posting. It was truly the ultimate editor. Since it was optimized for the 8086 architecture, it faded away without ever making the transition to Windows.</p>
+<p>The book is packed with nostalgic references to tools from that era, including the text formatting tool xtr and the word processor Ichitaro.</p>
+<hr>
+<p>この書籍は日本の1980年代後半から1990年代のMS-DOS時代を中心にPC上でのエディタ事情についての回顧録のようです。</p>
+<p>当時日本ではPC上のエディタはMIFES派とVz派に分れていて、私はVzを使っていました。VzはMS-DOSと8086のアーキテクチャーを極限まで活用した究極のエディタでした。常駐してコマンドラインに機能を追加してくれたり、マクロでパソコン通信のログ管理や投稿支援までこなしてくれました。まさに究極のエディタでした。8086 に最適化していたため、Windowsには対応することなく消えていきました。</p>
+<p>またテキスト整形ツール xtrやワープロの一太郎など当時のツールの話題が盛りだくさんで懐かしい気分になりました。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/05/when-i-tried-to-add.html" class="u-url"><time class="dt-published" datetime="2025-01-05 12:06:40 &#43;0900">Jan 5, 2025</time></a>
+
+		<div class="e-content">
+			 <p>When I tried to add Kindle books that weren&rsquo;t found in Micro.blog&rsquo;s <strong>Bookshelves</strong>, I couldn&rsquo;t add them because ISBN was required.</p>
+<p>It&rsquo;s a bit of a problem since books published only on Kindle have only ASIN numbers</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/05/oh-no-this-is-bad.html" class="u-url"><time class="dt-published" datetime="2025-01-05 03:18:18 &#43;0900">Jan 5, 2025</time></a>
+
+		<div class="e-content">
+			 <p>Oh no, this is bad.</p>
+<p>I&rsquo;m using the Strymon Iridium but something about it feels too digital, and I&rsquo;m drawn to the Simplifier MkII. I know, I know - the Iridium has an analog preamp and it&rsquo;s properly &lsquo;amp-like.&rsquo; But I&rsquo;m just weak when it comes to anything labeled &lsquo;analog.&rsquo;</p>
+<p>🎸</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/04/president-biden-has-ordered-to.html" class="u-url"><time class="dt-published" datetime="2025-01-04 17:37:52 &#43;0900">Jan 4, 2025</time></a>
+
+		<div class="e-content">
+			 <p>President Biden has ordered to block Nippon Steel&rsquo;s planned acquisition of major American steelmaker U.S. Steel, citing national security concerns.
+<strong>Is he out of his mind?</strong>  Japan is an allied nation that has security treaties with the U.S. - yet he&rsquo;s raising &ldquo;national security concerns&rdquo;?</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 			<h1><a href="https://blog.yostos.org/2025/01/04/sns.html">店舗のSNS依存 - 顧客に届かない情報発信</a></h1>
 		
 
@@ -909,7 +1230,7 @@ However, this time I added one crucial line: &ldquo;As I reach a turning point i
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/22/vin-antiqueoverdrive-ppse.html" class="u-url"><time class="dt-published" datetime="2024-12-22 22:04:21 &#43;0900">Dec 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/22/vin-antiqueoverdrive-ppse-classic.html" class="u-url"><time class="dt-published" datetime="2024-12-22 22:04:21 &#43;0900">Dec 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://www.vin-antique.com/">Vin Antique</a>のOverdrive PPSE Classic、24日発売のはずが、もう予約受け付けてるオンラインショップがあったので買ってしまった🎸</p>
@@ -967,7 +1288,7 @@ However, this time I added one crucial line: &ldquo;As I reach a turning point i
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/21/yostos-bar-daily.html" class="u-url"><time class="dt-published" datetime="2024-12-21 16:26:48 &#43;0900">Dec 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/21/yostos-bar-daily-sessions.html" class="u-url"><time class="dt-published" datetime="2024-12-21 16:26:48 &#43;0900">Dec 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p>ちょっとサボっていました。</p>
@@ -979,7 +1300,7 @@ However, this time I added one crucial line: &ldquo;As I reach a turning point i
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/20/masayoshi-takanakasmoother-yostos.html" class="u-url"><time class="dt-published" datetime="2024-12-20 14:57:33 &#43;0900">Dec 20, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/20/masayoshi-takanakasmoother-yostos-smoother.html" class="u-url"><time class="dt-published" datetime="2024-12-20 14:57:33 &#43;0900">Dec 20, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Masayoshi Takanakaの「Smoother」を弾いてみました。
@@ -1004,10 +1325,10 @@ However, this time I added one crucial line: &ldquo;As I reach a turning point i
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/12/19/berkeley-mono-a.html">Berkeley Mono: A Worthy Successor to MonoLisa in My Terminal</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/12/19/berkeley-mono-a-worthy-successor.html">Berkeley Mono: A Worthy Successor to MonoLisa in My Terminal</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/12/19/berkeley-mono-a.html" class="u-url"><time class="dt-published" datetime="2024-12-19 00:13:06 &#43;0900">Dec 19, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/19/berkeley-mono-a-worthy-successor.html" class="u-url"><time class="dt-published" datetime="2024-12-19 00:13:06 &#43;0900">Dec 19, 2024</time></a>
 
 		<div class="e-content">
 			 <p>ずっとMacのターミナルでは<a href="https://www.monolisa.dev/">MonoLisa</a>フォントを利用してきましたが、
@@ -1044,7 +1365,7 @@ However, this time I added one crucial line: &ldquo;As I reach a turning point i
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/18/teslas-stock-exceeded.html" class="u-url"><time class="dt-published" datetime="2024-12-18 17:52:31 &#43;0900">Dec 18, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/18/teslas-stock-exceeded-last-week.html" class="u-url"><time class="dt-published" datetime="2024-12-18 17:52:31 &#43;0900">Dec 18, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Tesla&rsquo;s stock exceeded $420 last week and hit $480 this week. Speaking of which, I remember when Elon Musk once tweeted that he was ready to take the company private at $420 per share.</p>
@@ -1055,7 +1376,7 @@ However, this time I added one crucial line: &ldquo;As I reach a turning point i
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/18/every-time-i.html" class="u-url"><time class="dt-published" datetime="2024-12-18 17:34:23 &#43;0900">Dec 18, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/18/every-time-i-visit-osaka.html" class="u-url"><time class="dt-published" datetime="2024-12-18 17:34:23 &#43;0900">Dec 18, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Every time I visit Osaka, I enjoy this simple Kitsune Udon. It&rsquo;s an udon dish where the star isn&rsquo;t the noodles or the fried tofu, but rather exists to savor the dashi brosh.</p>
@@ -1089,10 +1410,10 @@ However, this time I added one crucial line: &ldquo;As I reach a turning point i
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/12/16/while-visiting-a.html">SUBARU Crosstre S:HEV</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/12/16/subaru-crosstre-shev.html">SUBARU Crosstre S:HEV</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/12/16/while-visiting-a.html" class="u-url"><time class="dt-published" datetime="2024-12-16 16:32:05 &#43;0900">Dec 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/16/subaru-crosstre-shev.html" class="u-url"><time class="dt-published" datetime="2024-12-16 16:32:05 &#43;0900">Dec 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🚗
@@ -1106,7 +1427,7 @@ While visiting a Subaru dealership for maintenance, I had the opportunity to tes
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/14/amazon-affiliatesapiaffiliatesproduct-advertising.html" class="u-url"><time class="dt-published" datetime="2024-12-14 22:21:07 &#43;0900">Dec 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/14/222107.html" class="u-url"><time class="dt-published" datetime="2024-12-14 22:21:07 &#43;0900">Dec 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>(覚書)
@@ -1129,10 +1450,10 @@ Amazon Affiliatesで商品イメージが取れなくなって久しいけれど
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/12/13/i-already-have.html">Keychron Q60</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/12/13/keychron-q.html">Keychron Q60</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/12/13/i-already-have.html" class="u-url"><time class="dt-published" datetime="2024-12-13 21:26:23 &#43;0900">Dec 13, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/13/keychron-q.html" class="u-url"><time class="dt-published" datetime="2024-12-13 21:26:23 &#43;0900">Dec 13, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I already have a Keychron Q60⌨️, but I went and bought a Q60 Max too.
@@ -1146,7 +1467,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/13/fragile-luminous-petals.html" class="u-url"><time class="dt-published" datetime="2024-12-13 21:02:46 &#43;0900">Dec 13, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/13/fragile-luminous-petals-the-pale.html" class="u-url"><time class="dt-published" datetime="2024-12-13 21:02:46 &#43;0900">Dec 13, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>fragile</code></p>
@@ -1159,7 +1480,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/13/bar-daily-sessions.html" class="u-url"><time class="dt-published" datetime="2024-12-13 10:57:23 &#43;0900">Dec 13, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/13/bar-daily-sessions-yostos-bar.html" class="u-url"><time class="dt-published" datetime="2024-12-13 10:57:23 &#43;0900">Dec 13, 2024</time></a>
 
 		<div class="e-content">
 			 <p>12-Bar Daily Sessions 🎸 06 - 06 - 06</p>
@@ -1171,7 +1492,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/13/while-i-was.html" class="u-url"><time class="dt-published" datetime="2024-12-13 09:01:18 &#43;0900">Dec 13, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/13/while-i-was-taking-a.html" class="u-url"><time class="dt-published" datetime="2024-12-13 09:01:18 &#43;0900">Dec 13, 2024</time></a>
 
 		<div class="e-content">
 			 <p>While I was taking a break from Anarchy Battles in Splatoon 3 🎮 , I went back to the hidden Hero Mode stage—infamous for its brutal difficulty—after a long time.</p>
@@ -1195,7 +1516,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/12/bar-daily-sessions.html" class="u-url"><time class="dt-published" datetime="2024-12-12 09:55:59 &#43;0900">Dec 12, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/12/bar-daily-sessions-yostos-bar.html" class="u-url"><time class="dt-published" datetime="2024-12-12 09:55:59 &#43;0900">Dec 12, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎸 12-Bar Daily Sessions 05 - 05 - 05</p>
@@ -1207,7 +1528,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/10/the-splatoon-soundtrack.html" class="u-url"><time class="dt-published" datetime="2024-12-10 19:27:31 &#43;0900">Dec 10, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/10/the-splatoon-soundtrack-odertune-i.html" class="u-url"><time class="dt-published" datetime="2024-12-10 19:27:31 &#43;0900">Dec 10, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The Splatoon 3 🎮  soundtrack &ldquo;Odertune&rdquo; I ordered has just arrived. It&rsquo;s absolutely perfect as background music while working!</p>
@@ -1219,7 +1540,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/10/todays-blues-phrase.html" class="u-url"><time class="dt-published" datetime="2024-12-10 08:58:17 &#43;0900">Dec 10, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/10/bar-daily-sessions-yostos-blues.html" class="u-url"><time class="dt-published" datetime="2024-12-10 08:58:17 &#43;0900">Dec 10, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎸 12-Bar Daily Sessions 03-01-03</p>
@@ -1231,7 +1552,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/09/todays-blues-phrase.html" class="u-url"><time class="dt-published" datetime="2024-12-09 09:56:21 &#43;0900">Dec 9, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/09/bar-daily-sessions-yostos-blues.html" class="u-url"><time class="dt-published" datetime="2024-12-09 09:56:21 &#43;0900">Dec 9, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎸 12-Bar Daily Sessions 02-02-02</p>
@@ -1244,7 +1565,7 @@ No worries though! So now I can enjoy both  Gateron Jupiter   Banana  and Gatero
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/08/practice-to-expand.html" class="u-url"><time class="dt-published" datetime="2024-12-08 18:06:55 &#43;0900">Dec 8, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/08/practice-to-expand-my-blues.html" class="u-url"><time class="dt-published" datetime="2024-12-08 18:06:55 &#43;0900">Dec 8, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎸
@@ -1257,10 +1578,10 @@ Practice to expand my Blues phrase repertoire - 01-03-01</p>
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/12/07/mac-lcc.html">ピーチ航空の罠</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/12/07/115252.html">ピーチ航空の罠</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/12/07/mac-lcc.html" class="u-url"><time class="dt-published" datetime="2024-12-07 11:52:52 &#43;0900">Dec 7, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/07/115252.html" class="u-url"><time class="dt-published" datetime="2024-12-07 11:52:52 &#43;0900">Dec 7, 2024</time></a>
 
 		<div class="e-content">
 			 <p>帰省ラッシュの前に来週帰省しようかと、<strong>ピーチ航空</strong> で予約しようとしたらスマートフォン、Macのどんな環境でやっても支払処理で中断されて予約が完了しません。</p>
@@ -1282,7 +1603,7 @@ Practice to expand my Blues phrase repertoire - 01-03-01</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/07/ancient-yorishiro-vessel.html" class="u-url"><time class="dt-published" datetime="2024-12-07 00:52:55 &#43;0900">Dec 7, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/07/ancient-yorishiro-vessel-of-the.html" class="u-url"><time class="dt-published" datetime="2024-12-07 00:52:55 &#43;0900">Dec 7, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷<code>ancient</code></p>
@@ -1294,10 +1615,10 @@ Practice to expand my Blues phrase repertoire - 01-03-01</p>
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/12/06/i-took-the.html">AWS Certified AI Practitioner</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/12/06/aws-certified-ai-practitioner.html">AWS Certified AI Practitioner</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/12/06/i-took-the.html" class="u-url"><time class="dt-published" datetime="2024-12-06 20:20:37 &#43;0900">Dec 6, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/06/aws-certified-ai-practitioner.html" class="u-url"><time class="dt-published" datetime="2024-12-06 20:20:37 &#43;0900">Dec 6, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I took the AWS AI Practitioner certification exam this morning. Since it&rsquo;s aimed at beginners, I successfully passed it.</p>
@@ -1336,7 +1657,7 @@ Practice to expand my Blues phrase repertoire - 01-03-01</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/05/listening-to-double.html" class="u-url"><time class="dt-published" datetime="2024-12-05 10:22:58 &#43;0900">Dec 5, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/05/listening-to-double-fantasy-again.html" class="u-url"><time class="dt-published" datetime="2024-12-05 10:22:58 &#43;0900">Dec 5, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Listening to &ldquo;<strong>Double Fantasy</strong>&rdquo; again after a long time, I remembered skipping Yoko&rsquo;s songs back then. Revisiting it now, I realize that it&rsquo;s not so bad. Especially &ldquo;Hard Times Are Over&rdquo; brings me to tears when I think about what happened afterward. Her vocal  ability is still questionable, though.</p>
@@ -1347,7 +1668,7 @@ Practice to expand my Blues phrase repertoire - 01-03-01</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/05/lazyvim-had-a.html" class="u-url"><time class="dt-published" datetime="2024-12-05 09:10:14 &#43;0900">Dec 5, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/05/lazyvim-had-a-major-update.html" class="u-url"><time class="dt-published" datetime="2024-12-05 09:10:14 &#43;0900">Dec 5, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://www.lazyvim.org/">LazyVim</a> had a major update last month, so I applied it today. I had to make some adjustments as <a href="https://github.com/nvim-snacks/snacks.nvim">snacks.nvim</a> was introduced and the handling of <a href="https://github.com/nvimdev/dashboard-nvim">dashboard.nvim</a> and pickers had changed.</p>
@@ -1358,7 +1679,7 @@ Practice to expand my Blues phrase repertoire - 01-03-01</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/04/i-watched-senna.html" class="u-url"><time class="dt-published" datetime="2024-12-04 13:44:35 &#43;0900">Dec 4, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/04/i-watched-senna-on-netflix.html" class="u-url"><time class="dt-published" datetime="2024-12-04 13:44:35 &#43;0900">Dec 4, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎥
@@ -1382,7 +1703,7 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/03/i-visited-the.html" class="u-url"><time class="dt-published" datetime="2024-12-03 17:14:32 &#43;0900">Dec 3, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/03/i-visited-the-ichihara-lakeside.html" class="u-url"><time class="dt-published" datetime="2024-12-03 17:14:32 &#43;0900">Dec 3, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I visited the <strong><a href="https://lsm-ichihara.jp/">Ichihara Lakeside Museum</a></strong> today. It’s the typical municipal museum: “a grand building, but&hellip;”</p>
@@ -1395,7 +1716,7 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/03/i-hadnt-noticed.html" class="u-url"><time class="dt-published" datetime="2024-12-03 09:09:49 &#43;0900">Dec 3, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/03/i-hadnt-noticed-it-before.html" class="u-url"><time class="dt-published" datetime="2024-12-03 09:09:49 &#43;0900">Dec 3, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I hadn’t noticed it before, but when you post about books from <em>Bookshelves</em> on Micro.blog, a thumbnail of the book cover is attached. It’s so convenient!</p>
@@ -1407,7 +1728,7 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/12/03/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-12-03 09:08:51 &#43;0900">Dec 3, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/12/03/finished-reading-by-youtube-step.html" class="u-url"><time class="dt-published" datetime="2024-12-03 09:08:51 &#43;0900">Dec 3, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9784297134037">誰でも簡単! 世界一の4:6メソッドでハマる美味しいコーヒー</a> by 粕谷哲 📚</p>
@@ -1444,7 +1765,7 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/30/splatoon-youtube-httpswwwyoutubecomrinsplatoonban.html" class="u-url"><time class="dt-published" datetime="2024-11-30 11:24:04 &#43;0900">Nov 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/30/splatoon-youtube-ban-x-rinsplatoon.html" class="u-url"><time class="dt-published" datetime="2024-11-30 11:24:04 &#43;0900">Nov 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Splatoon🎮 : 上位帯のリッター使いで、Youtube配信者の <a href="https://www.youtube.com/@rinSplatoon/">りんチャンネル</a>が任天堂から垢BANされたらしい。ここ数日不正スナイプしてるって炎上してたけれど、本当だったのね。</p>
@@ -1455,10 +1776,10 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/11/29/discovering-an-estery.html">Discovering an Estery Rum in Chiba  / 房総大井倉蒸留所のエステリーラムとの出会い </a></h1>
+			<h1><a href="https://blog.yostos.org/2024/11/29/discovering-an-estery-rum-in.html">Discovering an Estery Rum in Chiba  / 房総大井倉蒸留所のエステリーラムとの出会い </a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/11/29/discovering-an-estery.html" class="u-url"><time class="dt-published" datetime="2024-11-29 17:25:39 &#43;0900">Nov 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/29/discovering-an-estery-rum-in.html" class="u-url"><time class="dt-published" datetime="2024-11-29 17:25:39 &#43;0900">Nov 29, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Recently, I heard about a rum distillery in Chiba prefecture at <a href="https://blog.yostos.org/2024/11/27/beer-oclockbeer-oclock.html">Beer O&rsquo;clock</a> and immediately ordered from <a href="https://rhumboso.com/">BOSO Oikura Distillery</a>&rsquo;s online shop.</p>
@@ -1490,7 +1811,7 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/29/magspeaker-duo.html" class="u-url"><time class="dt-published" datetime="2024-11-29 10:24:42 &#43;0900">Nov 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/29/magspeaker-duo-amazon.html" class="u-url"><time class="dt-published" datetime="2024-11-29 10:24:42 &#43;0900">Nov 29, 2024</time></a>
 
 		<div class="e-content">
 			 <p>かなり前にクラウドファンディングで支援していたスピーカー <a href="https://rhythm.jp/lp/magspeakerduo">MagSpeaker Duo</a>が届きました。</p>
@@ -1505,7 +1826,7 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/29/ai-phphdphpai-panasonic.html" class="u-url"><time class="dt-published" datetime="2024-11-29 10:00:10 &#43;0900">Nov 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/29/ai-phphdphpai-panasonic-group-hdphpaiai.html" class="u-url"><time class="dt-published" datetime="2024-11-29 10:00:10 &#43;0900">Nov 29, 2024</time></a>
 
 		<div class="e-content">
 			 <p>創業者の理念をAIを利用してアクセスするというのはよいアイデアだと思いますが、いくら残された音声やテキスト膨大でも人物再現するには量が足りないように思います。</p>
@@ -1518,10 +1839,10 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/11/29/switching-back-to.html">Switching Back to Anthropic Claude Pro from ChatGPT</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/11/29/switching-back-to-anthropic-claude.html">Switching Back to Anthropic Claude Pro from ChatGPT</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/11/29/switching-back-to.html" class="u-url"><time class="dt-published" datetime="2024-11-29 09:46:41 &#43;0900">Nov 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/29/switching-back-to-anthropic-claude.html" class="u-url"><time class="dt-published" datetime="2024-11-29 09:46:41 &#43;0900">Nov 29, 2024</time></a>
 
 		<div class="e-content">
 			 <p>While I think both are comparable in terms of response accuracy, <strong>Claude</strong> better suited my needs for the following reasons:</p>
@@ -1560,7 +1881,7 @@ I watched &ldquo;<strong>Senna</strong>&rdquo; on Netflix. At the time, Japan wa
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/28/what-the-heck.html" class="u-url"><time class="dt-published" datetime="2024-11-28 05:41:41 &#43;0900">Nov 28, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/28/what-the-heck-is-this.html" class="u-url"><time class="dt-published" datetime="2024-11-28 05:41:41 &#43;0900">Nov 28, 2024</time></a>
 
 		<div class="e-content">
 			 <p>What the heck is this?<br>
@@ -1576,7 +1897,7 @@ While I was looking into &ldquo;AmpliTube 5 Max v2 has been released,&rdquo; I s
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/28/oh-come-on.html" class="u-url"><time class="dt-published" datetime="2024-11-28 04:53:22 &#43;0900">Nov 28, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/28/oh-come-on-thats-clearly.html" class="u-url"><time class="dt-published" datetime="2024-11-28 04:53:22 &#43;0900">Nov 28, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Oh, come on, that’s clearly a Les Paul&hellip;
@@ -1589,10 +1910,10 @@ No wonder Gibson&rsquo;s suing
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/11/27/beer-oclockbeer-oclock.html">Beer O&#39;clock Bottle shop</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/11/27/beer-oclock-bottle-shop.html">Beer O&#39;clock Bottle shop</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/11/27/beer-oclockbeer-oclock.html" class="u-url"><time class="dt-published" datetime="2024-11-27 18:37:52 &#43;0900">Nov 27, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/27/beer-oclock-bottle-shop.html" class="u-url"><time class="dt-published" datetime="2024-11-27 18:37:52 &#43;0900">Nov 27, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Beer O&rsquo;clock, the renowned craft beer spot in Chiba, recently relocated. Curious about what became of its former location, I decided to check it out and discovered that it’s still operating as the <a href="https://www.instagram.com/beer_oclock_bottle_shop/">Beer O&rsquo;clock Bottle Shop</a>.</p>
@@ -1616,7 +1937,7 @@ No wonder Gibson&rsquo;s suing
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/26/automaton-xx-endautomaton.html" class="u-url"><time class="dt-published" datetime="2024-11-26 17:35:20 &#43;0900">Nov 26, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/26/automaton-xx-endautomaton-end-automaton.html" class="u-url"><time class="dt-published" datetime="2024-11-26 17:35:20 &#43;0900">Nov 26, 2024</time></a>
 
 		<div class="e-content">
 			 <p>暇つぶしに買った漫画『<a href="https://amzn.to/4eMdNDU">AUTOMATON</a>』<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> だが、5巻は強敵と戦う寸前で終わり。前巻までは「xx話 END」だったのに、5巻では「AUTOMATON END」。疑問に思っていると、作者のあとがきを見て驚愕</p>
@@ -1645,7 +1966,7 @@ No wonder Gibson&rsquo;s suing
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/26/mellow-the-gospel.html" class="u-url"><time class="dt-published" datetime="2024-11-26 04:53:33 &#43;0900">Nov 26, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/26/mellow-the-gospel-of-autumn.html" class="u-url"><time class="dt-published" datetime="2024-11-26 04:53:33 &#43;0900">Nov 26, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>mellow</code></p>
@@ -1657,10 +1978,10 @@ No wonder Gibson&rsquo;s suing
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/11/25/the-ultimate-guide.html">The Ultimate Guide to RAW Development: Data-Driven Insights  (SILKYPIX, Pixelmator Pro, and GR IIIx JPEG Compared)</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/11/25/the-ultimate-guide-to-raw.html">The Ultimate Guide to RAW Development: Data-Driven Insights  (SILKYPIX, Pixelmator Pro, and GR IIIx JPEG Compared)</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/11/25/the-ultimate-guide.html" class="u-url"><time class="dt-published" datetime="2024-11-25 18:00:00 &#43;0900">Nov 25, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/25/the-ultimate-guide-to-raw.html" class="u-url"><time class="dt-published" datetime="2024-11-25 18:00:00 &#43;0900">Nov 25, 2024</time></a>
 
 		<div class="e-content">
 			 <h3 id="introduction">Introduction</h3>
@@ -1966,7 +2287,7 @@ The GR IIIx JPEG provides a bright, soft tone with natural colors, making it gre
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/24/today-marks-the.html" class="u-url"><time class="dt-published" datetime="2024-11-24 09:31:55 &#43;0900">Nov 24, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/24/today-marks-the-rd-anniversary.html" class="u-url"><time class="dt-published" datetime="2024-11-24 09:31:55 &#43;0900">Nov 24, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Today marks the 33rd anniversary of the passing of <strong>Freddie Mercury</strong>. In Japanese Buddhist tradition, it&rsquo;s believed that after 33 years, a departed soul can reach the Pure Land—a state of ultimate peace and enlightenment. I&rsquo;ve performed this song🎸 in his honor.</p>
@@ -1978,7 +2299,7 @@ The GR IIIx JPEG provides a bright, soft tone with natural colors, making it gre
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/23/finished-reading-why.html" class="u-url"><time class="dt-published" datetime="2024-11-23 10:28:14 &#43;0900">Nov 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/23/finished-reading-why-is-the.html" class="u-url"><time class="dt-published" datetime="2024-11-23 10:28:14 &#43;0900">Nov 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9784098254576">世界はなぜ地獄になるのか(Why is the world becoming a dystopia?)</a> by 橘玲 📚</p>
@@ -1991,7 +2312,7 @@ The GR IIIx JPEG provides a bright, soft tone with natural colors, making it gre
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/22/slender-the-boundary.html" class="u-url"><time class="dt-published" datetime="2024-11-22 15:54:59 &#43;0900">Nov 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/22/slender-the-boundary-of-silence.html" class="u-url"><time class="dt-published" datetime="2024-11-22 15:54:59 &#43;0900">Nov 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>slender</code></p>
@@ -2003,7 +2324,7 @@ The GR IIIx JPEG provides a bright, soft tone with natural colors, making it gre
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/22/i-switched-back.html" class="u-url"><time class="dt-published" datetime="2024-11-22 10:29:59 &#43;0900">Nov 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/22/i-switched-back-to-chatgpt.html" class="u-url"><time class="dt-published" datetime="2024-11-22 10:29:59 &#43;0900">Nov 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I switched back to ChatGPT from Perplexity. I&rsquo;m testing ChatGPT now because it has a new Canvas feature. It&rsquo;s similar to Claude&rsquo;s Artifacts feature, but since users can directly edit it, it feels more like &ldquo;creating together&rdquo; compared to Artifacts, which I really like.</p>
@@ -2015,7 +2336,7 @@ The GR IIIx JPEG provides a bright, soft tone with natural colors, making it gre
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/21/the-two-new.html" class="u-url"><time class="dt-published" datetime="2024-11-21 20:49:46 &#43;0900">Nov 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/21/the-two-new-gr-iv.html" class="u-url"><time class="dt-published" datetime="2024-11-21 20:49:46 &#43;0900">Nov 21, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -2027,7 +2348,7 @@ The GR IIIx JPEG provides a bright, soft tone with natural colors, making it gre
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/21/i-just-sold.html" class="u-url"><time class="dt-published" datetime="2024-11-21 18:21:22 &#43;0900">Nov 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/21/i-just-sold-my-nikon.html" class="u-url"><time class="dt-published" datetime="2024-11-21 18:21:22 &#43;0900">Nov 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I just sold my  Nikon Ti35, which I purchased nearly 30 years ago.</p>
@@ -2040,10 +2361,10 @@ The GR IIIx JPEG provides a bright, soft tone with natural colors, making it gre
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/11/21/how-to-prevent.html">How to Prevent Image Reuse on Micro.blog</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/11/21/how-to-prevent-image-reuse.html">How to Prevent Image Reuse on Micro.blog</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/11/21/how-to-prevent.html" class="u-url"><time class="dt-published" datetime="2024-11-21 09:52:38 &#43;0900">Nov 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/21/how-to-prevent-image-reuse.html" class="u-url"><time class="dt-published" datetime="2024-11-21 09:52:38 &#43;0900">Nov 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I have compiled methods to prevent image reuse on Micro.blog. While I
@@ -2158,7 +2479,7 @@ information.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/21/takezinpagecopyright-magick-inputjpg.html" class="u-url"><time class="dt-published" datetime="2024-11-21 06:37:59 &#43;0900">Nov 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/21/takezinpagecopyright-pinterest-meta-tagmeta-tags.html" class="u-url"><time class="dt-published" datetime="2024-11-21 06:37:59 &#43;0900">Nov 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://takezin.page/2024/11/20/xtlalt.html">Takezin.Pageの画像についてのポスト</a>を見ていて気になったので、このブログのCopyright<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>に合わない転載を防ぐための防止策を施してみました。</p>
@@ -2199,7 +2520,7 @@ information.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/20/just-discovered-nintendo.html" class="u-url"><time class="dt-published" datetime="2024-11-20 21:06:17 &#43;0900">Nov 20, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/20/just-discovered-nintendo-music-is.html" class="u-url"><time class="dt-published" datetime="2024-11-20 21:06:17 &#43;0900">Nov 20, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Just discovered Nintendo Music is out! It&rsquo;s amazing to listen to all those tunes from the games I used to play! 🎮🎵</p>
@@ -2239,7 +2560,7 @@ information.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/20/hhkbpfu.html" class="u-url"><time class="dt-published" datetime="2024-11-20 11:50:25 &#43;0900">Nov 20, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/20/hhkb-pfu.html" class="u-url"><time class="dt-published" datetime="2024-11-20 11:50:25 &#43;0900">Nov 20, 2024</time></a>
 
 		<div class="e-content">
 			 <p>HHKBの<a href="https://www.pfu.ricoh.com/direct/hhkb/hhkb-option/detail_pd-kb400ktlgc.html">山葵キートップ</a>が限定で限定735台。限定と聞くと欲しくなりますが、そもそもブラインドタイプするからキーボード見ないしな。</p>
@@ -2251,7 +2572,7 @@ information.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/19/i-played-my.html" class="u-url"><time class="dt-published" datetime="2024-11-19 16:13:27 &#43;0900">Nov 19, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/19/i-played-my-new-stratocaster.html" class="u-url"><time class="dt-published" datetime="2024-11-19 16:13:27 &#43;0900">Nov 19, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I played my new Stratocaster with some random backing tracks to check out its sound. Man, it feels absolutely amazing!</p>
@@ -2263,7 +2584,7 @@ information.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/19/httpswwwbloombergcojpnewsarticlessngptumw.html" class="u-url"><time class="dt-published" datetime="2024-11-19 10:57:21 &#43;0900">Nov 19, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/19/wwwbloombergcojpnewsarti.html" class="u-url"><time class="dt-published" datetime="2024-11-19 10:57:21 &#43;0900">Nov 19, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://www.bloomberg.co.jp/news/articles/2024-11-18/SN63GPT1UM0W00">www.bloomberg.co.jp/news/arti&hellip;</a></p>
@@ -2302,7 +2623,7 @@ information.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/18/awk-posted-with.html" class="u-url"><time class="dt-published" datetime="2024-11-18 13:05:58 &#43;0900">Nov 18, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/18/awk-posted-with-alfred-v.html" class="u-url"><time class="dt-published" datetime="2024-11-18 13:05:58 &#43;0900">Nov 18, 2024</time></a>
 
 		<div class="e-content">
 			 <p>35年ぶりぐらいで第二版が出ていたので、購入してみました。懐かしい・・・</p>
@@ -2382,7 +2703,7 @@ Amazon Web Services(AWS)の資格で言うと、&ldquo;Cloud Practitioner&quot;�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/15/the-inexpensive-semicustom.html" class="u-url"><time class="dt-published" datetime="2024-11-15 13:02:30 &#43;0900">Nov 15, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/15/the-inexpensive-semicustom-i-bought.html" class="u-url"><time class="dt-published" datetime="2024-11-15 13:02:30 &#43;0900">Nov 15, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The inexpensive semi-custom 🎸 I bought in August. Since there’s no undercoat treatment, the topcoat paint is all bumpy (lol). I like the  sound, but maybe because I changed the body wood to ash, the weight exceeds 4 kg.</p>
@@ -2395,7 +2716,7 @@ Amazon Web Services(AWS)の資格で言うと、&ldquo;Cloud Practitioner&quot;�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/14/finished-reading-tomorrow.html" class="u-url"><time class="dt-published" datetime="2024-11-14 09:41:51 &#43;0900">Nov 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/14/finished-reading-tomorrow-and-tomorrow.html" class="u-url"><time class="dt-published" datetime="2024-11-14 09:41:51 &#43;0900">Nov 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9780593321201">Tomorrow, and Tomorrow, and Tomorrow</a> by Gabrielle Zevin 📚</p>
@@ -2413,7 +2734,7 @@ Amazon Web Services(AWS)の資格で言うと、&ldquo;Cloud Practitioner&quot;�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/14/subtle-silence-and.html" class="u-url"><time class="dt-published" datetime="2024-11-14 09:08:07 &#43;0900">Nov 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/14/subtle-silence-and-light-soft.html" class="u-url"><time class="dt-published" datetime="2024-11-14 09:08:07 &#43;0900">Nov 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>subtle</code></p>
@@ -2426,7 +2747,7 @@ Amazon Web Services(AWS)の資格で言うと、&ldquo;Cloud Practitioner&quot;�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/14/perplexity-profree-plan.html" class="u-url"><time class="dt-published" datetime="2024-11-14 08:35:32 &#43;0900">Nov 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/14/083532.html" class="u-url"><time class="dt-published" datetime="2024-11-14 08:35:32 &#43;0900">Nov 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>先月末から<strong>Perplexity Pro</strong>を使っていますが、Free Planでも十分かなと感じています。</p>
@@ -2439,7 +2760,7 @@ Amazon Web Services(AWS)の資格で言うと、&ldquo;Cloud Practitioner&quot;�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/12/bartender-was-menu.html" class="u-url"><time class="dt-published" datetime="2024-11-12 18:26:38 &#43;0900">Nov 12, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/12/bartender-was-menu-bar-wizard.html" class="u-url"><time class="dt-published" datetime="2024-11-12 18:26:38 &#43;0900">Nov 12, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://www.macbartender.com/">Bartender</a> was menu bar wizard I&rsquo;d been geeking out over. Turned out Ben Surtees had sold it to some shadowy outfit called Applause in March 2024. Reddit blew up with users freaking out.
@@ -2452,7 +2773,7 @@ Today, I&rsquo;ve now ditched Bartender for Ice,too.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/11/i-always-wanted.html" class="u-url"><time class="dt-published" datetime="2024-11-11 17:38:07 &#43;0900">Nov 11, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/11/i-always-wanted-an-original.html" class="u-url"><time class="dt-published" datetime="2024-11-11 17:38:07 &#43;0900">Nov 11, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I always wanted an original Fender🎸 at least once in my life. And by pure chance, I stumbled upon a <strong>70th Anniversary American Vintage II 1954 Stratocaster</strong> and it&rsquo;s only <strong>3.5Kg</strong>  - an absolute gem! I sped off in my car and bought it on the spot! Now, I&rsquo;ll let it sit for a while to cool off.</p>
@@ -2464,7 +2785,7 @@ Today, I&rsquo;ve now ditched Bartender for Ice,too.</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/10/macnetflixkcaldigit-ts-plusdisplayportcaldigit.html" class="u-url"><time class="dt-published" datetime="2024-11-10 18:06:18 &#43;0900">Nov 10, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/10/180618.html" class="u-url"><time class="dt-published" datetime="2024-11-10 18:06:18 &#43;0900">Nov 10, 2024</time></a>
 
 		<div class="e-content">
 			 <p>MacでNetflixが4K再生されないなと思ったら、使っている<a href="https://www.caldigit.com/ja/ts3-plus-ja/">CalDigit TS3 Plus</a>のDisplayPortが1.2で対応していませんでした。<a href="https://www.caldigit.com/ja/thunderbolt-station-4-ja/">CalDigit TS4</a>に買い替えるかと思いましたが、以前仕事で使っていた<a href="https://www.dockcase.com/products/dockcase-smart-hub-explorer-edition_10_in_1">Dockcase Explorer Edition:Smart 10-in-1 USB-C Hub</a>につなぎ変えました。</p>
@@ -2664,7 +2985,7 @@ Product」というブランドの片手鍋でした。</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/09/102708.html" class="u-url"><time class="dt-published" datetime="2024-11-09 10:27:08 &#43;0900">Nov 9, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/09/google-cloudcdlcredly.html" class="u-url"><time class="dt-published" datetime="2024-11-09 10:27:08 &#43;0900">Nov 9, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -2676,7 +2997,7 @@ Product」というブランドの片手鍋でした。</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/08/google-cloudcloud-digital.html" class="u-url"><time class="dt-published" datetime="2024-11-08 16:31:52 &#43;0900">Nov 8, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/08/163152.html" class="u-url"><time class="dt-published" datetime="2024-11-08 16:31:52 &#43;0900">Nov 8, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Google CloudのCloud Digital Leaderを受験してきました。レベル的にはAWSのCloud Practitioner相当だと思いますので、ほぼ準備せずに受験しても大丈夫でした。</p>
@@ -2688,7 +3009,7 @@ Product」というブランドの片手鍋でした。</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/07/ive-been-enjoying.html" class="u-url"><time class="dt-published" datetime="2024-11-07 09:12:51 &#43;0900">Nov 7, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/07/ive-been-enjoying-it-as.html" class="u-url"><time class="dt-published" datetime="2024-11-07 09:12:51 &#43;0900">Nov 7, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I&rsquo;ve been enjoying it as background music 🎵 for work lately.</p>
@@ -2701,7 +3022,7 @@ Product」というブランドの片手鍋でした。</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/07/trumps-back-with.html" class="u-url"><time class="dt-published" datetime="2024-11-07 01:19:27 &#43;0900">Nov 7, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/07/trumps-back-with-his-antitrust.html" class="u-url"><time class="dt-published" datetime="2024-11-07 01:19:27 &#43;0900">Nov 7, 2024</time></a>
 
 		<div class="e-content">
 			 <p><strong>Trump</strong>&rsquo;s back with his anti-trust hammer, and my ex-Amazon colleagues must be sweating bullets while Bezos plays Switzerland with WaPo. Guess my old boss thinks neutrality beats backbone these days. At least we still have remote work&hellip; oh wait 🙃</p>
@@ -2733,7 +3054,7 @@ Product」というブランドの片手鍋でした。</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/06/i-tried-switching.html" class="u-url"><time class="dt-published" datetime="2024-11-06 10:12:00 &#43;0900">Nov 6, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/06/i-tried-switching-from-spotify.html" class="u-url"><time class="dt-published" datetime="2024-11-06 10:12:00 &#43;0900">Nov 6, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I tried switching from <strong>Spotify</strong> to <strong>YouTube Music Premium</strong>, but I&rsquo;m going back to <strong>Spotify</strong>. While YouTube Music eliminates ads on YouTube and has no issues with content, Amazon Echo, which handles audio playback in my home, doesn&rsquo;t support it.</p>
@@ -2744,7 +3065,7 @@ Product」というブランドの片手鍋でした。</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/05/180520.html" class="u-url"><time class="dt-published" datetime="2024-11-05 18:05:20 &#43;0900">Nov 5, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/05/bold-serene-geometry-a-pier.html" class="u-url"><time class="dt-published" datetime="2024-11-05 18:05:20 &#43;0900">Nov 5, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>bold</code></p>
@@ -2757,7 +3078,7 @@ Product」というブランドの片手鍋でした。</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/05/cloudflareaws-ssblock-pubic.html" class="u-url"><time class="dt-published" datetime="2024-11-05 15:43:29 &#43;0900">Nov 5, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/05/cloudflareaws-ssblock-pubic-accessstatic-website.html" class="u-url"><time class="dt-published" datetime="2024-11-05 15:43:29 &#43;0900">Nov 5, 2024</time></a>
 
 		<div class="e-content">
 			 <p>メインブログを CloudflareからAWS S3に移行した際に、S3のBlock pubic accessをオフ、Static website hostingをオンにしていたので、CloudFrontがS3のREST APIエンドポイントを使用するよう修正しました。この場合CloudFrontはサブディレクトリのindex.htmlファイルを自動的に解決することができないので、以下のURLのパスを適切に変換するCloudFront Functionsを追加しました。あるあるですね。</p>
@@ -2886,7 +3207,7 @@ Edition</a>」を発表
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/02/qr-macqr-qr.html" class="u-url"><time class="dt-published" datetime="2024-11-02 11:52:57 &#43;0900">Nov 2, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/02/qr-macqr-qr-brew-install.html" class="u-url"><time class="dt-published" datetime="2024-11-02 11:52:57 &#43;0900">Nov 2, 2024</time></a>
 
 		<div class="e-content">
 			 <p>「地方税の納付でもしようか」と手続きを始めたところ、支払いサイトでQRコードの読み取りが必要でした。</p>
@@ -2912,7 +3233,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/01/hondas-super-cub.html" class="u-url"><time class="dt-published" datetime="2024-11-01 16:36:17 &#43;0900">Nov 1, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/01/hondas-super-cub-cc-which.html" class="u-url"><time class="dt-published" datetime="2024-11-01 16:36:17 &#43;0900">Nov 1, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Honda&rsquo;s Super Cub 50cc, which has been in production for nearly 80 years, will end production next May. Well, the 110cc will remain, but it&rsquo;s quite moving.</p>
@@ -2924,7 +3245,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/11/01/intel-nhk-cpuamdtsmcai.html" class="u-url"><time class="dt-published" datetime="2024-11-01 09:26:15 &#43;0900">Nov 1, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/11/01/092615.html" class="u-url"><time class="dt-published" datetime="2024-11-01 09:26:15 &#43;0900">Nov 1, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Intelは今期も赤字で、しかも2兆円を上回る赤字だったそうです。</p>
@@ -2939,7 +3260,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/31/cxodxaix-ibmosaix-ai.html" class="u-url"><time class="dt-published" datetime="2024-10-31 22:37:07 &#43;0900">Oct 31, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/31/cxodxaix-ibmosaix-ai-trasformation.html" class="u-url"><time class="dt-published" datetime="2024-10-31 22:37:07 &#43;0900">Oct 31, 2024</time></a>
 
 		<div class="e-content">
 			 <p>ここ数年CxOたちと話すとほぼ全員が「DX」という言葉を語っていたが、そろそろ「AIX」とか言い出すんだろうな。</p>
@@ -2951,7 +3272,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/31/the-macbook-pro.html" class="u-url"><time class="dt-published" datetime="2024-10-31 09:52:50 &#43;0900">Oct 31, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/31/the-macbook-pro-featuring-the.html" class="u-url"><time class="dt-published" datetime="2024-10-31 09:52:50 &#43;0900">Oct 31, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The MacBook Pro featuring the M4 chip has been announced.</p>
@@ -3014,7 +3335,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/30/eroded.html" class="u-url"><time class="dt-published" datetime="2024-10-30 20:09:03 &#43;0900">Oct 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/30/eroded-temporal-veins-the-history.html" class="u-url"><time class="dt-published" datetime="2024-10-30 20:09:03 &#43;0900">Oct 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>Eroded</code></p>
@@ -3027,7 +3348,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/29/greco-svgibson-es.html" class="u-url"><time class="dt-published" datetime="2024-10-29 16:27:45 &#43;0900">Oct 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/29/greco-svgibson-es-svpuusvpu.html" class="u-url"><time class="dt-published" datetime="2024-10-29 16:27:45 &#43;0900">Oct 29, 2024</time></a>
 
 		<div class="e-content">
 			 <p>先日実家で昔購入し実家を出るときに放置していたGrecoのセミアコ🎸を発掘。</p>
@@ -3240,7 +3561,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/23/i-visited-the.html" class="u-url"><time class="dt-published" datetime="2024-10-23 21:42:56 &#43;0900">Oct 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/23/i-visited-the-chiba-city.html" class="u-url"><time class="dt-published" datetime="2024-10-23 21:42:56 &#43;0900">Oct 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I visited the Chiba City Museum of Art today. There was a special exhibition titled &ldquo;Rolling the Horizon&rdquo; featuring works by the artist duo Nerhol. To be honest, I found it quite incomprehensible.</p>
@@ -3251,10 +3572,10 @@ Video Devices:
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/10/23/signal-signalline.html">The Ultimate Showdown: A Deep Dive into Modern Messaging Apps</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/10/23/the-ultimate-showdown-a-deep.html">The Ultimate Showdown: A Deep Dive into Modern Messaging Apps</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/10/23/signal-signalline.html" class="u-url"><time class="dt-published" datetime="2024-10-23 08:56:33 &#43;0900">Oct 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/23/the-ultimate-showdown-a-deep.html" class="u-url"><time class="dt-published" datetime="2024-10-23 08:56:33 &#43;0900">Oct 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>市川強盗傷害事件で犯人たちが「秘匿性が高い通信アプリを使用」とアプリ名を伏せて報道されています。
@@ -3427,7 +3748,7 @@ Video Devices:
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/23/translucenta-thunderbolt-interface.html" class="u-url"><time class="dt-published" datetime="2024-10-23 08:31:53 &#43;0900">Oct 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/23/translucenta-usb-hub-with-a.html" class="u-url"><time class="dt-published" datetime="2024-10-23 08:31:53 &#43;0900">Oct 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>#translucent</code>
@@ -3440,7 +3761,7 @@ A USB Hub with a translucent top panel showcasing its precision engineering. The
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/22/i-had-several.html" class="u-url"><time class="dt-published" datetime="2024-10-22 20:03:54 &#43;0900">Oct 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/22/i-had-several-exchanges-with.html" class="u-url"><time class="dt-published" datetime="2024-10-22 20:03:54 &#43;0900">Oct 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I had several exchanges with support about the issue of <strong>pCloud Drive</strong> not activating at startup, but their final response was as follows. The &lsquo;technical&rsquo; support certainly doesn&rsquo;t live up to its name.</p>
@@ -3452,7 +3773,7 @@ A USB Hub with a translucent top panel showcasing its precision engineering. The
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/21/toto-africa-yostos.html" class="u-url"><time class="dt-published" datetime="2024-10-21 18:28:01 &#43;0900">Oct 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/21/feeling-nostalgic-i-tried-covering.html" class="u-url"><time class="dt-published" datetime="2024-10-21 18:28:01 &#43;0900">Oct 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎸 Feeling nostalgic, I tried covering TOTO&rsquo;s famous song &ldquo;Africa&rdquo;.</p>
@@ -3465,7 +3786,7 @@ A USB Hub with a translucent top panel showcasing its precision engineering. The
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/21/cloudflareaws-s-usdssget.html" class="u-url"><time class="dt-published" datetime="2024-10-21 18:26:24 &#43;0900">Oct 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/21/182624.html" class="u-url"><time class="dt-published" datetime="2024-10-21 18:26:24 &#43;0900">Oct 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p>メインブログを CloudflareからAWS S3に移行してみました。
@@ -3519,7 +3840,7 @@ A USB Hub with a translucent top panel showcasing its precision engineering. The
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/20/ive-decided-to.html" class="u-url"><time class="dt-published" datetime="2024-10-20 06:35:24 &#43;0900">Oct 20, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/20/ive-decided-to-forgo-renewing.html" class="u-url"><time class="dt-published" datetime="2024-10-20 06:35:24 &#43;0900">Oct 20, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I&rsquo;ve decided to forgo renewing my Microsoft 365 Business Standard subscription (I chose Business instead of Home because it&rsquo;s cheaper) that I&rsquo;ve been using at home. I do have some concerns about Excel, as there are cases where alternatives like Numbers can&rsquo;t fully replace it.</p>
@@ -3588,7 +3909,7 @@ A USB Hub with a translucent top panel showcasing its precision engineering. The
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/17/i-watched-the.html" class="u-url"><time class="dt-published" datetime="2024-10-17 18:15:04 &#43;0900">Oct 17, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/17/i-watched-the-first-episode.html" class="u-url"><time class="dt-published" datetime="2024-10-17 18:15:04 &#43;0900">Oct 17, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I watched the first episode of &ldquo;Gundam: Requiem for Vengeance,&rdquo; which started streaming on Netflix today. It&rsquo;s a drama set on the European front during the One Year War from the first Gundam series. The story is told from the perspective of the Principality of Zeon, so the Gundam appears as the &ldquo;White Devil.&rdquo;
@@ -3602,7 +3923,7 @@ The show uses 3D CG created with the &ldquo;Unreal Engine 5&rdquo; game engine, 
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/16/lost-the-ruins.html" class="u-url"><time class="dt-published" datetime="2024-10-16 16:28:13 &#43;0900">Oct 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/16/lost-station-of-oblivion-the.html" class="u-url"><time class="dt-published" datetime="2024-10-16 16:28:13 &#43;0900">Oct 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 #lost</p>
@@ -3616,7 +3937,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/16/io-data-usbnfcusbnfcapple.html" class="u-url"><time class="dt-published" datetime="2024-10-16 11:03:32 &#43;0900">Oct 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/16/io-data-usbnfcusbnfcapple-macos-sequoia.html" class="u-url"><time class="dt-published" datetime="2024-10-16 11:03:32 &#43;0900">Oct 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>予定納税を完了。I/O DATA社のカードリーダー USB-NFC3でエラーが出てマイナポータルにログインできずに、ちょっと焦りました。USB-NFC3がAppleのシリコンチップに対応していないので、<a href="https://www.iodata.jp/lib/software/u/2229.htm#macOS">ドライバー</a>のインストールが必要でした。</p>
@@ -3640,7 +3961,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/15/yostos-dinner-song.html" class="u-url"><time class="dt-published" datetime="2024-10-15 20:17:26 &#43;0900">Oct 15, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/15/yostos-dinner-song-tuki-guitar.html" class="u-url"><time class="dt-published" datetime="2024-10-15 20:17:26 &#43;0900">Oct 15, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -3657,7 +3978,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/13/however-i-just.html" class="u-url"><time class="dt-published" datetime="2024-10-13 14:21:51 &#43;0900">Oct 13, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/13/however-i-just-opened-a.html" class="u-url"><time class="dt-published" datetime="2024-10-13 14:21:51 &#43;0900">Oct 13, 2024</time></a>
 
 		<div class="e-content">
 			 <p>However, I just opened a new Threads account for the first time in ages, and it&rsquo;s full of nothing but videos of women excessively shaking their butts. Is this place a garbage dump too?</p>
@@ -3668,7 +3989,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/13/microblogthreadsinstagram-manton-reece.html" class="u-url"><time class="dt-published" datetime="2024-10-13 14:17:08 &#43;0900">Oct 13, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/13/141708.html" class="u-url"><time class="dt-published" datetime="2024-10-13 14:17:08 &#43;0900">Oct 13, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Micro.blogからThreadsへのクロスポストが可能になりました。堕落したInstagramのアカウントは削除していましたが、テストのために復活させました。</p>
@@ -3684,7 +4005,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/12/aws-saacermertrics-congratulations.html" class="u-url"><time class="dt-published" datetime="2024-10-12 23:52:02 &#43;0900">Oct 12, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/12/aws-saacermertrics-congratulations-on-recertifying.html" class="u-url"><time class="dt-published" datetime="2024-10-12 23:52:02 &#43;0900">Oct 12, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -3701,7 +4022,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/11/awssaa-sapsaapcpearson.html" class="u-url"><time class="dt-published" datetime="2024-10-11 21:22:30 &#43;0900">Oct 11, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/11/awssaa-sapsaapcpearson-cermetricsexam-history.html" class="u-url"><time class="dt-published" datetime="2024-10-11 21:22:30 &#43;0900">Oct 11, 2024</time></a>
 
 		<div class="e-content">
 			 <p>もう要らないかなと思いましたが、AWSのSAA再認定を取りました。</p>
@@ -3738,7 +4059,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/09/i-quickly-preordered.html" class="u-url"><time class="dt-published" datetime="2024-10-09 22:20:13 &#43;0900">Oct 9, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/09/i-quickly-preordered-the-newly.html" class="u-url"><time class="dt-published" datetime="2024-10-09 22:20:13 &#43;0900">Oct 9, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I quickly pre-ordered the newly announced <strong>Nintendo Sound Clock, Alarmo</strong>!!!</p>
@@ -3749,7 +4070,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/08/its-a-queen.html" class="u-url"><time class="dt-published" datetime="2024-10-08 13:58:01 &#43;0900">Oct 8, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/08/its-a-queen-masterpiece-that.html" class="u-url"><time class="dt-published" datetime="2024-10-08 13:58:01 &#43;0900">Oct 8, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎸 It&rsquo;s a Queen masterpiece that I recorded at home about 10 years ago. I have memories of it being so difficult, with probably more than 6 vocal parts, that I don&rsquo;t have the motivation to do it again.</p>
@@ -3761,7 +4082,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/04/the-spider-lilies.html" class="u-url"><time class="dt-published" datetime="2024-10-04 08:08:37 &#43;0900">Oct 4, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/04/the-spider-lilies-are-in.html" class="u-url"><time class="dt-published" datetime="2024-10-04 08:08:37 &#43;0900">Oct 4, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The spider lilies are in bloom, and it finally feels like autumn.</p>
@@ -3773,7 +4094,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/04/silence-in-green.html" class="u-url"><time class="dt-published" datetime="2024-10-04 04:57:59 &#43;0900">Oct 4, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/04/gloomy-silence-in-green-a.html" class="u-url"><time class="dt-published" datetime="2024-10-04 04:57:59 &#43;0900">Oct 4, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 #gloomy</p>
@@ -3786,7 +4107,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/02/casio-gwjf-disassembled.html" class="u-url"><time class="dt-published" datetime="2024-10-02 10:23:24 &#43;0900">Oct 2, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/02/casio-gwjf-disassembled-while-it.html" class="u-url"><time class="dt-published" datetime="2024-10-02 10:23:24 &#43;0900">Oct 2, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -3809,7 +4130,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/10/01/martin-c-nylontexan.html" class="u-url"><time class="dt-published" datetime="2024-10-01 13:22:46 &#43;0900">Oct 1, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/10/01/martin-c-nylontexan-guitar-epiphone.html" class="u-url"><time class="dt-published" datetime="2024-10-01 13:22:46 &#43;0900">Oct 1, 2024</time></a>
 
 		<div class="e-content">
 			 <p>『学校のカイダン』を久しぶりに見ました。印象的な挿入歌は当時デビューしたての藤原さくらさんの作詞・作曲で驚いたもんです。</p>
@@ -3826,7 +4147,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/30/hearthisatsoundcloudraspberry-dream-finger.html" class="u-url"><time class="dt-published" datetime="2024-09-30 17:19:39 &#43;0900">Sep 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/30/171939.html" class="u-url"><time class="dt-published" datetime="2024-09-30 17:19:39 &#43;0900">Sep 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>楽曲を公開するサイトをHearThis.atに移行しようと思いましたが、あまりに品質が悪く当面SoundCloudを継続することにしました。この2年間の弾いた曲の再生統計データを見ていると、再生回数の上位は次の4曲です。Raspberry Dream以外は納得。</p>
@@ -3843,7 +4164,7 @@ Do countless words etched in history still slumber behind those rusted doors?</p
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/30/i-was-using.html" class="u-url"><time class="dt-published" datetime="2024-09-30 16:58:04 &#43;0900">Sep 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/30/i-was-using-chatgpt-but.html" class="u-url"><time class="dt-published" datetime="2024-09-30 16:58:04 &#43;0900">Sep 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I was using ChatGPT, but I have switched to <strong>Claude</strong> from Anthropic.
@@ -3868,7 +4189,7 @@ The deciding factors were the following three points:</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/30/an-unpublished-musical.html" class="u-url"><time class="dt-published" datetime="2024-09-30 04:42:51 &#43;0900">Sep 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/30/an-unpublished-musical-piece-by.html" class="u-url"><time class="dt-published" datetime="2024-09-30 04:42:51 &#43;0900">Sep 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>An unpublished musical piece by Mozart has reportedly been discovered in the Leipzig City Library and performed. It is believed to have been written in his early teens and appears to be one of the chamber music works he composed in his youth that was thought to be lost. Although it&rsquo;s a digital rendition, I&rsquo;ve attempted to play it using Logic Pro.</p>
@@ -3943,7 +4264,7 @@ The deciding factors were the following three points:</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/27/the-mainichi-shimbun.html" class="u-url"><time class="dt-published" datetime="2024-09-27 16:53:25 &#43;0900">Sep 27, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/27/the-mainichi-shimbun-reports-that.html" class="u-url"><time class="dt-published" datetime="2024-09-27 16:53:25 &#43;0900">Sep 27, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://mainichi.jp/articles/20240925/k00/00m/030/208000c">The Mainichi Shimbun reports</a> that Korea has agreed to return a Buddhist statue to Japan, but with conditions. It&rsquo;s typical of Korea to claim a stolen statue from Japan as their own and then set conditions for its return. This behavior is shockingly improper.</p>
@@ -3956,7 +4277,7 @@ The deciding factors were the following three points:</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/27/many-experts-were.html" class="u-url"><time class="dt-published" datetime="2024-09-27 09:42:34 &#43;0900">Sep 27, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/27/many-experts-were-predicting-that.html" class="u-url"><time class="dt-published" datetime="2024-09-27 09:42:34 &#43;0900">Sep 27, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Many experts were predicting that the American economy would crash towards the end of the year, yesterday, buy orders dominated the New York stock market, and the S&amp;P 500 reached a new record high. You can&rsquo;t really rely on expert opinions, can you? lol</p>
@@ -3967,7 +4288,7 @@ The deciding factors were the following three points:</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/26/the-new-reeder.html" class="u-url"><time class="dt-published" datetime="2024-09-26 22:46:28 &#43;0900">Sep 26, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/26/the-new-reeder-released-in.html" class="u-url"><time class="dt-published" datetime="2024-09-26 22:46:28 &#43;0900">Sep 26, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The new Reeder released in September is terrible. I think I&rsquo;ll go back to <a href="https://www.feedbin.com">Feedbin</a> after all. In these days when social media is a garbage dump, RSS is more effective than ever!</p>
@@ -3979,7 +4300,7 @@ The deciding factors were the following three points:</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/26/natures-vivid-hues.html" class="u-url"><time class="dt-published" datetime="2024-09-26 14:18:50 &#43;0900">Sep 26, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/26/vibrant-city-berries-natures-vivid.html" class="u-url"><time class="dt-published" datetime="2024-09-26 14:18:50 &#43;0900">Sep 26, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 #vibrant</p>
@@ -3991,7 +4312,7 @@ The deciding factors were the following three points:</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/26/im-using-jrnl.html" class="u-url"><time class="dt-published" datetime="2024-09-26 14:09:18 &#43;0900">Sep 26, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/26/im-using-jrnl-so-i.html" class="u-url"><time class="dt-published" datetime="2024-09-26 14:09:18 &#43;0900">Sep 26, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I&rsquo;m using <a href="https://github.com/jrnl-org/jrnl">jrnl</a>, so I submitted a pull request for internationalizing the documentation and adding Japanese translations. However, while the project manages dependencies with pyproject.toml, the CI/CD uses pip, causing the pull request build to fail. I think I&rsquo;ll open an issue about this.</p>
@@ -4002,7 +4323,7 @@ The deciding factors were the following three points:</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/24/the-movie-tonight.html" class="u-url"><time class="dt-published" datetime="2024-09-24 01:01:44 &#43;0900">Sep 24, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/24/the-movie-tonight-i-attended.html" class="u-url"><time class="dt-published" datetime="2024-09-24 01:01:44 &#43;0900">Sep 24, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -4017,7 +4338,7 @@ The year 1989 was marked by significant events: the death of Emperor Hirohito, t
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/23/splatoon-theres-a.html" class="u-url"><time class="dt-published" datetime="2024-09-23 17:59:03 &#43;0900">Sep 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/23/splatoon-theres-a-bug-in.html" class="u-url"><time class="dt-published" datetime="2024-09-23 17:59:03 &#43;0900">Sep 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Splatoon 3: There&rsquo;s a bug in the Grand Fest venue accessible via Amiibo that allows you to escape outside the venue, so I took a walk around.</p>
@@ -4030,7 +4351,7 @@ The year 1989 was marked by significant events: the death of Emperor Hirohito, t
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/23/i-was-thinking.html" class="u-url"><time class="dt-published" datetime="2024-09-23 02:39:54 &#43;0900">Sep 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/23/i-was-thinking-of-switching.html" class="u-url"><time class="dt-published" datetime="2024-09-23 02:39:54 &#43;0900">Sep 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I was thinking of switching to Amazon Music Unlimited, but I found out they&rsquo;ve increased their prices and they don&rsquo;t properly disclose their specifications. Spotify, on the other hand, clearly publishes their <a href="https://support.spotify.com/jp/artists/article/loudness-normalization/">loudness normalization specifications</a>. I guess I&rsquo;ll stick with Spotify after all.</p>
@@ -4041,7 +4362,7 @@ The year 1989 was marked by significant events: the death of Emperor Hirohito, t
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/22/sd-windows-pc.html" class="u-url"><time class="dt-published" datetime="2024-09-22 17:26:29 &#43;0900">Sep 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/22/sd-windows-pc-mac.html" class="u-url"><time class="dt-published" datetime="2024-09-22 17:26:29 &#43;0900">Sep 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p>ドライブレコーダーのSDカードが破損した模様。「フォーマットしろ」というエラーが出ますが、本体ではフォーマットできず <strong>Windows PCでしか</strong> フォーマットできないという「20世紀の遺物か？」と疑ってしまうバカ仕様。うちにはMacしかない。アイサイトとの関係のため、ディーラーオプションの <strong>デンソー</strong> のものしかつけられないが、安い中華製のやつの方がよほど使える。</p>
@@ -4053,7 +4374,7 @@ The year 1989 was marked by significant events: the death of Emperor Hirohito, t
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/22/nova-launcher-user.html" class="u-url"><time class="dt-published" datetime="2024-09-22 09:41:55 &#43;0900">Sep 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/22/nova-launcher-user-forever-but.html" class="u-url"><time class="dt-published" datetime="2024-09-22 09:41:55 &#43;0900">Sep 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p><strong>Nova Launcher</strong> user forever, but ad company buyout and dev team layoffs make future uncertain. Time to switch! Trying <strong><a href="https://f-droid.org/ja/packages/de.mm20.launcher2.release/">Kvaesitso</a></strong>, a niche German launcher (can&rsquo;t pronounce it 😅). Surprisingly good! Minimal design centered on search is beautiful.
@@ -4177,7 +4498,7 @@ AWSの既存サービスとシームレスに連携でき、管理面やコス�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/19/synthesizer-vvocaloid-aivocaloid.html" class="u-url"><time class="dt-published" datetime="2024-09-19 17:49:48 &#43;0900">Sep 19, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/19/synthesizer-vvocaloid-aivocaloid-synthesizer-v.html" class="u-url"><time class="dt-published" datetime="2024-09-19 17:49:48 &#43;0900">Sep 19, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Synthesizer Vを購入したので、テストのため「君が代」を歌わせてみました。ハモりは適当です。
@@ -4190,7 +4511,7 @@ AWSの既存サービスとシームレスに連携でき、管理面やコス�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/18/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-09-18 22:13:37 &#43;0900">Sep 18, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/18/finished-reading-by-a-book.html" class="u-url"><time class="dt-published" datetime="2024-09-18 22:13:37 &#43;0900">Sep 18, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9784104106035">ぼくはあと何回、満月を見るだろう</a> by 坂本龍一 📚</p>
@@ -4203,7 +4524,7 @@ AWSの既存サービスとシームレスに連携でき、管理面やコス�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/18/people-say-the.html" class="u-url"><time class="dt-published" datetime="2024-09-18 18:28:59 &#43;0900">Sep 18, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/18/people-say-the-home-screen.html" class="u-url"><time class="dt-published" datetime="2024-09-18 18:28:59 &#43;0900">Sep 18, 2024</time></a>
 
 		<div class="e-content">
 			 <p>People say the Home screen has been updated in iOS 18. How true is that?  On Android, Nova Launcher was acquired, and the development team was laid off in the summer, leaving it in a near-death state. Maybe I should just switch back to iPhone&hellip; Nah, that&rsquo;s not going to happen.</p>
@@ -4214,7 +4535,7 @@ AWSの既存サービスとシームレスに連携でき、管理面やコス�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/18/173936.html" class="u-url"><time class="dt-published" datetime="2024-09-18 17:39:36 &#43;0900">Sep 18, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/18/haraoka-pier-in-chiba-japan.html" class="u-url"><time class="dt-published" datetime="2024-09-18 17:39:36 &#43;0900">Sep 18, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -4227,7 +4548,7 @@ AWSの既存サービスとシームレスに連携でき、管理面やコス�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/17/these-are-laserdisc.html" class="u-url"><time class="dt-published" datetime="2024-09-17 18:42:31 &#43;0900">Sep 17, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/17/albumcoverthese-are-laserdisc-albums-which.html" class="u-url"><time class="dt-published" datetime="2024-09-17 18:42:31 &#43;0900">Sep 17, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 #album_cover
@@ -4240,7 +4561,7 @@ These are LaserDisc albums, which were once a cutting-edge medium. Now, I no lon
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/17/currently-evaluating-openais.html" class="u-url"><time class="dt-published" datetime="2024-09-17 17:21:23 &#43;0900">Sep 17, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/17/currently-evaluating-openais-opreview-although.html" class="u-url"><time class="dt-published" datetime="2024-09-17 17:21:23 &#43;0900">Sep 17, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Currently evaluating OpenAI&rsquo;s o1-preview. Although it is said that it is not always more accurate than GPT-4o, when checked with the &ldquo;<a href="https://github.com/SingularitySociety/WorldModels/">World Model</a>&rdquo;, which collects problems that LLMs struggle with, o1-preview correctly solves questions like the following that GPT-4o gets wrong.</p>
@@ -4265,7 +4586,7 @@ These are LaserDisc albums, which were once a cutting-edge medium. Now, I no lon
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/16/congratulations-to-hiroyuki.html" class="u-url"><time class="dt-published" datetime="2024-09-16 20:36:25 &#43;0900">Sep 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/16/congratulations-to-hiroyuki-sanada-for.html" class="u-url"><time class="dt-published" datetime="2024-09-16 20:36:25 &#43;0900">Sep 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎉 Congratulations to Hiroyuki Sanada for becoming the first Japanese actor to win the Emmy for Best Lead Actor in a Drama Series! It’s an incredible achievement. His talent, dedication, and groundbreaking performance continue to inspire audiences around the world. 🇯🇵🎬</p>
@@ -4276,7 +4597,7 @@ These are LaserDisc albums, which were once a cutting-edge medium. Now, I no lon
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/16/splatoweenfrosty-festspring-festsummer.html" class="u-url"><time class="dt-published" datetime="2024-09-16 14:07:48 &#43;0900">Sep 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/16/the-splatoon-grand-fest-has.html" class="u-url"><time class="dt-published" datetime="2024-09-16 14:07:48 &#43;0900">Sep 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The Splatoon 3 Grand Fest has ended, and Nintendo&rsquo;s official Twitter announced that regular updates, such as weapon additions, will also come to an end. It&rsquo;s sad. While the Grand Fest was elaborate, it didn&rsquo;t generate as much excitement as the final fest in Splatoon 2.</p>
@@ -4377,7 +4698,7 @@ AWSの
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/14/this-weekend-splatoon.html" class="u-url"><time class="dt-published" datetime="2024-09-14 17:52:05 &#43;0900">Sep 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/14/this-weekend-splatoon-is-hosting.html" class="u-url"><time class="dt-published" datetime="2024-09-14 17:52:05 &#43;0900">Sep 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>今週末のスプラトゥーン３🎮　はおそらく最後のフェスであるグランドフェス開催中。楽しみましょう。</p>
@@ -4390,7 +4711,7 @@ AWSの
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/14/it-seems-that.html" class="u-url"><time class="dt-published" datetime="2024-09-14 04:51:47 &#43;0900">Sep 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/14/it-seems-that-pfas-levels.html" class="u-url"><time class="dt-published" datetime="2024-09-14 04:51:47 &#43;0900">Sep 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>It seems that PFAS levels up to 200 times the national standard have been detected in wells around Ichihara. Japan’s provisional standard is set at 50 ng/L, while in the U.S., it’s 4 ng/L. Based on U.S. standards, that’s 5,000 times the limit. It’s also been detected around Kashiwa City in Chiba, which is concerning. I’m using a BRITA filter and plan to install a water purifier soon, both of which claim to remove over 80% of PFAS, so I can feel reassured for now.</p>
@@ -4415,7 +4736,7 @@ AWSの
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/11/casinocasino-and-your.html" class="u-url"><time class="dt-published" datetime="2024-09-11 14:21:32 &#43;0900">Sep 11, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/11/casinocasino-yostos-and-your-bird.html" class="u-url"><time class="dt-published" datetime="2024-09-11 14:21:32 &#43;0900">Sep 11, 2024</time></a>
 
 		<div class="e-content">
 			 <p>ギターを増やしすぎて折角手に入れたCasinoをあまり弾けていない。
@@ -4428,7 +4749,7 @@ AWSの
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/10/i-got-tired.html" class="u-url"><time class="dt-published" datetime="2024-09-10 16:53:58 &#43;0900">Sep 10, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/10/i-got-tired-of-the.html" class="u-url"><time class="dt-published" datetime="2024-09-10 16:53:58 &#43;0900">Sep 10, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I got tired of the ugliness of the iPhone and switched to the Essential Phone, and then to the Pixel. But the exceptionally ugly design of the Pixel 9 is probably no longer an option for me.</p>
@@ -4455,7 +4776,7 @@ AWSの
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/09/gathering-points-in.html" class="u-url"><time class="dt-published" datetime="2024-09-09 18:39:04 &#43;0900">Sep 9, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/09/many-gathering-points-in-a.html" class="u-url"><time class="dt-published" datetime="2024-09-09 18:39:04 &#43;0900">Sep 9, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 #many</p>
@@ -4610,7 +4931,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/05/amiibo-to-get.html" class="u-url"><time class="dt-published" datetime="2024-09-05 15:15:06 &#43;0900">Sep 5, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/05/to-get-into-the-spirit.html" class="u-url"><time class="dt-published" datetime="2024-09-05 15:15:06 &#43;0900">Sep 5, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -4634,7 +4955,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/03/today-i-visited.html" class="u-url"><time class="dt-published" datetime="2024-09-03 17:01:27 &#43;0900">Sep 3, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/03/today-i-visited-kinoene-omoya.html" class="u-url"><time class="dt-published" datetime="2024-09-03 17:01:27 &#43;0900">Sep 3, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Today, I visited <a href="https://www.iinumahonke.co.jp/lp/kinoene-omoya/">Kinoene Omoya</a>, a restaurant run by Iinumahonke, a sake brewery in Chiba known for its Japanese sake brand, 甲子(Kinoene).  I enjoyed a three-tiered bento box, a traditional Japanese meal presentation where different dishes are served in a set of three stacked boxes. 🍽️</p>
@@ -4646,7 +4967,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/03/i-was-surprised.html" class="u-url"><time class="dt-published" datetime="2024-09-03 10:41:29 &#43;0900">Sep 3, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/03/i-was-surprised-by-the.html" class="u-url"><time class="dt-published" datetime="2024-09-03 10:41:29 &#43;0900">Sep 3, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I was surprised by the announcement of Oasis&rsquo;s reunion and world tour, but it filled me with nostalgia. I used to listen to them a lot during my student days&hellip; Wait, Oasis was from the 1990s, so that doesn’t quite match up. I spent about two days confused, only to realize I had somehow mixed up Oasis with the 1980s band <a href="https://originalasia.com/">ASIA</a>. Even though Oasis and the progressive rock band Asia are completely different!</p>
@@ -4657,7 +4978,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/02/i-had-the.html" class="u-url"><time class="dt-published" datetime="2024-09-02 14:59:00 &#43;0900">Sep 2, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/02/i-had-the-chance-to.html" class="u-url"><time class="dt-published" datetime="2024-09-02 14:59:00 &#43;0900">Sep 2, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I had the chance to ride in a vehicle from Chiba City&rsquo;s <a href="https://www.city.chiba.jp/toshi/toshi/kotsu/gurisuro.html">Green Slow Mobility</a> demonstration experiment, which was being conducted in the Makuhari Baytown area. Since these are electric vehicles, they might be more cost-effective and practical than the community buses often used in rural areas. The photo shows the friendly drivers who kindly gave me a ride.</p>
@@ -4670,7 +4991,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/02/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-09-02 08:50:06 &#43;0900">Sep 2, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/02/finished-reading-by-the-story.html" class="u-url"><time class="dt-published" datetime="2024-09-02 08:50:06 &#43;0900">Sep 2, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9784088841601">怪獣8号 13</a> by 松本直也 📚</p>
@@ -4682,7 +5003,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/09/01/bluesky-wow-welcome.html" class="u-url"><time class="dt-published" datetime="2024-09-01 12:09:02 &#43;0900">Sep 1, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/09/01/bluesky-wow-welcome-to-the.html" class="u-url"><time class="dt-published" datetime="2024-09-01 12:09:02 &#43;0900">Sep 1, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Bluesky のユーザーがここ数日で百万人も増えたそうです。</p>
@@ -4709,7 +5030,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/31/microblognotes-android-an.html" class="u-url"><time class="dt-published" datetime="2024-08-31 20:18:19 &#43;0900">Aug 31, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/31/microblognotes-android-an-update-on.html" class="u-url"><time class="dt-published" datetime="2024-08-31 20:18:19 &#43;0900">Aug 31, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Micro.blogの機能のうち、<code>Notes</code> に特化したモバイルアプリなのかな。
@@ -4722,7 +5043,7 @@ JA農協にとっては蜜の味の状況なのでしょう。バカな話です
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/31/photofriday-in-the.html" class="u-url"><time class="dt-published" datetime="2024-08-31 17:32:37 &#43;0900">Aug 31, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/31/windshieldshot-in-the-tyhoon-while.html" class="u-url"><time class="dt-published" datetime="2024-08-31 17:32:37 &#43;0900">Aug 31, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷  #windshield_shot</p>
@@ -4834,7 +5155,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/30/texangibson-j-one.html" class="u-url"><time class="dt-published" datetime="2024-08-30 13:57:33 &#43;0900">Aug 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/30/texangibson-j-yostos-one-more.html" class="u-url"><time class="dt-published" datetime="2024-08-30 13:57:33 &#43;0900">Aug 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>折角アコギを買ったので弾いてみました。TexanだとオリジナルのGibson J-45のニュアンスとはちょっと違うか。</p>
@@ -4857,7 +5178,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/29/microsoftterminal-cascadia-codecascadia.html" class="u-url"><time class="dt-published" datetime="2024-08-29 21:23:44 &#43;0900">Aug 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/29/212344.html" class="u-url"><time class="dt-published" datetime="2024-08-29 21:23:44 &#43;0900">Aug 29, 2024</time></a>
 
 		<div class="e-content">
 			 <p>MicrosoftがTerminal用フォント Cascadia Codeを日本語、繁体・簡体字に対応させて<strong>Cascadia Next</strong>として発表。早速Macにインストールして試してみました。リガチャもサポートしててWindows標準となるとコーディング用フォントしてはいい感じです。愛用しているMonoLisa + M PLUS 1 CODE(20pxで表示)とCascadia Next JP(22pxで表示)を比較。個人的には小さめで詰め込み過ぎに感じます。MonoLisaがゆったり目なので、慣れと好みの問題でしょう。</p>
@@ -4870,7 +5191,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/29/the-pixel-is.html" class="u-url"><time class="dt-published" datetime="2024-08-29 10:01:41 &#43;0900">Aug 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/29/the-pixel-is-now-available.html" class="u-url"><time class="dt-published" datetime="2024-08-29 10:01:41 &#43;0900">Aug 29, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The Pixel 9 is now available for sale.</p>
@@ -4882,7 +5203,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/28/i-was-concerned.html" class="u-url"><time class="dt-published" datetime="2024-08-28 15:57:11 &#43;0900">Aug 28, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/28/i-was-concerned-about-the.html" class="u-url"><time class="dt-published" datetime="2024-08-28 15:57:11 &#43;0900">Aug 28, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I was concerned about the typhoon and was looking at <strong>Ventusky</strong>. Out of curiosity, I checked the air pollution layer and saw that a lot of pollutants were being carried over from <strong>that country</strong> by the typhoon winds! I really wish something could be done about it.</p>
@@ -4894,7 +5215,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/28/first-the-attacker.html" class="u-url"><time class="dt-published" datetime="2024-08-28 09:02:41 &#43;0900">Aug 28, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/28/first-the-attacker-creates-their.html" class="u-url"><time class="dt-published" datetime="2024-08-28 09:02:41 &#43;0900">Aug 28, 2024</time></a>
 
 		<div class="e-content">
 			 <blockquote>
@@ -4909,7 +5230,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/27/it-seems-that.html" class="u-url"><time class="dt-published" datetime="2024-08-27 23:17:48 &#43;0900">Aug 27, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/27/it-seems-that-the-ceo.html" class="u-url"><time class="dt-published" datetime="2024-08-27 23:17:48 &#43;0900">Aug 27, 2024</time></a>
 
 		<div class="e-content">
 			 <p>It seems that the CEO of Telegram has been arrested, which reminds me of the Winny incident in Japan. The unjust arrest and prosecution of Isamu Kaneko by the Japanese police in 2004 set back Japan&rsquo;s IT industry by 20 years. It&rsquo;s a foolish situation.</p>
@@ -4920,7 +5241,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/27/finale-incremental-value.html" class="u-url"><time class="dt-published" datetime="2024-08-27 18:48:26 &#43;0900">Aug 27, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/27/finale-incremental-value-for-our.html" class="u-url"><time class="dt-published" datetime="2024-08-27 18:48:26 &#43;0900">Aug 27, 2024</time></a>
 
 		<div class="e-content">
 			 <p>採譜ソフトのFinaleが開発・販売を終了する。 音楽はざっくり言うと作曲-&gt;アレンジ-&gt;採譜-&gt;演奏というプロセスが必要だが、「採譜」というプロセスは現代では端折られることも多いし、何か新しい革新があるわけでもないから「incremental value for our customers 」が無くなったというのは確かにそうなんだろう。ただ日本のクラシック音楽界隈ではデファクトスタンダードなどで、関係者には「Finaleがフィナーレを迎えた」などと冗談を言える雰囲気ではない。</p>
@@ -4933,7 +5254,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/27/i-recently-bought.html" class="u-url"><time class="dt-published" datetime="2024-08-27 11:22:19 &#43;0900">Aug 27, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/27/i-recently-bought-a-digital.html" class="u-url"><time class="dt-published" datetime="2024-08-27 11:22:19 &#43;0900">Aug 27, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I recently bought a digital camera for the first time in a while: the <strong>RICOH GR IIIx HDF</strong>. Compared to the original GR DIGITAL, which I previously owned, I was amazed by the improved image quality that now rivals a DSLR. What’s more, this camera is actually based on a model from five years ago!</p>
@@ -4957,7 +5278,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/26/i-visited-oyama.html" class="u-url"><time class="dt-published" datetime="2024-08-26 16:15:48 &#43;0900">Aug 26, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/26/i-visited-oyama-senmaida-in.html" class="u-url"><time class="dt-published" datetime="2024-08-26 16:15:48 &#43;0900">Aug 26, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I visited <strong>Oyama Senmaida(大山千枚田)</strong> in Chiba Pref, Japan. These terraced rice fields, dating back to before the 1600s, are ingeniously built on hillside slopes, forming 30 levels with 375 paddies still in use today. They are the quintessential rural landscape of Japan.</p>
@@ -4982,7 +5303,7 @@ S&amp;P500の動きはそこまで相関があったわけでもありません�
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/25/miff-number-was.html" class="u-url"><time class="dt-published" datetime="2024-08-25 20:46:37 &#43;0900">Aug 25, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/25/miff-number-was-a-wonderful.html" class="u-url"><time class="dt-published" datetime="2024-08-25 20:46:37 &#43;0900">Aug 25, 2024</time></a>
 
 		<div class="e-content">
 			 <p>日本では見ることが出来ない映画のようですが、どうやら渋谷にある「名曲喫茶ライオン」を紹介した映画のようです。今度このカフェに行ってみようかな。</p>
@@ -5140,7 +5461,7 @@ for my end users to use?</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/23/microblog-minah-yostos.html" class="u-url"><time class="dt-published" datetime="2024-08-23 23:53:12 &#43;0900">Aug 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/23/microblog-minah-yostos-i-just.html" class="u-url"><time class="dt-published" datetime="2024-08-23 23:53:12 &#43;0900">Aug 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>数日前のMicro.blogのエディタの変更以来日本語入力が出来なくて困っていたが、サクっと解決してくれて助かった。<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><a href="https://micro.blog/minah">@minah</a><!-- raw HTML omitted --> <!-- raw HTML omitted --><a href="https://micro.blog/yostos">@yostos</a><!-- raw HTML omitted --> I just rolled out a fix for Japanese and Chinese input. Can you try again and let me know if it works correctly? There might still be more we can do. For now, the coloring is disabled for these inputs.<!-- raw HTML omitted --><!-- raw HTML omitted -->Manton Reece <!-- raw HTML omitted --><!-- raw HTML omitted --><a href="https://micro.blog/manton/44052719">https://micro.blog/manton/44052719</a><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
@@ -5163,7 +5484,7 @@ for my end users to use?</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/23/netflixthe-ronettesvocaloid.html" class="u-url"><time class="dt-published" datetime="2024-08-23 14:01:03 &#43;0900">Aug 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/23/140103.html" class="u-url"><time class="dt-published" datetime="2024-08-23 14:01:03 &#43;0900">Aug 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>「おい、ハンサム!!」をNetflixで見返していて、そういえばThe Ronettesってこの曲しか知らんなと演奏してみた🎸。ヴォーカルはVocaloidだけど、先のアップデートでLogicProに追加されたChromaGlowが昔の録音のサチュレーションをうまく再現している気がする。</p>
@@ -5175,7 +5496,7 @@ for my end users to use?</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/23/i-spotted-a.html" class="u-url"><time class="dt-published" datetime="2024-08-23 13:13:26 &#43;0900">Aug 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/23/i-spotted-a-toad-being.html" class="u-url"><time class="dt-published" datetime="2024-08-23 13:13:26 &#43;0900">Aug 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I spotted a toad being attacked by a mouse! I chased the mouse away and saved the toad. Do you think this toad will come back to repay the favor someday, just like in those Japanese folktales like Urashima Taro or The Grateful Crane?</p>
@@ -5187,7 +5508,7 @@ for my end users to use?</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/23/i-had-set.html" class="u-url"><time class="dt-published" datetime="2024-08-23 12:52:08 &#43;0900">Aug 23, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/23/i-had-set-the-date.html" class="u-url"><time class="dt-published" datetime="2024-08-23 12:52:08 &#43;0900">Aug 23, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I had set the date incorrectly on my digital camera and wanted to correct the date in the Exif data. However, I didn’t want to install unnecessary apps from the App Store, so I used Homebrew to install exiftool and made the correction.</p>
@@ -5220,7 +5541,7 @@ exiftool -Alldates<span style="color:#f92672">=</span><span style="color:#e6db74
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/22/this-is-a.html" class="u-url"><time class="dt-published" datetime="2024-08-22 20:36:06 &#43;0900">Aug 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/22/this-is-a-ridiculous-device.html" class="u-url"><time class="dt-published" datetime="2024-08-22 20:36:06 &#43;0900">Aug 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p>This is a ridiculous device installed in the restroom at Chiba City Hall. It seems to be meant for explaining how to use the toilet in different languages. But first of all, it’s hard to even understand what this device is for, and using flags to identify languages is just not practical. For example, just because it’s the Chinese flag doesn’t mean the person understands Mandarin.</p>
@@ -5233,7 +5554,7 @@ exiftool -Alldates<span style="color:#f92672">=</span><span style="color:#e6db74
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/22/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-08-22 16:56:03 &#43;0900">Aug 22, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/22/finished-reading-by-cult-of.html" class="u-url"><time class="dt-published" datetime="2024-08-22 16:56:03 &#43;0900">Aug 22, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://amzn.to/3SYDlFv">ヴィンテージ・エフェクターの真実</a> by アキマツネオ📚</p>
@@ -5245,7 +5566,7 @@ exiftool -Alldates<span style="color:#f92672">=</span><span style="color:#e6db74
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/21/rere.html" class="u-url"><time class="dt-published" datetime="2024-08-21 18:25:24 &#43;0900">Aug 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/21/rere-yostos-that-band.html" class="u-url"><time class="dt-published" datetime="2024-08-21 18:25:24 &#43;0900">Aug 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p>🎥 『<a href="https://bocchi.rocks/">劇場版総集編 ぼっち・ざ・ろっくRe:Re:</a>』を見てきました。まだ夏休みですが、平日昼間のためかアニメのリュックを背負ったガチ勢の兄ちゃんしかいなくて怖かった。</p>
@@ -5257,10 +5578,10 @@ exiftool -Alldates<span style="color:#f92672">=</span><span style="color:#e6db74
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/08/21/finished-reading-by.html">Finished reading: The United States’ war responsibility in World War II(アメリカの戦争責任) by 竹田恒泰 📚</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/08/21/finished-reading-the-united-states.html">Finished reading: The United States’ war responsibility in World War II(アメリカの戦争責任) by 竹田恒泰 📚</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/08/21/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-08-21 09:27:08 &#43;0900">Aug 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/21/finished-reading-the-united-states.html" class="u-url"><time class="dt-published" datetime="2024-08-21 09:27:08 &#43;0900">Aug 21, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9784569826646">アメリカの戦争責任</a> by 竹田恒泰 📚</p>
@@ -5283,7 +5604,7 @@ It was particularly impactful to learn that the U.S. had scattered leaflets in J
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/21/tbs-news-dig.html" class="u-url"><time class="dt-published" datetime="2024-08-21 08:34:01 &#43;0900">Aug 21, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/21/tbs-news-dig-powered-by.html" class="u-url"><time class="dt-published" datetime="2024-08-21 08:34:01 &#43;0900">Aug 21, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -5295,7 +5616,7 @@ It was particularly impactful to learn that the U.S. had scattered leaflets in J
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/20/the-hiyodorizaka-is.html" class="u-url"><time class="dt-published" datetime="2024-08-20 21:11:35 &#43;0900">Aug 20, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/20/path-hiyodorizaka-the-hiyodorizaka-is.html" class="u-url"><time class="dt-published" datetime="2024-08-20 21:11:35 &#43;0900">Aug 20, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📷 <code>#Path</code></p>
@@ -5318,7 +5639,7 @@ It was particularly impactful to learn that the U.S. had scattered leaflets in J
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/20/the-new-webbased.html" class="u-url"><time class="dt-published" datetime="2024-08-20 09:41:22 &#43;0900">Aug 20, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/20/the-new-webbased-microblog-editor.html" class="u-url"><time class="dt-published" datetime="2024-08-20 09:41:22 &#43;0900">Aug 20, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The new web-based Micro.blog editor seems to have issues with Japanese input.</p>
@@ -5330,7 +5651,7 @@ It was particularly impactful to learn that the U.S. had scattered leaflets in J
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/19/ive-started-using.html" class="u-url"><time class="dt-published" datetime="2024-08-19 21:26:36 &#43;0900">Aug 19, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/19/ive-started-using-surfshark-vpn.html" class="u-url"><time class="dt-published" datetime="2024-08-19 21:26:36 &#43;0900">Aug 19, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I&rsquo;ve started using  <a href="https://surfshark.club/friend/vLx3TyyC">SurfShark VPN</a> to avoid facing the same issues as Chika Shigetani, a member of Japan&rsquo;s Paralympic team for Paris. <!-- raw HTML omitted -->
@@ -5343,7 +5664,7 @@ It was particularly impactful to learn that the U.S. had scattered leaflets in J
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/19/i-visited-bangla.html" class="u-url"><time class="dt-published" datetime="2024-08-19 13:49:41 &#43;0900">Aug 19, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/19/i-visited-bangla-kitchen-for.html" class="u-url"><time class="dt-published" datetime="2024-08-19 13:49:41 &#43;0900">Aug 19, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I visited <a href="https://x.com/banglakitchiba">Bangla Kitchen</a> for lunch🍽️, a place I’ve been wanting to try for a while. As the name suggests, this restaurant offers Bangladeshi cuisine.
@@ -5368,7 +5689,7 @@ Today, I had the mutton biryani, which was what I was looking forward to. Delici
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/18/when-i-looked.html" class="u-url"><time class="dt-published" datetime="2024-08-18 13:21:55 &#43;0900">Aug 18, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/18/when-i-looked-at-the.html" class="u-url"><time class="dt-published" datetime="2024-08-18 13:21:55 &#43;0900">Aug 18, 2024</time></a>
 
 		<div class="e-content">
 			 <p>When I looked at the street trees near my home, I noticed that these insects were quite prevalent, which was creepy.</p>
@@ -5381,7 +5702,7 @@ Today, I had the mutton biryani, which was what I was looking forward to. Delici
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/16/i-found-some.html" class="u-url"><time class="dt-published" datetime="2024-08-16 19:25:09 &#43;0900">Aug 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/16/i-found-some-old-studio.html" class="u-url"><time class="dt-published" datetime="2024-08-16 19:25:09 &#43;0900">Aug 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I found some old Studio Ghibli anime and a Paul McCartney DVD. Since the DVD drive is a bit unreliable, I&rsquo;ll convert them to MP4 using <a href="https://www.makemkv.com">MakeMKV</a> and <a href="https://handbrake.fr/downloads.php">HandBrake</a>.</p>
@@ -5393,7 +5714,7 @@ Today, I had the mutton biryani, which was what I was looking forward to. Delici
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/16/death-notenetflix-version.html" class="u-url"><time class="dt-published" datetime="2024-08-16 12:47:46 &#43;0900">Aug 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/16/death-notenetflix-version-laughably-bad.html" class="u-url"><time class="dt-published" datetime="2024-08-16 12:47:46 &#43;0900">Aug 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Death Note(Netflix Version) 🎥
@@ -5405,7 +5726,7 @@ Laughably bad. The highlight of the story is supposed to be the battle of wits b
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/15/224351.html" class="u-url"><time class="dt-published" datetime="2024-08-15 22:43:51 &#43;0900">Aug 15, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/15/yostos-flashbacker.html" class="u-url"><time class="dt-published" datetime="2024-08-15 22:43:51 &#43;0900">Aug 15, 2024</time></a>
 
 		<div class="e-content">
 			 <p>劇場総集編『ぼっち・ざ・ろっく』の前編を見忘れたので、後編を今更みにいくか迷う。
@@ -5443,7 +5764,7 @@ Laughably bad. The highlight of the story is supposed to be the battle of wits b
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/13/its-finally-here.html" class="u-url"><time class="dt-published" datetime="2024-08-13 20:41:15 &#43;0900">Aug 13, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/13/its-finally-here-the-announcement.html" class="u-url"><time class="dt-published" datetime="2024-08-13 20:41:15 &#43;0900">Aug 13, 2024</time></a>
 
 		<div class="e-content">
 			 <p>It&rsquo;s finally here! The announcement video for <strong>Splatoon 3</strong>&rsquo;s biggest fest, the &ldquo;Grand Fest,&rdquo; just dropped! Could this be the last fest that decides the direction for the next Splatoon, like they did in Splatoon 2?</p>
@@ -5527,7 +5848,7 @@ Laughably bad. The highlight of the story is supposed to be the battle of wits b
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/12/im-watching-the.html" class="u-url"><time class="dt-published" datetime="2024-08-12 20:22:16 &#43;0900">Aug 12, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/12/im-watching-the-recording-of.html" class="u-url"><time class="dt-published" datetime="2024-08-12 20:22:16 &#43;0900">Aug 12, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I’m watching the recording of the Olympic closing ceremony now, and what stood out to me the most was how unusually high the guitarist Christian Mazzalai was holding his guitar. I’ve never seen anyone hold a Telecaster that high before. It’s a shame because it’s such a classy all-rosewood one.</p>
@@ -5550,7 +5871,7 @@ Laughably bad. The highlight of the story is supposed to be the battle of wits b
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/10/i-decided-to.html" class="u-url"><time class="dt-published" datetime="2024-08-10 12:09:08 &#43;0900">Aug 10, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/10/i-decided-to-create-a.html" class="u-url"><time class="dt-published" datetime="2024-08-10 12:09:08 &#43;0900">Aug 10, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I decided to create a business card, even though it doesn&rsquo;t really matter much since I&rsquo;ve already quit my job. Instead of the usual offset printing, I decided to go the extra mile and use letterpress printing for my business cards.</p>
@@ -5562,7 +5883,7 @@ Laughably bad. The highlight of the story is supposed to be the battle of wits b
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/09/following-yesterdays-earthquake.html" class="u-url"><time class="dt-published" datetime="2024-08-09 20:15:34 &#43;0900">Aug 9, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/09/following-yesterdays-earthquake-in-miyazaki.html" class="u-url"><time class="dt-published" datetime="2024-08-09 20:15:34 &#43;0900">Aug 9, 2024</time></a>
 
 		<div class="e-content">
 			 <p>📰
@@ -5587,10 +5908,10 @@ Following yesterday&rsquo;s earthquake in Miyazaki, there was another one in Kan
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/08/09/software-development-using.html">Software Development Using Generative AI</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/08/09/software-development-using-generative-ai.html">Software Development Using Generative AI</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/08/09/software-development-using.html" class="u-url"><time class="dt-published" datetime="2024-08-09 06:11:27 &#43;0900">Aug 9, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/09/software-development-using-generative-ai.html" class="u-url"><time class="dt-published" datetime="2024-08-09 06:11:27 &#43;0900">Aug 9, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Recently, I had a conversation with someone about software development using
@@ -5763,7 +6084,7 @@ AIを使うと可能になるので、新しいソフトウェアの応用方法
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/08/i-went-to.html" class="u-url"><time class="dt-published" datetime="2024-08-08 17:26:06 &#43;0900">Aug 8, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/08/i-went-to-roppongi-to.html" class="u-url"><time class="dt-published" datetime="2024-08-08 17:26:06 &#43;0900">Aug 8, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -5786,7 +6107,7 @@ AIを使うと可能になるので、新しいソフトウェアの応用方法
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/08/this-earthquake-in.html" class="u-url"><time class="dt-published" datetime="2024-08-08 16:53:12 &#43;0900">Aug 8, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/08/this-earthquake-in-miyazaki-might.html" class="u-url"><time class="dt-published" datetime="2024-08-08 16:53:12 &#43;0900">Aug 8, 2024</time></a>
 
 		<div class="e-content">
 			 <p>This earthquake in Miyazaki might be quite big!!!</p>
@@ -5799,7 +6120,7 @@ AIを使うと可能になるので、新しいソフトウェアの応用方法
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/08/manton-reece-microblog.html" class="u-url"><time class="dt-published" datetime="2024-08-08 01:25:17 &#43;0900">Aug 8, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/08/manton-reece-microblog-survey-results.html" class="u-url"><time class="dt-published" datetime="2024-08-08 01:25:17 &#43;0900">Aug 8, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://www.manton.org/2024/08/07/microblog-survey-results.html">Manton Reece
@@ -5815,7 +6136,7 @@ AIを使うと可能になるので、新しいソフトウェアの応用方法
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/07/due-to-netlifys.html" class="u-url"><time class="dt-published" datetime="2024-08-07 19:48:35 &#43;0900">Aug 7, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/07/due-to-netlifys-stagnant-python.html" class="u-url"><time class="dt-published" datetime="2024-08-07 19:48:35 &#43;0900">Aug 7, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Due to Netlify&rsquo;s stagnant Python version support, I’ve migrated my primary blog over to Cloudflare Pages.
@@ -5828,7 +6149,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/07/even-though-the.html" class="u-url"><time class="dt-published" datetime="2024-08-07 11:01:05 &#43;0900">Aug 7, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/07/even-though-the-specifications-have.html" class="u-url"><time class="dt-published" datetime="2024-08-07 11:01:05 &#43;0900">Aug 7, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Even though the specifications have changed since then, I thought I should play this song when I hold an Texan🎸, so I tried playing it
@@ -5843,7 +6164,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/06/i-visited-chiba.html" class="u-url"><time class="dt-published" datetime="2024-08-06 20:06:33 &#43;0900">Aug 6, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/06/i-visited-chiba-castle-it.html" class="u-url"><time class="dt-published" datetime="2024-08-06 20:06:33 &#43;0900">Aug 6, 2024</time></a>
 
 		<div class="e-content">
 			 <!-- raw HTML omitted -->
@@ -5856,7 +6177,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/06/httpsnotesinegalescomkomiya.html" class="u-url"><time class="dt-published" datetime="2024-08-06 11:18:52 &#43;0900">Aug 6, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/06/notesinegalescom.html" class="u-url"><time class="dt-published" datetime="2024-08-06 11:18:52 &#43;0900">Aug 6, 2024</time></a>
 
 		<div class="e-content">
 			 <p>日傘、必要だね。</p>
@@ -5868,7 +6189,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/06/after-checking-netlifys.html" class="u-url"><time class="dt-published" datetime="2024-08-06 06:47:12 &#43;0900">Aug 6, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/06/after-checking-netlifys-build-image.html" class="u-url"><time class="dt-published" datetime="2024-08-06 06:47:12 &#43;0900">Aug 6, 2024</time></a>
 
 		<div class="e-content">
 			 <p>After checking Netlify&rsquo;s <a href="https://github.com/netlify/build-image/blob/focal/included_software.md">build image</a>, I found that the Python version is still 3.8. Considering the compatibility with the latest version of Nikola, it&rsquo;s becoming difficult to continue using it, so I might need to think about migrating to another platform. While researching Netlify&rsquo;s environment, I came across an <a href="https://yoshitaku-jp.hatenablog.com/entry/2020/02/05/170000">article</a>, only to realize it was referencing my own past blog post, which made me laugh.</p>
@@ -5880,7 +6201,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/05/recently-my-subaru.html" class="u-url"><time class="dt-published" datetime="2024-08-05 17:47:59 &#43;0900">Aug 5, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/05/recently-my-subaru-has-been.html" class="u-url"><time class="dt-published" datetime="2024-08-05 17:47:59 &#43;0900">Aug 5, 2024</time></a>
 
 		<div class="e-content">
 			 <p><img src="https://cdn.uploads.micro.blog/170124/2024/cars.webp" alt="My Subaru"></p>
@@ -5904,7 +6225,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/04/aws-codecommitamazon-cloudsearch.html" class="u-url"><time class="dt-published" datetime="2024-08-04 04:45:23 &#43;0900">Aug 4, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/04/aws-codecommitamazon-cloudsearch-developersio-aws.html" class="u-url"><time class="dt-published" datetime="2024-08-04 04:45:23 &#43;0900">Aug 4, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://dev.classmethod.jp/articles/aws-start-to-restrict-codecommit-and-cloudsearch/">2024年7月27日時点におけるAWS CodeCommitとAmazon CloudSearchの新規利用に関して | DevelopersIO</a></p>
@@ -5919,7 +6240,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/03/since-there-is.html" class="u-url"><time class="dt-published" datetime="2024-08-03 23:59:34 &#43;0900">Aug 3, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/03/since-there-is-not-much.html" class="u-url"><time class="dt-published" datetime="2024-08-03 23:59:34 &#43;0900">Aug 3, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Since there is not much information about Micro.blog in Japanese, I created a <a href="https://blog.yostos.org/microblog/community-guidelines/">Japanese translation</a> of the Community Guidelines.</p>
@@ -5944,7 +6265,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/02/maybe-due-to.html" class="u-url"><time class="dt-published" datetime="2024-08-02 14:10:53 &#43;0900">Aug 2, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/02/maybe-due-to-the-summer.html" class="u-url"><time class="dt-published" datetime="2024-08-02 14:10:53 &#43;0900">Aug 2, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Maybe due to the summer heat, the fan on the Raspberry Pi is spinning loudly. Just in case, I edited the crontab file with <code>sudo crontab -e</code> and add the following line to reboot it every day at 3 AM.</p>
@@ -5957,7 +6278,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/08/01/im-not-interested.html" class="u-url"><time class="dt-published" datetime="2024-08-01 15:02:29 &#43;0900">Aug 1, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/08/01/im-not-interested-in-the.html" class="u-url"><time class="dt-published" datetime="2024-08-01 15:02:29 &#43;0900">Aug 1, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I&rsquo;m not interested in the Olympics or basketball, but even I am appalled by the low moral standards of FIBA.</p>
@@ -5983,7 +6304,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/31/docomo-home-gmy.html" class="u-url"><time class="dt-published" datetime="2024-07-31 20:40:42 &#43;0900">Jul 31, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/31/docomo-home-gmy-docomodocomo-docomo.html" class="u-url"><time class="dt-published" datetime="2024-07-31 20:40:42 &#43;0900">Jul 31, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Docomo Home 5Gを使っているけど、料金とかの確認でMy Docomoにログインしようとするとパスワードまではいくが二段階認証でメールが飛んでこない。契約時も何かがうまくいなかくてDocomoショップに行った憶えがある。</p>
@@ -5996,7 +6317,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/31/i-returned-the.html" class="u-url"><time class="dt-published" datetime="2024-07-31 11:13:27 &#43;0900">Jul 31, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/31/i-returned-the-company-mac.html" class="u-url"><time class="dt-published" datetime="2024-07-31 11:13:27 &#43;0900">Jul 31, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I returned the company Mac a while ago and have been busy with private matters, so I had forgotten, but today was my last day as an Amazonian. I guess I&rsquo;ll go return my health insurance card.</p>
@@ -6008,7 +6329,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/30/soundcloudhearthisat-android.html" class="u-url"><time class="dt-published" datetime="2024-07-30 13:40:45 &#43;0900">Jul 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/30/soundcloudhearthisathearthisat-android.html" class="u-url"><time class="dt-published" datetime="2024-07-30 13:40:45 &#43;0900">Jul 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>SoundCloudが高いのでHearThis.atに乗り換え中。
@@ -6027,7 +6348,7 @@ HearThis.atの不満な点は次の3点：</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/30/this-song-was.html" class="u-url"><time class="dt-published" datetime="2024-07-30 13:32:40 &#43;0900">Jul 30, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/30/this-song-was-included-in.html" class="u-url"><time class="dt-published" datetime="2024-07-30 13:32:40 &#43;0900">Jul 30, 2024</time></a>
 
 		<div class="e-content">
 			 <p>This song was included in Masayoshi Takanaka&rsquo;s &ldquo;T-WAVE&rdquo; album released in 1980. I liked the way he played the mellow melody with clean tones and distortion tones, and the use of the volume pedal, and played it often when I was a student.</p>
@@ -6064,7 +6385,7 @@ HearThis.atの不満な点は次の3点：</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/29/apichangecodecommit-createrepository-api.html" class="u-url"><time class="dt-published" datetime="2024-07-29 08:38:44 &#43;0900">Jul 29, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/29/083844.html" class="u-url"><time class="dt-published" datetime="2024-07-29 08:38:44 &#43;0900">Jul 29, 2024</time></a>
 
 		<div class="e-content">
 			 <blockquote>
@@ -6080,7 +6401,7 @@ HearThis.atの不満な点は次の3点：</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/27/guitar-factoryfurtafstvskg.html" class="u-url"><time class="dt-published" datetime="2024-07-27 22:48:06 &#43;0900">Jul 27, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/27/the-semicustom-i-ordered-at.html" class="u-url"><time class="dt-published" datetime="2024-07-27 22:48:06 &#43;0900">Jul 27, 2024</time></a>
 
 		<div class="e-content">
 			 <p>The semi-custom 🎸 I ordered at the beginning of the year, the FST-400VS , has finally arrived. The ash body absorbed the paint unevenly, and it weighs over 4 kg. Despite this, the clear tone is fantastic.</p>
@@ -6094,7 +6415,7 @@ HearThis.atの不満な点は次の3点：</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/26/i-purchased-a.html" class="u-url"><time class="dt-published" datetime="2024-07-26 09:14:50 &#43;0900">Jul 26, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/26/i-purchased-a-tshirt-from.html" class="u-url"><time class="dt-published" datetime="2024-07-26 09:14:50 &#43;0900">Jul 26, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I purchased a T-shirt from Amazon Japan from a fraudulent seller. The fabric quality was terrible, and the size was incorrect. Amazon’s customer service issued a refund without needing the item returned. Excellent service! Returning it to China would have cost more than the refund.</p>
@@ -6106,7 +6427,7 @@ HearThis.atの不満な点は次の3点：</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/25/204016.html" class="u-url"><time class="dt-published" datetime="2024-07-25 20:40:16 &#43;0900">Jul 25, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/25/finished-reading-by-a-amazon.html" class="u-url"><time class="dt-published" datetime="2024-07-25 20:40:16 &#43;0900">Jul 25, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9784103549512">成瀬は天下を取りにいく</a> by 宮島未奈 📚</p>
@@ -6119,7 +6440,7 @@ HearThis.atの不満な点は次の3点：</p>
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/25/there-was-an.html" class="u-url"><time class="dt-published" datetime="2024-07-25 01:20:41 &#43;0900">Jul 25, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/25/there-was-an-it-alert.html" class="u-url"><time class="dt-published" datetime="2024-07-25 01:20:41 &#43;0900">Jul 25, 2024</time></a>
 
 		<div class="e-content">
 			 <p>There was an IT Alert from CrowdStrike’s Falcon at the workplace, AWS last weekend. I wonder if it has been resolved. Since I’m using a Mac, I shouldn’t be affected, and I’ve already returned my device as I left the company.
@@ -6134,7 +6455,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/25/finished-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-07-25 00:28:55 &#43;0900">Jul 25, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/25/finished-reading-by-amazon.html" class="u-url"><time class="dt-published" datetime="2024-07-25 00:28:55 &#43;0900">Jul 25, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9784106109683">バカと無知</a> by 橘玲 📚</p>
@@ -6147,7 +6468,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/24/currently-reading-by.html" class="u-url"><time class="dt-published" datetime="2024-07-24 23:50:45 &#43;0900">Jul 24, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/24/currently-reading-by-amazon.html" class="u-url"><time class="dt-published" datetime="2024-07-24 23:50:45 &#43;0900">Jul 24, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Currently reading: <a href="https://micro.blog/books/9784103549512">成瀬は天下を取りにいく</a> by 宮島未奈 📚</p>
@@ -6172,7 +6493,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/24/gibson-jepiphone-texan.html" class="u-url"><time class="dt-published" datetime="2024-07-24 15:00:11 &#43;0900">Jul 24, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/24/gibson-jepiphone-texan-usagibson-i.html" class="u-url"><time class="dt-published" datetime="2024-07-24 15:00:11 &#43;0900">Jul 24, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Gibson J-45と弾き比べて、ついEpiphone Texan USA　を買ってしまった。こちらも腐ってもGibson謹製。</p>
@@ -6185,7 +6506,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/19/150913.html" class="u-url"><time class="dt-published" datetime="2024-07-19 15:09:13 &#43;0900">Jul 19, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/19/jpreuterscombusiness-gitlab-github-for-real.html" class="u-url"><time class="dt-published" datetime="2024-07-19 15:09:13 &#43;0900">Jul 19, 2024</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://jp.reuters.com/business/technology/BI4FAX7LH5KUHJJ56XSXQ3LHVU-2024-07-18/">jp.reuters.com/business/&hellip;</a></p>
@@ -6210,7 +6531,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/17/home-gmiraiya-bookmark.html" class="u-url"><time class="dt-published" datetime="2024-07-17 11:10:03 &#43;0900">Jul 17, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/17/home-gmiraiya-bookmark-lounge.html" class="u-url"><time class="dt-published" datetime="2024-07-17 11:10:03 &#43;0900">Jul 17, 2024</time></a>
 
 		<div class="e-content">
 			 <p>大量のファイルをアップロードする必要があったのだけど、自宅をHome 5Gにしてからアップロード速度がでない。仕方がないので、<a href="https://bookmarklounge.rsvsys.jp/">MIRAIYA Bookmark Lounge</a>に来た。リーズナブルな割に快適。しかも、未来書店の本を三冊まで持ち込んで良いらしい。</p>
@@ -6246,7 +6567,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/16/finished-reading-replay.html" class="u-url"><time class="dt-published" datetime="2024-07-16 19:51:57 &#43;0900">Jul 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/16/finished-reading-replay-by-ken.html" class="u-url"><time class="dt-published" datetime="2024-07-16 19:51:57 &#43;0900">Jul 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Finished reading: <a href="https://micro.blog/books/9780062030696">Replay</a> by Ken Grimwood 📚</p>
@@ -6257,7 +6578,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/16/enjoy-a-fast.html" class="u-url"><time class="dt-published" datetime="2024-07-16 10:04:17 &#43;0900">Jul 16, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/16/enjoy-a-fast-crab-tank.html" class="u-url"><time class="dt-published" datetime="2024-07-16 10:04:17 &#43;0900">Jul 16, 2024</time></a>
 
 		<div class="e-content">
 			 <p>快速カニタンク イベントマッチを愉しむ</p>
@@ -6271,7 +6592,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/15/to-celebrate-akina.html" class="u-url"><time class="dt-published" datetime="2024-07-15 20:17:58 &#43;0900">Jul 15, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/15/to-celebrate-akina-nakamoris-fan.html" class="u-url"><time class="dt-published" datetime="2024-07-15 20:17:58 &#43;0900">Jul 15, 2024</time></a>
 
 		<div class="e-content">
 			 <p><strong>中森明菜さん</strong>が7月12日から14日にかけて都内でファンクラブ限定イベントを7年ぶりのコンサートを行ったのを祝福して、「十戒(1984)」を演奏してみました。</p>
@@ -6284,7 +6605,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/15/180707.html" class="u-url"><time class="dt-published" datetime="2024-07-15 18:07:07 &#43;0900">Jul 15, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/15/subaru-the-front-part-of.html" class="u-url"><time class="dt-published" datetime="2024-07-15 18:07:07 &#43;0900">Jul 15, 2024</time></a>
 
 		<div class="e-content">
 			 <p>先月家族がぶつけてしまったSUBARUのフロント部分。昨日ディーラーに修理を依頼し今日仕上がってきました。フロント部分を丸ごと取り換えでした。</p>
@@ -6312,7 +6633,7 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	  <div class="h-entry">
 		
 
-		<a href="https://blog.yostos.org/2024/07/15/fernandes-went-bankrupt.html" class="u-url"><time class="dt-published" datetime="2024-07-15 00:10:26 &#43;0900">Jul 15, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/15/fernandes-went-bankrupt-they-were.html" class="u-url"><time class="dt-published" datetime="2024-07-15 00:10:26 &#43;0900">Jul 15, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Fernandes went bankrupt? They were a good quality Japanese guitar maker, but they were not unique. Oh, I wish someone would buy the license for ZO-3 and Sustainer and continue them.</p>
@@ -6329,10 +6650,10 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/07/14/i-played-this.html">Feedback&#39;s Feel  🎸</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/07/14/feedbacks-feel.html">Feedback&#39;s Feel  🎸</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/07/14/i-played-this.html" class="u-url"><time class="dt-published" datetime="2024-07-14 22:29:45 &#43;0900">Jul 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/14/feedbacks-feel.html" class="u-url"><time class="dt-published" datetime="2024-07-14 22:29:45 &#43;0900">Jul 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I played this  80s Japanese fusion song, because I like the interplay between the distorted tone and the clean tone of the lead guitar.</p>
@@ -6349,10 +6670,10 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/07/14/i-played-the.html">SPACE WAGON  🎸</a></h1>
+			<h1><a href="https://blog.yostos.org/2024/07/14/space-wagon.html">SPACE WAGON  🎸</a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/07/14/i-played-the.html" class="u-url"><time class="dt-published" datetime="2024-07-14 22:25:00 &#43;0900">Jul 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/14/space-wagon.html" class="u-url"><time class="dt-published" datetime="2024-07-14 22:25:00 &#43;0900">Jul 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>I played the song ‘<strong>SPACE WAGON</strong>’ from Takana Masayoshi’s EP ‘Finger Dancin’.’ I remember it being used as an insert song for the anime ‘Return of Lum, Urusei Yatsura’ and as a commercial song for Mazda 3 at the time.</p>
@@ -6364,10 +6685,10 @@ Falcon itself likely operates in kernel mode to deal with malware running in ker
 	
 	  <div class="h-entry">
 		
-			<h1><a href="https://blog.yostos.org/2024/07/14/summer-nights.html">🎮 Splatoon3 : Summer Nights  </a></h1>
+			<h1><a href="https://blog.yostos.org/2024/07/14/splatoon-summer-nights.html">🎮 Splatoon3 : Summer Nights  </a></h1>
 		
 
-		<a href="https://blog.yostos.org/2024/07/14/summer-nights.html" class="u-url"><time class="dt-published" datetime="2024-07-14 14:57:26 &#43;0900">Jul 14, 2024</time></a>
+		<a href="https://blog.yostos.org/2024/07/14/splatoon-summer-nights.html" class="u-url"><time class="dt-published" datetime="2024-07-14 14:57:26 &#43;0900">Jul 14, 2024</time></a>
 
 		<div class="e-content">
 			 <p>Today, the Summer Nights Fest is happening in Splatoon 3, so I&rsquo;m going to enjoy using various weapons.</p>
