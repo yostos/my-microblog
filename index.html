@@ -25,6 +25,171 @@
 	  <div class="h-entry">
 		
 
+		<a href="https://blog.yostos.org/2025/01/14/i-passed-the-theoretical-exam.html" class="u-url"><time class="dt-published" datetime="2025-01-14 13:13:05 &#43;0900">Jan 14, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I passed the theoretical exam for the Class 2 drone pilot license. Now all that&rsquo;s left is the practical test.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/13/212933.html" class="u-url"><time class="dt-published" datetime="2025-01-13 21:29:33 &#43;0900">Jan 13, 2025</time></a>
+
+		<div class="e-content">
+			 <p>年末から予兆はあったけど、やはり宮崎で大きな地震。震度が大きいので心配。</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/12/sensei-which-is-a-powerful.html" class="u-url"><time class="dt-published" datetime="2025-01-12 17:43:20 &#43;0900">Jan 12, 2025</time></a>
+
+		<div class="e-content">
+			 <p><a href="https://cindori.com/sensei">Sensei</a>, which is a powerful Mac optimization and monitoring tool, has an absolutely stunning interface.</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/11/scanned-pdfs-often-lack-a.html" class="u-url"><time class="dt-published" datetime="2025-01-11 18:47:56 &#43;0900">Jan 11, 2025</time></a>
+
+		<div class="e-content">
+			 <p>Scanned PDFs often lack a table of contents. Instead of buying expensive PDF software, use these Linux/Mac commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Install pdftk (on Mac)</span>
+brew install pdftk-java
+<span style="color:#75715e"># Extract metadata</span>
+pdftk input.pdf dump_data_utf8 &gt; metadata.txt
+</code></pre></div><p>Open metadata.txt in your editor and add bookmark locations in this format:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">BookmarkBegin
+BookmarkTitle: Chapter 1
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkBegin
+BookmarkTitle: Chapter 2
+BookmarkLevel: 1
+BookmarkPageNumber: 10
+</code></pre></div><p>Then apply the metadata to create a PDF with a table of contents:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Apply edited metadata</span>
+pdftk input.pdf update_info_utf8 metadata.txt output output.pdf
+</code></pre></div>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/11/141456.html" class="u-url"><time class="dt-published" datetime="2025-01-11 14:14:56 &#43;0900">Jan 11, 2025</time></a>
+
+		<div class="e-content">
+			 <p>柏に久しぶりに来た。客のサポートで時々来てた20年前より更にガラの悪い荒んだ印象。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/11/im-at-a-vietnamese-restaurant.html" class="u-url"><time class="dt-published" datetime="2025-01-11 13:26:33 &#43;0900">Jan 11, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I&rsquo;m at a Vietnamese restaurant with Vietnamese coffee in front of me, but when on earth will I actually be able to drink this?!</p>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/11/scanned-pdfs-arent-searchable-use.html" class="u-url"><time class="dt-published" datetime="2025-01-11 10:32:39 &#43;0900">Jan 11, 2025</time></a>
+
+		<div class="e-content">
+			 <p>Scanned PDFs aren&rsquo;t searchable. Use these Linux/Mac commands for OCR instead of expensive software:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">brew install ocrmypdf
+brew install tesseract-lang
+<span style="color:#75715e"># OCR with image optimization</span>
+ocrmypdf -l jpn --optimize <span style="color:#ae81ff">3</span> input.pdf output.pdf
+</code></pre></div>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2025/01/10/how-to-merge-and-optimize.html">How to Merge and Optimize Your PDF Files</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2025/01/10/how-to-merge-and-optimize.html" class="u-url"><time class="dt-published" datetime="2025-01-10 15:25:56 &#43;0900">Jan 10, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I recently purchased a DJI Neo drone, and in Japan, it&rsquo;s mandatory to register your drone with the Ministry of Land, Infrastructure, Transport and Tourism (MLIT). During registration, you need to submit a user manual that includes both handling instructions and specifications. However, the DJI Neo manual only contains references to specifications on DJI&rsquo;s website. Therefore, for the registration, I needed to merge the user manual with the specifications from the website.</p>
+<h3 id="bypassing-pdf-password-protection">Bypassing PDF Password Protection</h3>
+<p>While the DJI Neo user manual is provided in PDF format, it&rsquo;s password-protected, preventing any modifications or merging. Here&rsquo;s how to bypass the password protection on a Mac:</p>
+<ol>
+<li>Open the PDF in the Preview app</li>
+<li>Select &ldquo;Print&rdquo; from the File menu (note: not &ldquo;Export&rdquo;)</li>
+<li>Choose &ldquo;Save as PDF&rdquo; and specify the destination</li>
+</ol>
+<p>This process will create a new PDF without password protection.</p>
+<h3 id="merging-pdfs">Merging PDFs</h3>
+<p>While this can be done with <code>Ghostscript</code> (mentioned later), we&rsquo;ll use <code>pdftk</code> for its advantages:</p>
+<ul>
+<li>Preserves PDF internal structure (table of contents, bookmarks, links, etc.)</li>
+<li>Operates at the binary level, preventing quality degradation</li>
+<li>(Although not relevant for this case) Offers flexible operations like page rotation and reordering</li>
+</ul>
+<p>Here&rsquo;s how to merge PDFs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#75715e"># Install pdftk (on Mac)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">brew</span> install pdftk-java
+
+
+<span style="color:#75715e"># Merge PDFs
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">pdftk</span> input1.pdf input2.pdf cat output merged.pdf
+</code></pre></div><h3 id="pdf-optimization">PDF Optimization</h3>
+<p>After merging, I found that the file size exceeded 40MB, which was too large to upload to MLIT&rsquo;s DIPS2.0 (Drone/UAS Information Platform System).</p>
+<p>To resolve this, I used Ghostscript for optimization:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#75715e"># Install Ghostscript (on Mac)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">brew</span> install ghostscript
+
+
+<span style="color:#75715e"># Optimize PDF
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">gs</span> <span style="color:#a6e22e">-sDEVICE</span><span style="color:#f92672">=</span>pdfwrite <span style="color:#a6e22e">-dCompatibilityLevel</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">4</span> <span style="color:#a6e22e">-dPDFSETTINGS</span><span style="color:#f92672">=</span>/screen <span style="color:#a6e22e">-dNOPAUSE</span> <span style="color:#a6e22e">-dQUIET</span> <span style="color:#a6e22e">-dBATCH</span> <span style="color:#a6e22e">-sOutputFile</span><span style="color:#f92672">=</span>output.pdf <span style="color:#a6e22e">input</span>.pdf
+</code></pre></div><p>The <code>-dPDFSETTINGS</code> option allows you to adjust the compression level:</p>
+<ul>
+<li><code>/screen</code>: For screen display (72dpi) - smallest file size</li>
+<li><code>/ebook</code>: For e-books (150dpi) - balanced compression</li>
+<li><code>/printer</code>: For printing (300dpi)</li>
+<li><code>/prepress</code>: For high-quality printing (highest quality)</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>With these steps, I successfully optimized the PDF and completed the drone registration.</p>
+<p>However, it seems rather inefficient to require individual manual submissions for DJI drones, which are widely used. This feels like typical bureaucratic red tape.</p>
+<p>Finally, while this may only be relevant for Japanese users, I&rsquo;m sharing the prepared DJI Neo manual that meets DIPS2.0 requirements here: <a href="https://e.pcloud.link/publink/show?code=XZHwGwZuCQmrRb6SFHGinz8MJe1akHv9dF7">Download</a></p>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/01/09/i-purchased-a-geteron-switch.html" class="u-url"><time class="dt-published" datetime="2025-01-09 23:34:23 &#43;0900">Jan 9, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I purchased a Geteron Switch Puller. While I questioned my sanity spending nearly $30 on such a thing, after using it, it definitely makes switch replacement several times more efficient without damaging the switches.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
 		<a href="https://blog.yostos.org/2025/01/07/dic.html" class="u-url"><time class="dt-published" datetime="2025-01-07 09:14:11 &#43;0900">Jan 7, 2025</time></a>
 
 		<div class="e-content">
