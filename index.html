@@ -25,6 +25,464 @@
 	  <div class="h-entry">
 		
 
+		<a href="https://blog.yostos.org/2025/02/25/hhkb-hhkb.html" class="u-url"><time class="dt-published" datetime="2025-02-25 16:12:12 &#43;0900">Feb 25, 2025</time></a>
+
+		<div class="e-content">
+			 <p>またHHKBのカラーキートップが発売になるらしい。今回は「<a href="https://happyhackingkb.com/jp/news/2025/news20250225.html">蒲公英(たんぽぽ)</a>」だそうです。</p>
+<p>HHKBはリコーに買収されたからではないでしょうが、機能に関係ないこういった安っぽい企画を最近連発していますね。そのうち、ユーザーからしっぺ返しがあると思います。</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2025/02/25/movie-under-ninja-review-director.html">Movie “Under Ninja” Review: Director Fukuda&#39;s Merits and Demerits</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2025/02/25/movie-under-ninja-review-director.html" class="u-url"><time class="dt-published" datetime="2025-02-25 12:04:15 &#43;0900">Feb 25, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I saw the movie “<strong>Under Ninja</strong>” yesterday.
+I was looking forward to seeing it because it is based on a popular manga and an animated series.</p>
+<p><img src="https://blog.yostos.org/uploads/2025/under-ninja.webp" alt=""></p>
+<h4 id="良かった点">良かった点</h4>
+<p>映画『アイアムアヒーロー』同様、原作からストーリーを絞って映画したことが良い結果になっていました。</p>
+<p>原作者の花沢健吾氏の作品は、後半話を広げすぎて「破綻しているのでは？」と感じることもあります。
+今回は『アンダーニンジャ』原作の8巻くらいまでの九郎編だけなのでそれほど長くはありませんが、アニメ版を見る限り後半話がよくわからなくなっていました。時系列の入れ替えが分かりにくさに拍車をかけ、初見の視聴者には物語が分かりづらかったと思います、</p>
+<p>映画版では九郎編のストーリーをカバーしつつ、無駄な部分については設定を変えたりストーリーに手を入れて脚本でかなり分かりやすくしているので、非常に見やすいと感じました。</p>
+<p>漫画原作の映画化と言えばこの人という感じになりつつありますが、山﨑賢人の演じる主人公はまさに原作のイメージ通りです。白石麻衣さん、間宮祥太朗さん、岡山天音さん、宮世琉弥さん、坂口涼太郎さん、木南晴夏さんなどのキャスティグもなかなか絶妙に原作の世界観にハマっていると思います。</p>
+<p>アクションもなかなか見どころがありました。</p>
+<p>また、原作は花沢健吾氏らしいシュールなギャグや日常シーンが多く含まれますが、アニメ版ではシリアスに振っていたので、全体にどんなテイストの作品がよく分からなくなっていましたが、映画版は福田雄一監督のギャグ多めの演出が、より原作のテイストがあり、一般受けしそうなギャグに落とし込んであるので面白めの仕上がりとなり大人も子供も楽しめる映画になっていました。（アクションシーンはグロな表現もあるので注意）</p>
+<h4 id="残念な点">残念な点</h4>
+<p>残念な点は、福田監督らしさが若干勝ってしまっている部分です。</p>
+<p>福田監督の作品ということで、ムロツヨシさんと佐藤二朗も出演されていましたが、個人的に気になったのはこの二人です。
+この二人のいつもの長回しのギャグシーンは、面白いのだけど見飽きたしこの作品のテイストにはどうだろう？</p>
+<h4 id="まとめ">まとめ</h4>
+<p>全体としては原作の世界観を壊さず、多めのギャグと見ごたえのあるアクションで、楽しめる作品となっていると思います。</p>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2025/02/25/how-to-configure-tinylytics-analytics.html">How to Configure Tinylytics Analytics for Production Environment Only</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2025/02/25/how-to-configure-tinylytics-analytics.html" class="u-url"><time class="dt-published" datetime="2025-02-25 09:05:14 &#43;0900">Feb 25, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I have tried to prevent tinylytics stats from being retrieved outside of the production environment.</p>
+<h4 id="why-is-this-code-needed">Why is this code needed?</h4>
+<p>When incorporating tinylytics javascript, accesses during development are also reflected in the statistics, so we added code so that statistics are obtained only in production. There may be a better way to do this, but for now, I&rsquo;ll introduce it here because it does what I want to do.</p>
+<h4 id="how-this-code-works">How this code works</h4>
+<p>This code works as follows:</p>
+<ol>
+<li>When the page loads, JavaScript checks the current hostname (domain)</li>
+<li>Only if the hostname exactly matches &ldquo;your.domain.com&rdquo;, it will dynamically add the tinylytics script</li>
+<li>For all other domains (localhost, 127.0.0.1, staging environments, etc.), the script won&rsquo;t be added, and only a console message will be displayed</li>
+</ol>
+<h4 id="implementation">Implementation</h4>
+<p>Place this code in the <!-- raw HTML omitted --> section of your HTML and remove the original tinylytics script tag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">Check</span> <span style="color:#a6e22e">domain</span> <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">enable</span> <span style="color:#a6e22e">analytics</span> <span style="color:#a6e22e">only</span> <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">specific</span> <span style="color:#a6e22e">domain</span> <span style="color:#f92672">--&gt;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#75715e">// Get current hostname
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentHostname</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">hostname</span>;
+  
+  <span style="color:#75715e">// Specify production domain
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productionDomain</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;your.domain.com&#39;</span>;
+  
+  <span style="color:#75715e">// Only load analytics on production domain
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">currentHostname</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">productionDomain</span>) {
+    <span style="color:#75715e">// Dynamically add tinylytics script
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">analyticScript</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+    <span style="color:#a6e22e">analyticScript</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://tinylytics.app/embed/Xx-xxxxxxxxxxxxxx.js&#39;</span>;
+    <span style="color:#a6e22e">analyticScript</span>.<span style="color:#a6e22e">defer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+    document.<span style="color:#a6e22e">head</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">analyticScript</span>);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Production environment: Analytics enabled&#39;</span>);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Development environment: Analytics disabled&#39;</span>);
+  }
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2025/02/23/just-purchased-xreal-onewhile-others.html">The Future is Here: XREAL One AR Glasses Transform Your Digital Workspace</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2025/02/23/just-purchased-xreal-onewhile-others.html" class="u-url"><time class="dt-published" datetime="2025-02-23 16:27:55 &#43;0900">Feb 23, 2025</time></a>
+
+		<div class="e-content">
+			 <p>Just purchased <a href="https://amzn.to/41tGimr">XREAL One</a>.
+<img src="https://blog.yostos.org/uploads/2025/xreal-one.webp" alt="XREAL One">
+While others only see me wearing sunglasses, when connected to Mac, a vast 32:9 wide screen spreads out before my eyes. The display area changes as I move my head, which makes work quite efficient. When typing with XREAL One on, I feel as cool as Stevie Wonder.</p>
+<h4 id="xreal-oneの製品仕様">XREAL Oneの製品仕様</h4>
+<p>以前からXREAL Air 2 Proという製品があったようですが、今回2年半ぶりに新製品としてXREAL Oneが登場となっています。</p>
+<p>主な仕様は以下の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>仕様</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重量</td>
+<td>82g</td>
+</tr>
+<tr>
+<td>チップ</td>
+<td>XREAL X1</td>
+</tr>
+<tr>
+<td>ディスプレイ</td>
+<td>SONY 0.68inch マイクロ OLED</td>
+</tr>
+<tr>
+<td>エレクトロクロミック調光</td>
+<td>3段階</td>
+</tr>
+<tr>
+<td>解像度</td>
+<td>400万Pixel / 1080p</td>
+</tr>
+<tr>
+<td>視野角</td>
+<td>50°</td>
+</tr>
+<tr>
+<td>最大リフレッシュレート</td>
+<td>120Hz</td>
+</tr>
+<tr>
+<td>最大輝度</td>
+<td>600nits</td>
+</tr>
+<tr>
+<td>IDP調整</td>
+<td>ソフト調整</td>
+</tr>
+<tr>
+<td>音響</td>
+<td>BOSEによるチューニング</td>
+</tr>
+</tbody>
+</table>
+<p>以前はXREAL Beamというデバイスで処理して表示していたようですが、新しいX1チッ
+プによりXREAL One自体で映像処理をするため直接USB-CでMacに繋ぐだけです。
+設定もXREAL One本体だけで完結します。</p>
+<p>眼鏡のツルの上面にマイクとスピーカーが配置されているようです。
+また、鼻の部分のフレームには拡張ポートがあり、XREAL Eyeという小型カメラがオ
+プションでさせるそうです。海外では既に$99で発売されていますが、日本では未発
+表です。</p>
+<p>パッケージには、以下のものが同梱されています。</p>
+<ul>
+<li>本体</li>
+<li>ケース</li>
+<li>ノーズパット SとLサイズ (Mは本体装着済)</li>
+<li>USB Type-C ケーブル</li>
+<li>クリーニングクロス</li>
+</ul>
+<h4 id="xreal-oneの主な機能">XREAL Oneの主な機能</h4>
+<p>Macbook Proに繋いでいろいろと試してみました。</p>
+<p>USB-Cケーブルで接続すると、XREAL Oneはディスプレイとして認識されます。そのた
+め、特にドライバーや専用ソフトウェアは必要ありません。</p>
+<p>接続しただけで、XREAL Oneは自動的な起動されています。
+最初にXREAL Oneが起動されるとチュートリアルが起動ので、しっかり確認しましょ
+う。</p>
+<p>目の前にMacの画面が広がっています。</p>
+<h5 id="ブレ補正モード">ブレ補正モード</h5>
+<p>このモードでは表示している画面が向いている方向に追従してきます。どこを向いて
+も画面がついてきます。そのため、顔を動かしても画面が大きく揺れずに表示されて
+います。</p>
+<h5 id="3dof">3DoF</h5>
+<p>このモードは、空間に固定された画面が見えているモードで、頭の向きを検知して固
+定された画面の見え位置が変わります。後述のワイドモードと相性がよく、広大な画
+面を使いながら、頭の向きで見える部分をシームレスに動かすことができます。</p>
+<h5 id="サイドビュー">サイドビュー</h5>
+<p>これはディスプレイの端に小さく画面が見えているモードです。
+Macでは使わないと思いますがスマートフォンなど屋外で接続している際に、
+このモードで横目で画面を見ながら歩いたりできるのかも知れません。（試しており
+ません)</p>
+<h5 id="3dモード">3Dモード</h5>
+<p>空間ビデオや写真を3Dで再生するモードです。再生したいコンテンツも環境もないの
+で、使わないと思います。</p>
+<h5 id="ワイドモード">ワイドモード</h5>
+<p>このモードは32:9のアスペクト比で表示され、3840×1080ピクセルの解像度を実現します。</p>
+<p>XREAL One上の表示は、このウルトラワイドな画面の内、16:9くらいの領域が表示さ
+れていて頭の向きを変えると見えていない横の領域も見ることができます。</p>
+<h4 id="xreal-oneの使用感">XREAL Oneの使用感</h4>
+<p>私はゲームや動画よりは、自宅外の環境で大きなコーディングなどの作業の際に大き
+なディスプレイの代替としての使い方を想定しています。</p>
+<p>ワイドモードで3DoFで使うことが多く、32:9のウルトラワイドな画面は非常に作業の
+生産性が上がります。</p>
+<p>32:9という画角は私が普段使っているDELLのワイドディスプレイ(3440x1440ピクセル)に近く、
+実際にウルトラワイドなディスプレイを使う時は顔の向きを変えて見る領域を変えて
+いるので、このXREAL Oneの表示は非常に自然に感じます。また曲面モニターに似せ
+ているのか、少し湾曲して見えるのもリアルです。</p>
+<p>27インチ以上の外部ディスプレイが使えるならば、おそらくそちらのほうが
+XREAL Oneより快適かもしれません。しかし、品粗なコワーキングスペースの
+画角の小さいディスプレイならばXREAL Oneのほうが圧倒的に快適です。</p>
+<p>また使ってみると、ノートPCの場合のように視線を下げずに画面をXREAL One内で見
+ることができるので、視線を下げることで首に掛かっていた負担がなくなったのか
+肩や首の凝りがずいぶんと楽になりました。</p>
+<h4 id="xreal-oneはこういう人にお勧め">XREAL Oneはこういう人にお勧め</h4>
+<p>私の場合、あくまで超手軽に持ち歩ける外部ディスプレイとしての使い方ですが、同
+じようなニーズのある方にはXREAL Oneは本当にお勧めです。</p>
+<p>以前Meta Quest 2で同じような仮想ディスプレイを使っていましたが、自宅外に持ち
+出すのは難しい大きさと重量でした。また装着が大変なので、一度付けると気軽に外
+せないので一人で安心して集中できる環境でしか使えませんでした。</p>
+<p>しかし、XREAL Oneはほぼサングラスのサイズで簡単に持ち歩きできます。
+また、付け外しも気軽なので職場などでも気軽に使うことができます。</p>
+<p>使っていると「いかついサングラスしてるな」と変人扱いされる可能性はあります
+が、あまり仮想ディスプレイを使っているとは気付かれないでしょう。</p>
+<p>出張や出先、カフェでの作業が多い方には、7万円程度なのでお勧めしたいです。</p>
+<!-- raw HTML omitted -->
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://blog.yostos.org/2025/02/22/ive-been-writing-html-for.html" class="u-url"><time class="dt-published" datetime="2025-02-22 16:52:07 &#43;0900">Feb 22, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I&rsquo;ve been writing HTML for nearly 30 years, both professionally and personally. But somehow, I ended up having to take an HTML coding test on a plain, bare-bones Mac text editor with no features whatsoever. Annoyed by the situation, I returned the code with not a single line of HTML inside the <code>body</code> element.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!doctype html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;HOTEL ROYAL HILL SEATTLE&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">meta</span>
+      <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>
+      <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A premier wedding venue in the heart of Seattle. Experience unforgettable moments in our elegant space. Explore bridal fairs and exclusive plans.&#34;</span>
+    /&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+      <span style="color:#f92672">table</span> {
+        <span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
+      }
+      <span style="color:#f92672">th</span><span style="color:#f92672">,</span>
+      <span style="color:#f92672">td</span> {
+        <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">black</span>;
+      }
+    &lt;/<span style="color:#f92672">style</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createList</span>(<span style="color:#a6e22e">items</span>) {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ul</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;ul&#34;</span>);
+        <span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">item</span>) {
+          <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+          <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>;
+          <span style="color:#a6e22e">ul</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+        });
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ul</span>;
+      }
+
+
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">header</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;header&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">img1</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;img&#34;</span>);
+      <span style="color:#a6e22e">img1</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./images/logo.png&#34;</span>;
+      <span style="color:#a6e22e">img1</span>.<span style="color:#a6e22e">alt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;HOTEL ROYAL HILL SEATTLE&#34;</span>;
+      <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">img1</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h1</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;h1&#34;</span>);
+      <span style="color:#a6e22e">h1</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;HOTEL ROYAL HILL SEATTLE Wedding Venue&#34;</span>;
+      <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">h1</span>);
+
+
+      document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">header</span>);
+
+
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">nav</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;nav&#34;</span>);
+      <span style="color:#a6e22e">nav</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;aria-label&#34;</span>, <span style="color:#e6db74">&#34;Main Navigation&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ul</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;ul&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">menuItems</span> <span style="color:#f92672">=</span> [
+        { <span style="color:#a6e22e">href</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;concept.html&#34;</span>, <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Venue Concept&#34;</span> },
+        { <span style="color:#a6e22e">href</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;plan.html&#34;</span>, <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Plan Overview&#34;</span> },
+        { <span style="color:#a6e22e">href</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fair.html&#34;</span>, <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Bridal Fair&#34;</span> },
+        { <span style="color:#a6e22e">href</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;contact.html&#34;</span>, <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Contact Us&#34;</span> },
+      ];
+      <span style="color:#a6e22e">menuItems</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">item</span>) {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
+        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">href</span>;
+        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">text</span>;
+        <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">a</span>);
+        <span style="color:#a6e22e">ul</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+      });
+      <span style="color:#a6e22e">nav</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">ul</span>);
+      document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">nav</span>);
+
+
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;main&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">section1</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;section&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">slide1</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;img&#34;</span>);
+      <span style="color:#a6e22e">slide1</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./images/slide1.jpg&#34;</span>;
+      <span style="color:#a6e22e">slide1</span>.<span style="color:#a6e22e">alt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Enjoy a luxurious and relaxing moment in our venue&#34;</span>;
+      <span style="color:#a6e22e">section1</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">slide1</span>);
+      <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">section1</span>);
+
+
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">section2</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;section&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newh2</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;h2&#34;</span>);
+      <span style="color:#a6e22e">newh2</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;News &amp; Updates&#34;</span>;
+      <span style="color:#a6e22e">section2</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">newh2</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ul2</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;ul&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newsItems</span> <span style="color:#f92672">=</span> [
+        {
+          <span style="color:#a6e22e">datetime</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2024-04-25&#34;</span>,
+          <span style="color:#a6e22e">date</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;April 25, 2024&#34;</span>,
+          <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Lunch &amp; Dinner Tasting Fair&#34;</span>,
+        },
+        {
+          <span style="color:#a6e22e">datetime</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2024-03-03&#34;</span>,
+          <span style="color:#a6e22e">date</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;March 3, 2024&#34;</span>,
+          <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Spring Special Viewing Event&#34;</span>,
+        },
+        {
+          <span style="color:#a6e22e">datetime</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2024-02-20&#34;</span>,
+          <span style="color:#a6e22e">date</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;February 20, 2024&#34;</span>,
+          <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Limited-Time Discount Plan&#34;</span>,
+        },
+        {
+          <span style="color:#a6e22e">datetime</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2024-02-14&#34;</span>,
+          <span style="color:#a6e22e">date</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;February 14, 2024&#34;</span>,
+          <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Valentine&#39;s Fair&#34;</span>,
+        },
+      ];
+      <span style="color:#a6e22e">newsItems</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">item</span>) {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;time&#34;</span>);
+        <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">datetime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">datetime</span>;
+        <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">date</span>;
+        <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">time</span>);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">span</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;span&#34;</span>);
+        <span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;news-title&#34;</span>;
+        <span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">text</span>;
+        <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">span</span>);
+        <span style="color:#a6e22e">ul2</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+      });
+      <span style="color:#a6e22e">section2</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">ul2</span>);
+      <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">section2</span>);
+
+
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">section3</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;section&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">link_plan</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
+      <span style="color:#a6e22e">link_plan</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;plan.html&#34;</span>;
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bnr_plan</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;img&#34;</span>);
+      <span style="color:#a6e22e">bnr_plan</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./images/bnr_plan.jpg&#34;</span>;
+      <span style="color:#a6e22e">bnr_plan</span>.<span style="color:#a6e22e">alt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Plan Details&#34;</span>;
+      <span style="color:#a6e22e">link_plan</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">bnr_plan</span>);
+      <span style="color:#a6e22e">section3</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">link_plan</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">std_plan</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+      <span style="color:#a6e22e">std_plan</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Explore our standard plans.&#34;</span>;
+      <span style="color:#a6e22e">section3</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">std_plan</span>);
+      <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">section3</span>);
+
+
+      document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">main</span>);
+
+
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">footer</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;footer&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">to_top</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">link_top</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
+      <span style="color:#a6e22e">link_top</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#top&#34;</span>;
+      <span style="color:#a6e22e">link_top</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Back to Top&#34;</span>;
+      <span style="color:#a6e22e">to_top</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">link_top</span>);
+      <span style="color:#a6e22e">footer</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">to_top</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">address</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;address&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">address1</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">address2</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">address3</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+      <span style="color:#a6e22e">address1</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1234 Downtown St, Seattle, WA&#34;</span>;
+      <span style="color:#a6e22e">address2</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Phone: +1-206-555-xxxx&#34;</span>;
+      <span style="color:#a6e22e">address3</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Opening Hours: 11:00 AM - 8:00 PM&#34;</span>;
+      <span style="color:#a6e22e">address</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">address1</span>);
+      <span style="color:#a6e22e">address</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">address2</span>);
+      <span style="color:#a6e22e">address</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">address3</span>);
+      <span style="color:#a6e22e">footer</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">address</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">small</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;small&#34;</span>);
+      <span style="color:#a6e22e">small</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span>
+        <span style="color:#e6db74">&#34;Copyright © HOTEL ROYAL HILL SEATTLE All Rights Reserved.&#34;</span>;
+      <span style="color:#a6e22e">footer</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">small</span>);
+      document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">footer</span>);
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://blog.yostos.org/2025/02/20/elevate-your-fish-shell-experience.html">Elevate Your Fish Shell Experience with Tide: Installation &amp; Configuration Guide</a></h1>
+		
+
+		<a href="https://blog.yostos.org/2025/02/20/elevate-your-fish-shell-experience.html" class="u-url"><time class="dt-published" datetime="2025-02-20 21:31:59 &#43;0900">Feb 20, 2025</time></a>
+
+		<div class="e-content">
+			 <p>I’ve been using <a href="https://starship.rs/">Starship</a> as my shell prompt customization tool for a long time, but since my shell of choice is <a href="https://fishshell.com/">Fish</a>, I decided to switch to <a href="https://github.com/IlanCosman/tide">Tide</a>, which is specialized for Fish.</p>
+<p><img src="https://blog.yostos.org/uploads/2025/tide.png" alt="Fish + Tide"></p>
+<h3 id="what-is-tide">What is Tide?</h3>
+<p><a href="https://github.com/IlanCosman/tide">Tide</a> is a high-performance and highly customizable shell prompt designed specifically for Fish. Unlike general-purpose shell prompt tools like Starship, Tide is <strong>optimized exclusively for Fish</strong>, ensuring a seamless experience.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>This article provides a guide on installing and configuring the <strong>Tide</strong> shell prompt customization tool, assuming that <strong>Fish shell</strong> and the <strong>Fisher</strong> package manager are already installed.</p>
+<ul>
+<li><strong>Fish</strong> is installed
+<ul>
+<li>Version 3.x or later is recommended</li>
+</ul>
+</li>
+<li><strong>Fisher</strong> is installed
+<ul>
+<li>The file <code>~/.config/fish/functions/fisher.fish</code> exists, and the command <code>fisher --version</code> works correctly</li>
+</ul>
+</li>
+</ul>
+<h3 id="installation-steps">Installation Steps</h3>
+<h4 id="1-install-tide-using-fisher">1. Install Tide using Fisher</h4>
+<p>If Fisher is already installed, you can install Tide with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">fisher install IlanCosman/tide
+</code></pre></div><blockquote>
+<p><strong>Note</strong><br>
+This command installs the latest version of Tide, so there is no need to specify a version.</p>
+</blockquote>
+<h4 id="2-initial-configuration-wizard">2. Initial Configuration Wizard</h4>
+<p>After installation, the configuration wizard launches automatically (only on the first installation).<br>
+If the wizard does not start or if you want to reconfigure Tide, run the following command manually:</p>
+<pre tabindex="0"><code>tide configure
+</code></pre><h3 id="key-configuration-options-in-the-wizard">Key Configuration Options in the Wizard</h3>
+<p>During the wizard setup, you can customize the following settings:</p>
+<ul>
+<li><strong>Theme Style</strong>: Choose between simple monochrome, colorful, and other styles</li>
+<li><strong>Prompt Layout</strong>: Select between a single-line or two-line display</li>
+<li><strong>Git Branch and Status Display</strong>: Enable or disable Git information as needed</li>
+<li><strong>Display of Time, Hostname, etc.</strong>: Customize based on your workflow</li>
+</ul>
+<p>Once the setup is complete, the new prompt settings take effect immediately.</p>
+<h3 id="verifying-configuration-files">Verifying Configuration Files</h3>
+<p>The wizard automatically updates Fish configuration files, mainly <code>~/.config/fish/config.fish</code> and other related settings.<br>
+If you want to modify settings later, you can either edit these files directly or rerun <code>tide configure</code>.</p>
+<h4 id="checking-if-everything-works">Checking If Everything Works</h4>
+<p>Finally, restart Fish or open a new terminal session to check if Tide is active.</p>
+<pre tabindex="0"><code>exec fish
+</code></pre><h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Prerequisites</strong>: Fish and Fisher are installed</li>
+<li><strong>Tide Installation</strong>: <code>fisher install IlanCosman/tide</code></li>
+<li><strong>Initial Setup</strong>: The configuration wizard runs automatically or can be manually invoked using <code>tide configure</code></li>
+</ul>
+<p>With this setup, <strong>Tide</strong> provides a smooth and optimized shell experience for Fish users. Even if you&rsquo;re accustomed to other tools like Starship, you may find Tide&rsquo;s speed and customization features particularly beneficial. Enjoy your enhanced terminal environment!</p>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
 		<a href="https://blog.yostos.org/2025/02/17/i-just-learned-that-pixelmator.html" class="u-url"><time class="dt-published" datetime="2025-02-17 11:54:41 &#43;0900">Feb 17, 2025</time></a>
 
 		<div class="e-content">
@@ -166,9 +624,9 @@
 
 		<div class="e-content">
 			 <p>成田山に厄払いに行ってきました。</p>
-<p><img src="https://blog.yostos.org/uploads/2025/r0000671.jpg" alt="お線香 貴昇"></p>
+<p><img src="https://cdn.uploads.micro.blog/170124/2025/r0000671.jpg" alt="お線香 貴昇"></p>
 <p>ちょうどお線香が切れていたので、<a href="http://www.shisenkobo.co.jp/">詩仙香房</a>で癖強めの店主さんに勧められて、「貴昇」という沈香のお線香を購入。口上以上によい香りです。</p>
-<p><img src="https://blog.yostos.org/uploads/2025/r0000669.jpg" alt="うなぎの蒲焼き"></p>
+<p><img src="https://cdn.uploads.micro.blog/170124/2025/r0000669.jpg" alt="うなぎの蒲焼き"></p>
 <p>折角成田山なのでランチにうなぎをいただいて帰ってきました。</p>
 
 		</div>
@@ -211,7 +669,7 @@
 		<a href="https://blog.yostos.org/2025/02/11/analog-amp-simulator-simplifier-mkii.html" class="u-url"><time class="dt-published" datetime="2025-02-11 15:09:00 &#43;0900">Feb 11, 2025</time></a>
 
 		<div class="e-content">
-			 <p><img src="https://blog.yostos.org/uploads/2025/simplifier-mk2.jpg" alt="Simplifier MK-II"></p>
+			 <p><img src="https://cdn.uploads.micro.blog/170124/2025/simplifier-mk2.jpg" alt="Simplifier MK-II"></p>
 <p>I had no major complaints about the Strymon Iridium I had been using for a long time, but I was drawn to the word &ldquo;analog&rdquo; and ended up purchasing the <a href="https://www.simplifieramp.com/simplifier-mk-ii">DSM &amp; Humboldt Simplifier MK-II</a>.</p>
 <h4 id="zero-watt-amp">Zero-Watt Amp</h4>
 <p>The Simplifier MK-II is an amp simulator handmade by the Chilean manufacturer DSM &amp; Humboldt, using primarily analog circuits. It is marketed as a &ldquo;zero-watt amp,&rdquo; condensing amp functionality into a compact enclosure.</p>
@@ -1966,7 +2424,7 @@ LINEに関わる利用者情報などが流出する事案を起こしていま�
 			 <h3 id="getting-started-with-pfu-scansnap-ix1600">Getting Started with PFU ScanSnap iX1600</h3>
 <p>I recently embarked on a journey to digitize my old photographs. Since my pre-digital photos exist only as physical prints, I decided to invest in a PFU scanner to bring these memories into the digital age.</p>
 <p>The scanner&rsquo;s performance has been impressive - it handled even my old San Francisco business trip photos from 2001 beautifully, producing crisp, clear scans.</p>
-<p><img src="https://blog.yostos.org/uploads/2024/20241230-031.jpg" alt="Scanned Photo"></p>
+<p><img src="https://cdn.uploads.micro.blog/170124/2024/20241230-031.jpg" alt="Scanned Photo"></p>
 <h3 id="setting-exif-information">Setting EXIF Information</h3>
 <p>Unlike photos taken with a digital camera, scanned images don&rsquo;t come with proper EXIF data. To preserve the actual capture dates of these photos, I used exiftool from the command line to set the correct EXIF information:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#75715e"># Example: Setting the original capture date
@@ -2068,7 +2526,7 @@ LINEに関わる利用者情報などが流出する事案を起こしていま�
 <li>Addition of Super Type compiler for more detailed custom modifications</li>
 </ul>
 <p>With the improved customization and addition of the Super Type compiler, the distribution method has changed. Previously, users would download prepared fonts after selecting glyphs, but now even with a standard license, fonts are compiled through the Standard compiler based on customization settings.</p>
-<p><img src="https://blog.yostos.org/uploads/2024/berkeley-mono.jpg" alt="Compiling Berkeley Mono."></p>
+<p><img src="https://cdn.uploads.micro.blog/170124/2024/berkeley-mono.jpg" alt="Compiling Berkeley Mono."></p>
 <h3 id="berkeley-mono-version-2-license-changes">Berkeley Mono Version 2 License Changes</h3>
 <p>The license tiers have been divided more finely than before.
 The Developer License for individual users remains at $75 but now only includes &ldquo;MX-002 Berkeley Mono™ Standard Fonts,&rdquo; which contains:</p>
@@ -7232,7 +7690,7 @@ According to <a href="https://developers.cloudflare.com/pages/configuration/lang
 		<a href="https://blog.yostos.org/2024/08/05/recently-my-subaru-has-been.html" class="u-url"><time class="dt-published" datetime="2024-08-05 17:47:59 &#43;0900">Aug 5, 2024</time></a>
 
 		<div class="e-content">
-			 <p><img src="https://blog.yostos.org/uploads/2024/cars.webp" alt="My Subaru"></p>
+			 <p><img src="https://cdn.uploads.micro.blog/170124/2024/cars.webp" alt="My Subaru"></p>
 <p>Recently my Subaru 🚗  has been sandwiched between two maniacal cars in a parking lot. By the way, the one on the left is a nearly 60 year old Toyota sports car and the one on the right is the latest Toyota sports car, both of which belong to the same owner.</p>
 
 		</div>
